@@ -1,51 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="30" height="12" tilewidth="128" tileheight="128" infinite="0" nextlayerid="5" nextobjectid="11">
+<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="75">
  <editorsettings>
   <export target="level1.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="2" columns="1">
-  <image source="tileset.png" width="128" height="256"/>
+  <image source="../assets/tileset.png" width="128" height="256"/>
   <tile id="0">
    <properties>
     <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="3" name="level1_images" tilewidth="3840" tileheight="1536" tilecount="1" columns="0">
+ <tileset firstgid="3" name="background" tilewidth="2560" tileheight="896" tilecount="11" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
-   <image width="3840" height="1536" source="wood_tiled_back2.png"/>
+   <image width="2560" height="896" source="../assets/level1/background.png"/>
+  </tile>
+  <tile id="1">
+   <image width="24" height="23" source="../assets/level1/star1.png"/>
+  </tile>
+  <tile id="2">
+   <image width="34" height="34" source="../assets/level1/star2.png"/>
+  </tile>
+  <tile id="3">
+   <image width="13" height="13" source="../assets/level1/star3.png"/>
+  </tile>
+  <tile id="4">
+   <image width="301" height="384" source="../assets/level1/tree1.png"/>
+  </tile>
+  <tile id="5">
+   <image width="298" height="384" source="../assets/level1/tree2.png"/>
+  </tile>
+  <tile id="6">
+   <image width="288" height="384" source="../assets/level1/tree3.png"/>
+  </tile>
+  <tile id="7">
+   <image width="298" height="384" source="../assets/level1/tree4.png"/>
+  </tile>
+  <tile id="8">
+   <image width="384" height="384" source="../assets/level1/tree5.png"/>
+  </tile>
+  <tile id="9">
+   <image width="288" height="384" source="../assets/level1/tree6.png"/>
+  </tile>
+  <tile id="10">
+   <image width="2560" height="128" source="../assets/level1/strip.png"/>
   </tile>
  </tileset>
- <tileset firstgid="4" name="player" tilewidth="72" tileheight="97" tilecount="12" columns="4">
-  <image source="../assets/player.png" width="358" height="293"/>
+ <tileset firstgid="14" name="virgil" tilewidth="152" tileheight="248" tilecount="4" columns="1">
+  <image source="../assets/virgil.png" width="152" height="992"/>
  </tileset>
- <objectgroup id="3" name="background">
-  <object id="8" gid="3" x="-24" y="1556" width="3888" height="1608"/>
+ <tileset firstgid="18" name="dante" tilewidth="152" tileheight="248" tilecount="5" columns="1">
+  <image source="../assets/dante.png" width="152" height="1240"/>
+ </tileset>
+ <objectgroup id="11" name="background">
+  <object id="54" gid="13" x="0" y="512" width="2560" height="73.4545"/>
+  <object id="21" gid="3" x="0" y="455.879" width="2560" height="461.212"/>
  </objectgroup>
- <layer id="1" name="ground" width="30" height="12">
+ <objectgroup id="12" name="background_objects_2">
+  <object id="22" gid="4" x="134.061" y="233.333" width="24" height="23"/>
+  <object id="23" gid="4" x="518.061" y="361.333" width="24" height="23"/>
+  <object id="24" gid="4" x="1030.06" y="105.333" width="24" height="23"/>
+  <object id="25" gid="4" x="1670.06" y="361.333" width="24" height="23"/>
+  <object id="26" gid="4" x="2361.58" y="312.121" width="24" height="23"/>
+  <object id="27" gid="5" x="1030.06" y="361.333" width="34" height="34"/>
+  <object id="28" gid="5" x="334.515" y="233.727" width="34" height="34"/>
+  <object id="29" gid="5" x="1414.06" y="233.333" width="34" height="34"/>
+  <object id="30" gid="5" x="1926.06" y="105.333" width="34" height="34"/>
+  <object id="31" gid="6" x="2054.06" y="361.333" width="13" height="13"/>
+  <object id="55" gid="1073741834" x="2034.94" y="80.3939" width="298" height="384" rotation="180"/>
+  <object id="32" gid="6" x="1286.06" y="361.333" width="13" height="13"/>
+  <object id="33" gid="6" x="774.061" y="233.333" width="13" height="13"/>
+  <object id="60" gid="2147483660" x="1121.21" y="453.455" width="288" height="384"/>
+  <object id="41" gid="10" x="487.242" y="485.364" width="298" height="384"/>
+  <object id="34" gid="6" x="265.091" y="17.4545" width="13" height="13"/>
+  <object id="47" gid="12" x="151.03" y="446.697" width="288" height="384"/>
+  <object id="35" gid="6" x="697.03" y="105.545" width="13" height="13"/>
+  <object id="36" gid="6" x="81.8788" y="120.697" width="13" height="13"/>
+  <object id="37" gid="6" x="2157.64" y="87.3636" width="13" height="13"/>
+  <object id="56" gid="12" x="2341.33" y="440" width="288" height="384"/>
+  <object id="38" gid="6" x="2521.27" y="87.3636" width="13" height="13"/>
+  <object id="50" gid="5" x="1707.61" y="76.8788" width="34" height="34"/>
+ </objectgroup>
+ <objectgroup id="13" name="background_objects_1">
+  <object id="63" gid="7" x="-59.7576" y="511.636" width="301" height="384"/>
+  <object id="64" gid="11" x="681" y="499.727" width="432.485" height="432.485"/>
+  <object id="67" gid="9" x="1488.24" y="500.485" width="288" height="384"/>
+  <object id="69" gid="1073741831" x="2334.29" y="93.8788" width="301" height="384" rotation="180"/>
+ </objectgroup>
+ <layer id="8" name="ground" width="20" height="5">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
-2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
  <objectgroup id="4" name="game">
-  <object id="5" name="virgil" type="virgil" x="1474.67" y="1145.33">
+  <object id="6" name="elevator" type="elevator" x="2242.97" y="511.094">
    <point/>
   </object>
-  <object id="6" name="elevator" type="elevator" x="2239.33" y="1144.67">
-   <point/>
-  </object>
-  <object id="10" name="player" type="player" gid="4" x="246" y="1145" width="72" height="97"/>
+  <object id="73" name="virgil" gid="14" x="366" y="509" width="152" height="248"/>
+  <object id="74" name="player" gid="18" x="185" y="510" width="152" height="248"/>
  </objectgroup>
 </map>
