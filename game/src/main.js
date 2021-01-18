@@ -1,3 +1,13 @@
+/* Util functions */
+function objectFromSpawnPoint(game, spawn_point_obj, sprite_key) {
+    let obj = game.physics.add.sprite(spawn_point_obj.x, spawn_point_obj.y, sprite_key); 
+    spawn_point_obj.destroy();
+    return obj;
+}
+
+/* Game */
+
+
 let config = {
     type: Phaser.AUTO,
     width: 800,
@@ -28,21 +38,19 @@ let score = 0;
 
 
 function preload() {
-    // map made with Tiled in JSON format
-    this.load.tilemapTiledJSON('map', 'assets/map.json');
-    // tiles in spritesheet 
-    this.load.spritesheet('tiles', 'assets/tiles.png', {frameWidth: 70, frameHeight: 70});
-    // simple coin image
-    this.load.image('coin', 'assets/coinGold.png');
-    // player animations
+    this.load.tilemapTiledJSON('map', 'maps/level1.json');
+    this.load.spritesheet('tiles', 'maps/tileset.png', 
+        {frameWidth: 128, frameHeight: 128});
     this.load.atlas('player', 'assets/player.png', 'assets/player.json');
 }
 
-function initGround(game) {
-    map = game.make.tilemap({key: 'map'});
-    let groundTiles = map.addTilesetImage('tiles');
+function initMap(game) {
+    return game.add.tilemap('map');
+}
 
-    let ground = map.createLayer('World', groundTiles, 0, 0);
+function initGround(game, map) {
+    let groundTiles = map.addTilesetImage('tiles', 'tiles');
+    let ground = map.createLayer('ground', groundTiles);
     ground.setCollisionByExclusion([-1]);
  
     game.physics.world.bounds.width = ground.width;
@@ -51,11 +59,26 @@ function initGround(game) {
     return ground;
 }
 
-function initPlayer(game) {
-    let ply = game.physics.add.sprite(200, 200, 'player'); 
-    ply.setBounce(0.2); // our player will bounce from items
-    ply.setCollideWorldBounds(true); // don't go out of the map
+function initBackground(game) {
+    map = game.add.tilemap('map');
+    let groundTiles = map.addTilesetImage('tiles', 'tiles');
+    let ground = map.createLayer('ground', groundTiles);
+    ground.setCollisionByExclusion([-1]);
+ 
+    game.physics.world.bounds.width = ground.width;
+    game.physics.world.bounds.height = ground.height;
 
+    return ground;
+}
+
+
+function initPlayer(game, map) {
+    let player_spawn = map.createFromObjects('game', {name: "player"}, {key: 'player'});
+    let ply_spawn = player_spawn[0];
+
+    let ply = objectFromSpawnPoint(game, ply_spawn, 'player')
+    ply.setBounce(0.1); // our player will bounce from items
+    ply.setCollideWorldBounds(true); // don't go out of the map
     return ply;    
 }
 
@@ -75,7 +98,7 @@ function initCamera(game) {
 
 function initAnimations(game) { 
     game.anims.create({
-        key: 'walk',
+        key: 'player_walk',
         frames: game.anims.generateFrameNames('player', 
             { prefix: 'p1_walk', start: 1, end: 11, zeroPad: 2 }),
         frameRate: 10,
@@ -93,8 +116,9 @@ function initUI(game) {
 }
 
 function create() {
-    groundLayer = initGround(this); 
-    player = initPlayer(this);
+    map = initMap(this);
+    groundLayer = initGround(this, map);  
+    player = initPlayer(this, map);
     
     this.physics.add.collider(groundLayer, player);
 
@@ -104,19 +128,6 @@ function create() {
 
     initAnimations(this);
 
-
-    // coin image used as tileset
-    var coinTiles = map.addTilesetImage('coin');
-    // add coins as tiles
-    coinLayer = map.createLayer('Coins', coinTiles, 0, 0);
-
-    coinLayer.setTileIndexCallback(17, collectCoin, this); // the coin id is 17
-    // when the player overlaps with a tile with index 17, collectCoin will be called 
-
-
-    this.physics.add.overlap(player, coinLayer);
-
-
     text = initUI(this);
 }
  
@@ -124,23 +135,23 @@ function update() {
     if (cursors.left.isDown) // if the left arrow key is down
     {
         player.body.setVelocityX(-200); // move left
-        player.anims.play('walk', true); // play walk animation
+        player.anims.play('player_walk', true); // play walk animation
         player.flipX= true; // flip the sprite to the left
     }
     else if (cursors.right.isDown) // if the right arrow key is down
     {
         player.body.setVelocityX(200); // move right
-        player.anims.play('walk', true); // play walk animatio
+        player.anims.play('player_walk', true); // play walk animatio
         player.flipX = false; // use the original sprite looking to the right
     } else if (player.body.onFloor()) {
         player.body.setVelocityX(0);
-        player.anims.play('walk', false);
+        player.anims.play('player_walk', false);
     }
 
     if ((cursors.space.isDown || cursors.up.isDown) && player.body.onFloor())
     {
         player.body.setVelocityY(-500); // jump up
-        player.anims.play('idle', true);
+        player.anims.play('player_walk', true);
     } 
  }
 
