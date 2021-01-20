@@ -350,18 +350,6 @@
                  "y":511.636
                 }, 
                 {
-                 "gid":11,
-                 "height":432.485,
-                 "id":64,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":432.485,
-                 "x":681,
-                 "y":499.727
-                }, 
-                {
                  "gid":9,
                  "height":384,
                  "id":67,
@@ -384,6 +372,18 @@
                  "width":301,
                  "x":2334.29,
                  "y":93.8788
+                }, 
+                {
+                 "gid":11,
+                 "height":384,
+                 "id":76,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":384,
+                 "x":696,
+                 "y":504
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -409,19 +409,7 @@
          "name":"game",
          "objects":[
                 {
-                 "height":0,
-                 "id":6,
-                 "name":"elevator",
-                 "point":true,
-                 "rotation":0,
-                 "type":"elevator",
-                 "visible":true,
-                 "width":0,
-                 "x":2242.97,
-                 "y":511.094
-                }, 
-                {
-                 "gid":14,
+                 "gid":15,
                  "height":248,
                  "id":73,
                  "name":"virgil",
@@ -433,7 +421,7 @@
                  "y":509
                 }, 
                 {
-                 "gid":18,
+                 "gid":19,
                  "height":248,
                  "id":74,
                  "name":"player",
@@ -443,6 +431,24 @@
                  "width":152,
                  "x":185,
                  "y":510
+                }, 
+                {
+                 "gid":14,
+                 "height":73.3333333333333,
+                 "id":75,
+                 "name":"owl",
+                 "properties":[
+                        {
+                         "name":"clickable",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"clickable",
+                 "visible":true,
+                 "width":76,
+                 "x":302.666666666667,
+                 "y":272.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -451,7 +457,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":75,
+ "nextobjectid":78,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.01.13",
@@ -492,7 +498,7 @@
          "margin":0,
          "name":"background",
          "spacing":0,
-         "tilecount":11,
+         "tilecount":12,
          "tileheight":896,
          "tiles":[
                 {
@@ -560,12 +566,18 @@
                  "image":"..\/assets\/level1\/strip.png",
                  "imageheight":128,
                  "imagewidth":2560
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/assets\/level1\/owl.png",
+                 "imageheight":108,
+                 "imagewidth":108
                 }],
          "tilewidth":2560
         }, 
         {
          "columns":1,
-         "firstgid":14,
+         "firstgid":15,
          "image":"..\/assets\/virgil.png",
          "imageheight":992,
          "imagewidth":152,
@@ -578,7 +590,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":18,
+         "firstgid":19,
          "image":"..\/assets\/dante.png",
          "imageheight":1240,
          "imagewidth":152,

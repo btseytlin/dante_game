@@ -1,0 +1,29 @@
+{
+    "owl": {
+        "type": "sequential",
+        "offset": [0, -50],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Howl!",
+            "Howl... howl...",
+            "HOWLHOWLHOWL HOWLHOWLHOWL HOWLHOWLHOWLHOWL HOWLHOWLHOWLHOWL",
+            "Awesome to be an owl, HOWL"
+        ],
+        "style": { 
+            "fontSize": "32px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wordWrap": {
+                 "width": 400, 
+                 "useAdvancedWrap": true
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    }
+}

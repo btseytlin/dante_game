@@ -7,6 +7,8 @@ function objectFromSpawnPoint(game, spawn_point_obj, sprite_key) {
 
 /* Game */
 
+const textHideDelay = 1200;
+const textCharDrawDelay = 30;
 const screenWidth = 800;
 const screenHeight = 600;
 const plySpeed = 500;
@@ -37,11 +39,14 @@ let player;
 let cursors;
 let groundLayer;
 let text;
+let dialogues;
+let levelObjects = [];
 let score = 0;
 
 
 function preload() {
-    this.load.tilemapTiledJSON('map', 'maps/level1.json');
+    /* Load common */
+
     this.load.spritesheet('tiles', 'assets/tileset.png', 
         {frameWidth: 128, frameHeight: 128});
     this.load.spritesheet('player', 'assets/dante.png',
@@ -49,9 +54,15 @@ function preload() {
     this.load.spritesheet('virgil', 'assets/virgil.png',
         {frameWidth: 152, frameHeight: 248});
 
+    /* Load map */
+
+    this.load.tilemapTiledJSON('map', 'maps/level1.json');
+    this.load.json('dialogues', 'assets/level1/dialogues.json');
+
     const level1_assets = [
         'background', 'star1', 'star2', 'star3', 'strip', 
         'tree1', 'tree2', 'tree3', 'tree3', 'tree4', 'tree5', 'tree6',
+        'owl',
         'headline'
     ]
 
@@ -104,9 +115,8 @@ function initBackground(game, map) {
 
 
 function initPlayer(game, map) {
-    let player_spawns = map.createFromObjects('game', {name: "player"});
+    let player_spawns = map.createFromObjects('game', {name: "player", key: "player"});
     let ply_spawn = player_spawns[0];
-
     let ply = objectFromSpawnPoint(game, ply_spawn, 'player')
     ply.setBounce(0.1); // our player will bounce from items
     ply.setCollideWorldBounds(true); // don't go out of the map
@@ -179,14 +189,111 @@ function initUI(game) {
     return txt
 }
 
+
+function initGameObject(game, object) {
+    const obj_key = object.name;
+    const obj = map.createFromObjects('game', {id: object.id, key: obj_key})[0];
+
+    const obj_clickable = object.properties.filter(property => property.name == 'clickable')[0].value;
+    if (obj_clickable === true) {
+        obj.setInteractive();
+
+        const obj_dialogues = dialogues[obj.name];
+        const phrases = obj_dialogues.phrases;
+        const style = obj_dialogues.style;
+
+        const text = game.add.text(-1000, -1000, '');
+        text.setOrigin(obj_dialogues.origin[0], obj_dialogues.origin[1]);
+        text.setStyle(style);
+        text.setPadding(obj_dialogues.padding);
+        text.setVisible(0);
+
+        obj.text = {
+            'text': text,
+            'offset': obj_dialogues.offset, 
+            'cur_phrase': -1, 
+            "hide_timer": undefined,
+            "draw_timer": undefined
+        };
+
+        obj.on('pointerdown', function (pointer) {
+            if (obj.text.draw_timer && obj.text.draw_timer.getOverallProgress() < 1) {
+                obj.text.text.setText(obj.text.draw_timer.args[1])
+                obj.text.draw_timer.remove();
+                return;
+            }
+
+            if (obj.text.hide_timer) {
+                obj.text.hide_timer.remove();
+            }
+
+            const next_phrase = (obj.text['cur_phrase']+1)%phrases.length
+
+            const next_phrase_text = phrases[next_phrase];
+
+            const draw_timer_event = {
+                delay: textCharDrawDelay,
+                callback: function(text, phrase_text){
+                    if (!this.char) {
+                        this.char = 0;
+                    }
+                    text.setText(next_phrase_text.slice(0, this.char));
+                    this.char += 1;
+                },
+                args: [text, next_phrase_text],
+                repeat: next_phrase_text.length,
+            }
+
+            obj.text['draw_timer'] = game.time.addEvent(draw_timer_event);
+            obj.text['cur_phrase'] = next_phrase;
+
+            const hide_timer_event = {
+                delay: textCharDrawDelay * next_phrase_text.length + textHideDelay,
+                callback: function(text){
+                    text.text.setVisible(0);
+                    text.text.setText('');
+                    if (text.draw_timer) {
+                        text.draw_timer.remove();
+                    }
+                },
+                args: [obj.text],
+            }
+
+            obj.text.hide_timer = game.time.addEvent(hide_timer_event);
+            text.setVisible(1);
+        });
+
+    }
+    return obj;
+}
+
+function initGameObjects(game, map) {
+    const objectsLayer = map.objects.filter(layer => layer.name == 'game')[0];
+    for (let object of objectsLayer.objects) {
+        if (['player', 'virgil'].includes(object.name)) {
+            continue
+        }
+
+        const new_sprite = initGameObject(game, object);
+
+        levelObjects.push(new_sprite);
+    }
+
+    player = initPlayer(game, map);
+    virgil = initVirgil(game, map);
+    game.physics.add.collider(groundLayer, player);
+    game.physics.add.collider(groundLayer, virgil);
+}
+
 function create() {
+    dialogues = this.cache.json.get('dialogues');
+
     map = initMap(this);
     initBackground(this, map);
     groundLayer = initGround(this, map);  
-    player = initPlayer(this, map);
-    virgil = initVirgil(this, map);
-    this.physics.add.collider(groundLayer, player);
-    this.physics.add.collider(groundLayer, virgil);
+    
+    initGameObjects(this, map);
+
     cursors = initInput(this);
     initCamera(this);
     initAnimations(this);
@@ -215,6 +322,14 @@ function update() {
         player.body.setVelocityY(-500); // jump up
         player.anims.play('player_walk', true);
     } 
+
+    for (let obj of levelObjects) {
+        const textBulb = obj.text;
+        let text = textBulb.text;
+
+        text.x = obj.x + textBulb.offset[0];
+        text.y = obj.y + textBulb.offset[1];
+    }
  }
 
 

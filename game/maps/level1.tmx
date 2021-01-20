@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="75">
+<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="78">
  <editorsettings>
   <export target="level1.json" format="json"/>
  </editorsettings>
@@ -11,7 +11,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="3" name="background" tilewidth="2560" tileheight="896" tilecount="11" columns="0">
+ <tileset firstgid="3" name="background" tilewidth="2560" tileheight="896" tilecount="12" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
    <image width="2560" height="896" source="../assets/level1/background.png"/>
@@ -46,11 +46,14 @@
   <tile id="10">
    <image width="2560" height="128" source="../assets/level1/strip.png"/>
   </tile>
+  <tile id="11">
+   <image width="108" height="108" source="../assets/level1/owl.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="14" name="virgil" tilewidth="152" tileheight="248" tilecount="4" columns="1">
+ <tileset firstgid="15" name="virgil" tilewidth="152" tileheight="248" tilecount="4" columns="1">
   <image source="../assets/virgil.png" width="152" height="992"/>
  </tileset>
- <tileset firstgid="18" name="dante" tilewidth="152" tileheight="248" tilecount="5" columns="1">
+ <tileset firstgid="19" name="dante" tilewidth="152" tileheight="248" tilecount="5" columns="1">
   <image source="../assets/dante.png" width="152" height="1240"/>
  </tileset>
  <objectgroup id="11" name="background">
@@ -84,9 +87,9 @@
  </objectgroup>
  <objectgroup id="13" name="background_objects_1">
   <object id="63" gid="7" x="-59.7576" y="511.636" width="301" height="384"/>
-  <object id="64" gid="11" x="681" y="499.727" width="432.485" height="432.485"/>
   <object id="67" gid="9" x="1488.24" y="500.485" width="288" height="384"/>
   <object id="69" gid="1073741831" x="2334.29" y="93.8788" width="301" height="384" rotation="180"/>
+  <object id="76" gid="11" x="696" y="504" width="384" height="384"/>
  </objectgroup>
  <layer id="8" name="ground" width="20" height="5">
   <data encoding="csv">
@@ -98,10 +101,12 @@
 </data>
  </layer>
  <objectgroup id="4" name="game">
-  <object id="6" name="elevator" type="elevator" x="2242.97" y="511.094">
-   <point/>
+  <object id="73" name="virgil" gid="15" x="366" y="509" width="152" height="248"/>
+  <object id="74" name="player" gid="19" x="185" y="510" width="152" height="248"/>
+  <object id="75" name="owl" type="clickable" gid="14" x="302.667" y="272.667" width="76" height="73.3333">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
   </object>
-  <object id="73" name="virgil" gid="14" x="366" y="509" width="152" height="248"/>
-  <object id="74" name="player" gid="18" x="185" y="510" width="152" height="248"/>
  </objectgroup>
 </map>
