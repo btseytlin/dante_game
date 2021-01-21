@@ -17,8 +17,8 @@ function objectFromSpawnPoint(game, spawn_point_obj, sprite_key) {
 /* Game */
 
 const UIScale = 0.6;
-const textHideDelay = 1200;
-const textCharDrawDelay = 30;
+const textHideDelay = 2400;
+const textCharDrawDelay = 7;
 const screenWidth = 800;
 const screenHeight = 600;
 const plySpeed = 500;
@@ -56,6 +56,8 @@ let ui = {};
 
 function preload() {
     /* Load common */
+
+    this.load.plugin('rexbbcodetextplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexbbcodetextplugin.min.js', true);
 
     loadFont("ffforward", "assets/fonts/FFFFORWA.TTF");
 
@@ -226,32 +228,6 @@ function initUI(game) {
         button_right_img.isPressed = false;
     });
 
-    // const rectWidth = screenWidth - buttonWidthScaled*2 - y_padding*2 - 30;
-    // const rectHeight = 100;
-    // const text_rect = game.add.rectangle(screenWidth/2, screenHeight - y_padding, rectWidth, rectHeight, 0x564487);
-    // text_rect.setStrokeStyle(6, 0x17112a);
-
-
-    // const textX = screenWidth/2 - rectWidth/2;
-    // const textY = screenHeight - y_padding - rectHeight/2;
-
-    // const textStyle = {
-    //     fontFamily: "ffforward",
-    //     fontSize: "30px",
-    //     color: "#9e96ae",
-    //     padding: {
-    //         left: 20,
-    //         right: 20,
-    //         top: 20,
-    //         bottom: 20,
-    //     },
-    //     wordWrap: {
-    //         width: rectWidth - 20,
-    //     },
-    // };
-
-    // const text = game.add.text(textX, textY, 'wtfwwwwwwwwwwwwwww wwwwwwwwww wwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwww', textStyle);
-
     const ui = {
         headline_img: headline_img,
         button_left_img: button_left_img,
@@ -266,6 +242,94 @@ function initUI(game) {
     return ui;
 }
 
+function displayFullPhrase(game, obj) {
+    if (obj.text.draw_timer && obj.text.draw_timer.getOverallProgress() < 1) {
+        obj.text.text.setText(obj.text.draw_timer.args[1])
+        obj.text.draw_timer.remove();
+        return true;
+    }
+}
+
+function clearDrawnDialogue(game, obj) {
+    /* Speeds up drawing if text is still printing or clears up dialogue if its finished */
+    if (obj.text.draw_timer) {
+        obj.text.draw_timer.remove();
+    }
+    if (obj.text.hide_timer) {
+        obj.text.hide_timer.remove();
+    }
+}
+
+function drawDialoguePhrase(game, obj, phrase) {
+    const draw_timer_event = {
+        delay: textCharDrawDelay,
+        callback: function(text, phrase_text){
+            if (!this.char) {
+                this.char = 1;
+            }
+            const visibleText = phrase_text.slice(0, this.char);
+            const invisibleText = '[color=transparent]'+phrase_text.slice(this.char, phrase_text.length)+'[/color]';
+            //console.log(visibleText+invisibleText);
+            text.setText(visibleText+invisibleText);
+            this.char += 1;
+        },
+        args: [obj.text.text, phrase],
+        repeat: phrase.length,
+    }
+    obj.text.text.setText('[color=transparent]'+phrase+'[/color]');
+    obj.text['draw_timer'] = game.time.addEvent(draw_timer_event);
+
+    const hide_timer_event = {
+        delay: textCharDrawDelay * phrase.length + textHideDelay,
+        callback: function(text){
+            text.text.setVisible(0);
+            text.text.setText('');
+            if (text.draw_timer) {
+                text.draw_timer.remove();
+            }
+        },
+        args: [obj.text],
+    }
+
+    obj.text.hide_timer = game.time.addEvent(hide_timer_event);
+    obj.text.text.setVisible(1);
+}
+
+function initObjectDialogues(game, obj, obj_name) {
+    obj.setInteractive();
+    console.log('Initting text for', obj, obj_name)
+    const obj_dialogues = dialogues[obj_name];
+    const phrases = obj_dialogues.phrases;
+    const style = obj_dialogues.style;
+
+    const text = game.add.rexBBCodeText(-1000, -1000, 'dummy text', style);
+    text.setOrigin(obj_dialogues.origin[0], obj_dialogues.origin[1]);
+    text.setPadding(obj_dialogues.padding);
+    text.setVisible(0);
+
+    obj.text = {
+        'text': text,
+        'offset': obj_dialogues.offset, 
+        'cur_phrase': -1, 
+        "hide_timer": undefined,
+        "draw_timer": undefined
+    };
+
+    obj.on('pointerdown', function (pointer) {
+        if (displayFullPhrase(game, obj)) {
+            return;
+        }
+
+        clearDrawnDialogue(game, obj);
+
+        const next_phrase = (obj.text['cur_phrase']+1)%phrases.length
+        const next_phrase_text = phrases[next_phrase];
+
+        obj.text['cur_phrase'] = next_phrase;
+
+        drawDialoguePhrase(game, obj, next_phrase_text);
+    });
+}
 
 function initGameObject(game, object) {
     const obj_key = object.name;
@@ -273,73 +337,9 @@ function initGameObject(game, object) {
 
     const obj_clickable = object.properties.filter(property => property.name == 'clickable')[0].value;
     if (obj_clickable === true) {
-        obj.setInteractive();
+        
 
-        const obj_dialogues = dialogues[obj.name];
-        const phrases = obj_dialogues.phrases;
-        const style = obj_dialogues.style;
-
-        const text = game.add.text(-1000, -1000, '');
-        text.setOrigin(obj_dialogues.origin[0], obj_dialogues.origin[1]);
-        text.setStyle(style);
-        text.setPadding(obj_dialogues.padding);
-        text.setVisible(0);
-
-        obj.text = {
-            'text': text,
-            'offset': obj_dialogues.offset, 
-            'cur_phrase': -1, 
-            "hide_timer": undefined,
-            "draw_timer": undefined
-        };
-
-        obj.on('pointerdown', function (pointer) {
-            if (obj.text.draw_timer && obj.text.draw_timer.getOverallProgress() < 1) {
-                obj.text.text.setText(obj.text.draw_timer.args[1])
-                obj.text.draw_timer.remove();
-                return;
-            }
-
-            if (obj.text.hide_timer) {
-                obj.text.hide_timer.remove();
-            }
-
-            const next_phrase = (obj.text['cur_phrase']+1)%phrases.length
-
-            const next_phrase_text = phrases[next_phrase];
-
-            const draw_timer_event = {
-                delay: textCharDrawDelay,
-                callback: function(text, phrase_text){
-                    if (!this.char) {
-                        this.char = 0;
-                    }
-                    text.setText(next_phrase_text.slice(0, this.char));
-                    this.char += 1;
-                },
-                args: [text, next_phrase_text],
-                repeat: next_phrase_text.length,
-            }
-
-            obj.text['draw_timer'] = game.time.addEvent(draw_timer_event);
-            obj.text['cur_phrase'] = next_phrase;
-
-            const hide_timer_event = {
-                delay: textCharDrawDelay * next_phrase_text.length + textHideDelay,
-                callback: function(text){
-                    text.text.setVisible(0);
-                    text.text.setText('');
-                    if (text.draw_timer) {
-                        text.draw_timer.remove();
-                    }
-                },
-                args: [obj.text],
-            }
-
-            obj.text.hide_timer = game.time.addEvent(hide_timer_event);
-            text.setVisible(1);
-        });
-
+        initObjectDialogues(game, obj, object.name);
     }
     return obj;
 }
@@ -357,7 +357,11 @@ function initGameObjects(game, map) {
     }
 
     player = initPlayer(game, map);
+
     virgil = initVirgil(game, map);
+    initObjectDialogues(game, virgil, 'virgil');
+    levelObjects.push(virgil);
+
     game.physics.add.collider(groundLayer, player);
     game.physics.add.collider(groundLayer, virgil);
 }
@@ -411,6 +415,6 @@ function update() {
         let text = obj.text.text;
 
         text.x = obj.x + obj.text.offset[0];
-        text.y = obj.y + obj.text.offset[1];
+        text.y = obj.y - obj.height/2 - text.height/2 + obj.text.offset[1];
     }
  }

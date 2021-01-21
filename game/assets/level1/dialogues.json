@@ -1,21 +1,46 @@
 {
     "owl": {
         "type": "sequential",
-        "offset": [0, -50],
+        "offset": [0, 0],
         "origin": [0.5, 0.5],
         "phrases": [
             "Howl!",
             "Howl... howl...",
-            "HOWLHOWLHOWL HOWLHOWLHOWL HOWLHOWLHOWLHOWL HOWLHOWLHOWLHOWL",
+            "HOWL HOWL HOWL HOWL HOWL HOWL HOWL HOWL HOWL HOWL HOWL HOWL HOWL HOWL",
             "Awesome to be an owl, HOWL"
         ],
         "style": { 
             "fontSize": "32px", 
             "fontFamily": "Courier",
             "fontStyle": "bold",
-            "wordWrap": {
+            "wrap": {
                  "width": 400, 
-                 "useAdvancedWrap": true
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+
+    "virgil": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Welcome to hell,\nplease enjoy your stay."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
              },
             "align": "center", 
             "color": "#e3e3e3",
