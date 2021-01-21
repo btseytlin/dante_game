@@ -88,7 +88,7 @@
  <objectgroup id="13" name="background_objects_1">
   <object id="63" gid="7" x="-59.7576" y="511.636" width="301" height="384"/>
   <object id="67" gid="9" x="1488.24" y="500.485" width="288" height="384"/>
-  <object id="69" gid="1073741831" x="2334.29" y="93.8788" width="301" height="384" rotation="180"/>
+  <object id="69" gid="1073741831" x="2334.29" y="121.879" width="301" height="384" rotation="180"/>
   <object id="76" gid="11" x="696" y="504" width="384" height="384"/>
  </objectgroup>
  <layer id="8" name="ground" width="20" height="5">
@@ -103,7 +103,7 @@
  <objectgroup id="4" name="game">
   <object id="73" name="virgil" gid="15" x="366" y="509" width="152" height="248"/>
   <object id="74" name="player" gid="19" x="185" y="510" width="152" height="248"/>
-  <object id="75" name="owl" type="clickable" gid="14" x="302.667" y="272.667" width="76" height="73.3333">
+  <object id="75" name="owl" type="clickable" gid="14" x="993.334" y="272.667" width="76" height="73.3333">
    <properties>
     <property name="clickable" type="bool" value="true"/>
    </properties>

@@ -1,4 +1,13 @@
 /* Util functions */
+function loadFont(name, url) {
+    var newFont = new FontFace(name, `url(${url})`);
+    newFont.load().then(function (loaded) {
+        document.fonts.add(loaded);
+    }).catch(function (error) {
+        return error;
+    });
+}
+
 function objectFromSpawnPoint(game, spawn_point_obj, sprite_key) {
     let obj = game.physics.add.sprite(spawn_point_obj.x, spawn_point_obj.y, sprite_key); 
     spawn_point_obj.destroy();
@@ -7,6 +16,7 @@ function objectFromSpawnPoint(game, spawn_point_obj, sprite_key) {
 
 /* Game */
 
+const UIScale = 0.6;
 const textHideDelay = 1200;
 const textCharDrawDelay = 30;
 const screenWidth = 800;
@@ -21,7 +31,7 @@ let config = {
         default: 'arcade',
         arcade: {
             gravity: {y: 1500},
-            debug: true
+            debug: false
         }
     },
     scene: {
@@ -42,10 +52,12 @@ let text;
 let dialogues;
 let levelObjects = [];
 let score = 0;
-
+let ui = {};
 
 function preload() {
     /* Load common */
+
+    loadFont("ffforward", "assets/fonts/FFFFORWA.TTF");
 
     this.load.spritesheet('tiles', 'assets/tileset.png', 
         {frameWidth: 128, frameHeight: 128});
@@ -54,8 +66,12 @@ function preload() {
     this.load.spritesheet('virgil', 'assets/virgil.png',
         {frameWidth: 152, frameHeight: 248});
 
-    /* Load map */
+    const ui_assets = ['button_left_active', 'button_left_passive', 'button_right_active', 'button_right_passive']
+    for (let image_key of ui_assets) {
+        this.load.image(image_key, 'assets/ui/' + image_key + '.png');
+    }
 
+    /* Load map */
     this.load.tilemapTiledJSON('map', 'maps/level1.json');
     this.load.json('dialogues', 'assets/level1/dialogues.json');
 
@@ -176,17 +192,78 @@ function initAnimations(game) {
 }
 
 function initUI(game) { 
+    const headlineHeight = 130;
+    const headlinePadding = (headlineHeight * UIScale)/2 + 25;
+    let headline_img = game.add.sprite(screenWidth/2, headlinePadding, 'headline');
 
-    let headline_img = game.add.sprite(screenWidth/2, 50, 'headline');
-    headline_img.setScrollFactor(0);
-    headline_img.scale = 0.6;
-
-    let txt = game.add.text(20, 570, '0', {
-        fontSize: '20px',
-        fill: '#ffffff'
+    const x_padding = 100; 
+    const buttonWidth = 127;
+    const buttonWidthScaled = (buttonWidth * UIScale);
+    const y_padding = buttonWidthScaled/2 + 30;
+    let button_left_img = game.add.sprite(x_padding, screenHeight-y_padding, 'button_left_passive');
+    button_left_img.setInteractive();
+    button_left_img.on('pointerdown', function (pointer) {
+        button_left_img.isPressed = true;
     });
-    txt.setScrollFactor(0);
-    return txt
+    button_left_img.on('pointerout', function (pointer) {
+        button_left_img.isPressed = false;
+    });
+
+    button_left_img.on('pointerup', function (pointer) {
+        button_left_img.isPressed = false;
+    });
+
+    let button_right_img = game.add.sprite(screenWidth-x_padding, screenHeight-y_padding, 'button_right_passive');
+    button_right_img.setInteractive();
+    button_right_img.on('pointerdown', function (pointer) {
+        button_right_img.isPressed = true;
+    });
+    button_right_img.on('pointerout', function (pointer) {
+        button_right_img.isPressed = false;
+    });
+
+    button_right_img.on('pointerup', function (pointer) {
+        button_right_img.isPressed = false;
+    });
+
+    // const rectWidth = screenWidth - buttonWidthScaled*2 - y_padding*2 - 30;
+    // const rectHeight = 100;
+    // const text_rect = game.add.rectangle(screenWidth/2, screenHeight - y_padding, rectWidth, rectHeight, 0x564487);
+    // text_rect.setStrokeStyle(6, 0x17112a);
+
+
+    // const textX = screenWidth/2 - rectWidth/2;
+    // const textY = screenHeight - y_padding - rectHeight/2;
+
+    // const textStyle = {
+    //     fontFamily: "ffforward",
+    //     fontSize: "30px",
+    //     color: "#9e96ae",
+    //     padding: {
+    //         left: 20,
+    //         right: 20,
+    //         top: 20,
+    //         bottom: 20,
+    //     },
+    //     wordWrap: {
+    //         width: rectWidth - 20,
+    //     },
+    // };
+
+    // const text = game.add.text(textX, textY, 'wtfwwwwwwwwwwwwwww wwwwwwwwww wwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwww', textStyle);
+
+    const ui = {
+        headline_img: headline_img,
+        button_left_img: button_left_img,
+        button_right_img: button_right_img,
+    };
+
+    for (const key in ui) {
+        ui[key].setScrollFactor(0);
+        ui[key].scale = UIScale;
+    }
+
+    return ui;
 }
 
 
@@ -297,45 +374,43 @@ function create() {
     cursors = initInput(this);
     initCamera(this);
     initAnimations(this);
-    text = initUI(this);
+    ui = initUI(this);
 }
- 
-function update() {
-    if (cursors.left.isDown) // if the left arrow key is down
-    {
+
+
+function plyMove(player, left=true){
+    if (left) {
         player.body.setVelocityX(-plySpeed); // move left
         player.anims.play('player_walk', true); // play walk animation
-        player.flipX= true; // flip the sprite to the left
-    }
-    else if (cursors.right.isDown) // if the right arrow key is down
-    {
+        player.flipX = true; // flip the sprite to the left
+    } else {
         player.body.setVelocityX(plySpeed); // move right
         player.anims.play('player_walk', true); // play walk animatio
         player.flipX = false; // use the original sprite looking to the right
+    }
+}
+
+function update() {
+    if (cursors.left.isDown || ui.button_left_img.isPressed)
+    {
+        ui.button_left_img.setTexture('button_left_active');
+        plyMove(player, left=true);
+    }
+    else if (cursors.right.isDown || ui.button_right_img.isPressed)
+    {
+        ui.button_right_img.setTexture('button_right_active');
+        plyMove(player, left=false);
     } else if (player.body.onFloor()) {
         player.body.setVelocityX(0);
         player.anims.play('player_walk', false);
+        ui.button_left_img.setTexture('button_left_passive');
+        ui.button_right_img.setTexture('button_right_passive');
     }
-
-    if ((cursors.space.isDown || cursors.up.isDown) && player.body.onFloor())
-    {
-        player.body.setVelocityY(-500); // jump up
-        player.anims.play('player_walk', true);
-    } 
 
     for (let obj of levelObjects) {
-        const textBulb = obj.text;
-        let text = textBulb.text;
+        let text = obj.text.text;
 
-        text.x = obj.x + textBulb.offset[0];
-        text.y = obj.y + textBulb.offset[1];
+        text.x = obj.x + obj.text.offset[0];
+        text.y = obj.y + obj.text.offset[1];
     }
  }
-
-
-function collectCoin(sprite, tile) {
-    coinLayer.removeTileAt(tile.x, tile.y); // remove the tile/coin
-    score ++; // increment the score
-    text.setText(score); // set the text to show the current score
-    return false;
-}
