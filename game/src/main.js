@@ -1,28 +1,4 @@
-/* Util functions */
-function loadFont(name, url) {
-    var newFont = new FontFace(name, `url(${url})`);
-    newFont.load().then(function (loaded) {
-        document.fonts.add(loaded);
-    }).catch(function (error) {
-        return error;
-    });
-}
-
-function objectFromSpawnPoint(game, spawn_point_obj, sprite_key) {
-    let obj = game.physics.add.sprite(spawn_point_obj.x, spawn_point_obj.y, sprite_key); 
-    spawn_point_obj.destroy();
-    return obj;
-}
-
 /* Game */
-
-const UIScale = 0.6;
-const textHideDelay = 2400;
-const textCharDrawDelay = 7;
-const screenWidth = 800;
-const screenHeight = 600;
-const plySpeed = 500;
-
 let config = {
     type: Phaser.AUTO,
     width: 800,
@@ -31,93 +7,63 @@ let config = {
         default: 'arcade',
         arcade: {
             gravity: {y: 1500},
-            debug: true
+            debug: false
         }
     },
-    scene: {
-        key: 'main',
-        preload: preload,
-        create: create,
-        update: update
-    }
+    scene: [Level1Wood, Level2Wtf]
 };
  
 let game = new Phaser.Game(config);
- 
-let map;
 
-let groundLayer;
+function getNextLevel(cur_key) {
+    const level_order = [
+        'Level1Wood', 'Level2Wtf'
+    ];
 
-let player;
-let virgil;
-let elevator_doors;
-let levelObjects = [];
+    const cur_index = level_order.indexOf(cur_key);
 
-let cursors;
-let text;
-let dialogues;
+    return level_order[Math.min(cur_index+1, level_order.length-1)]
+}
 
-let score = 0;
-let ui = {};
-
-let changeLevelRequested = false;
-
-function preload() {
-    /* Load common */
-
-    this.load.plugin('rexbbcodetextplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexbbcodetextplugin.min.js', true);
+function preloadCommon(scene) {
+    scene.load.plugin('rexbbcodetextplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexbbcodetextplugin.min.js', true);
 
     loadFont("ffforward", "assets/fonts/FFFFORWA.TTF");
 
-    this.load.spritesheet('tiles', 'assets/tileset.png', 
+    scene.load.spritesheet('tiles', 'assets/tileset.png', 
         {frameWidth: 128, frameHeight: 128});
-    this.load.spritesheet('player', 'assets/dante.png',
+    scene.load.spritesheet('player', 'assets/dante.png',
         {frameWidth: 152, frameHeight: 248});
-    this.load.spritesheet('virgil', 'assets/virgil.png',
+    scene.load.spritesheet('virgil', 'assets/virgil.png',
         {frameWidth: 152, frameHeight: 248});
 
-    this.load.spritesheet('elevator', 'assets/elevator.png', 
+    scene.load.spritesheet('elevator', 'assets/elevator.png', 
         {frameWidth: 350, frameHeight: 392});
-    this.load.spritesheet('elevator_doors', 'assets/elevator_doors.png', 
+    scene.load.spritesheet('elevator_doors', 'assets/elevator_doors.png', 
         {frameWidth: 196, frameHeight: 322});
 
     const ui_assets = ['button_left_active', 'button_left_passive', 'button_right_active', 'button_right_passive']
     for (let image_key of ui_assets) {
-        this.load.image(image_key, 'assets/ui/' + image_key + '.png');
-    }
-
-    /* Load map */
-    this.load.tilemapTiledJSON('map', 'maps/level1.json');
-    this.load.json('dialogues', 'assets/level1/dialogues.json');
-
-    const level1_assets = [
-        'background', 'star1', 'star2', 'star3', 'strip', 
-        'tree1', 'tree2', 'tree3', 'tree3', 'tree4', 'tree5', 'tree6',
-        'owl',
-        'headline'
-    ]
-
-    for (let image_key of level1_assets) {
-        this.load.image(image_key, 'assets/level1/' + image_key + '.png');
+        scene.load.image(image_key, 'assets/ui/' + image_key + '.png');
     }
 }
 
-function initMap(game) {
-    return game.add.tilemap('map');
+function initMap(scene) {
+    return scene.add.tilemap('map');
 }
 
-function initGround(game, map) {
+function initGround(scene, map) {
     let groundTiles = map.addTilesetImage('tiles', 'tiles');
     let ground = map.createLayer('ground', groundTiles);
     ground.setCollisionByExclusion([-1]);
  
-    game.physics.world.bounds.width = ground.width;
-    game.physics.world.bounds.height = ground.height;
+    scene.physics.world.bounds.width = ground.width;
+    scene.physics.world.bounds.height = ground.height;
 
     return ground;
 }
 
-function initBackground(game, map) {
+function initBackground(scene, map) {
 
     for (let img of map.imageCollections[0].images) {
         let parts = img.image.split('/');
@@ -145,115 +91,115 @@ function initBackground(game, map) {
 }
 
 
-function initPlayer(game, map) {
+function initPlayer(scene, map) {
     let player_spawns = map.createFromObjects('game', {name: "player", key: "player"});
     let ply_spawn = player_spawns[0];
-    let ply = objectFromSpawnPoint(game, ply_spawn, 'player')
+    let ply = objectFromSpawnPoint(scene, ply_spawn, 'player')
     ply.setBounce(0.1); // our player will bounce from items
     ply.setCollideWorldBounds(true); // don't go out of the map
     return ply;    
 }
 
-function initVirgil(game, map) {
+function initVirgil(scene, map) {
     let spawns = map.createFromObjects('game', {name: "virgil"});
     let spawn = spawns[0];
 
-    let obj = objectFromSpawnPoint(game, spawn, 'virgil')
+    let obj = objectFromSpawnPoint(scene, spawn, 'virgil')
     obj.setBounce(0.1); // our player will bounce from items
     obj.setCollideWorldBounds(true); // don't go out of the map
     return obj;    
 }
 
-function changeLevel() {
-    console.log('level change!')
+function changeLevel(scene, nextLevel) {
+    console.log('Loading level', nextLevel);
+    scene.scene.start(nextLevel);
 }
 
-function onElevatorDoorsCollidePlayer(game) {
-    if (!changeLevelRequested) {
-        changeLevelRequested = true;
+function onElevatorDoorsCollidePlayer(scene) {
+    if (!scene.changeLevelRequested) {
+        scene.changeLevelRequested = true;
         elevator_doors.setVisible(true);
         elevator_doors.anims.play('elevator_doors_close', false);
 
-        const timer = game.time.addEvent({
-                delay: 600,
-                callback: changeLevel,
-                loop: false
+        const nextLevel = getNextLevel(scene.scene.key);
+
+        const timer = scene.time.addEvent({
+            delay: changeLevelDelay,
+            callback: changeLevel,
+            args: [scene, nextLevel],
+            loop: false
         });
     }
 }
 
-function initElevatorDoors(game, map, player) {
+function initElevatorDoors(scene, map, player) {
     let elevator_doors_spawn = map.createFromObjects('game', {name: "elevator_doors", key: "elevator_doors"})[0];
-    let elevator_doors = objectFromSpawnPoint(game, elevator_doors_spawn, 'elevator_doors');
+    let elevator_doors = objectFromSpawnPoint(scene, elevator_doors_spawn, 'elevator_doors');
     elevator_doors.setImmovable(true);
     elevator_doors.setVisible(false);
     elevator_doors.body.allowGravity = false;
     elevator_doors.body.setSize(10, 10);
 
-    game.physics.add.overlap(player, elevator_doors, () => onElevatorDoorsCollidePlayer(game) );
+    scene.physics.add.overlap(player, elevator_doors, () => onElevatorDoorsCollidePlayer(scene) );
     return elevator_doors;    
 }
 
 
-function initInput(game) {
-    return game.input.keyboard.createCursorKeys();
+function initInput(scene) {
+    return scene.input.keyboard.createCursorKeys();
 }
 
-function initCamera(game) {
-     // set bounds so the camera won't go outside the game world
-    game.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
-    // make the camera follow the player
-    game.cameras.main.startFollow(player);
-    
-    // set background color, so the sky is not black    
-    game.cameras.main.setBackgroundColor('#ccccff');
+function initCamera(scene, map) {
+    scene.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
+    scene.cameras.main.startFollow(scene.player);
+    scene.cameras.main.setBackgroundColor('#ccccff');
 }
 
-function initAnimations(game) { 
-    game.anims.create({
+function initAnimations(scene) { 
+    scene.anims.create({
         key: 'idle',
-        frames: game.anims.generateFrameNames('player', 
+        frames: scene.anims.generateFrameNames('player', 
             { start: 0, end: 0}),
         frameRate: 10,
         repeat: -1
     });
 
-    game.anims.create({
+    scene.anims.create({
         key: 'player_walk',
-        frames: game.anims.generateFrameNames('player', 
+        frames: scene.anims.generateFrameNames('player', 
             { start: 0, end: 4}),
         frameRate: 5,
         repeat: -1
     });
 
 
-    game.anims.create({
+    scene.anims.create({
         key: 'virgil_walk',
-        frames: game.anims.generateFrameNames('virgil', 
+        frames: scene.anims.generateFrameNames('virgil', 
             { start: 0, end: 3}),
         frameRate: 5,
         repeat: -1
     });
 
-    game.anims.create({
+    scene.anims.create({
         key: 'elevator_doors_close',
-        frames: game.anims.generateFrameNames('elevator_doors', 
+        frames: scene.anims.generateFrameNames('elevator_doors', 
             { start: 0, end: 6}),
         frameRate: 15,
         repeat: 0
     });
 }
 
-function initUI(game) { 
+function initUI(scene) { 
     const headlineHeight = 130;
     const headlinePadding = (headlineHeight * UIScale)/2 + 25;
-    let headline_img = game.add.sprite(screenWidth/2, headlinePadding, 'headline');
+    let headline_img = scene.add.sprite(screenWidth/2, headlinePadding, 'headline');
 
     const x_padding = 100; 
     const buttonWidth = 127;
     const buttonWidthScaled = (buttonWidth * UIScale);
     const y_padding = buttonWidthScaled/2 + 30;
-    let button_left_img = game.add.sprite(x_padding, screenHeight-y_padding, 'button_left_passive');
+    let button_left_img = scene.add.sprite(x_padding, screenHeight-y_padding, 'button_left_passive');
     button_left_img.setInteractive();
     button_left_img.on('pointerdown', function (pointer) {
         button_left_img.isPressed = true;
@@ -266,7 +212,7 @@ function initUI(game) {
         button_left_img.isPressed = false;
     });
 
-    let button_right_img = game.add.sprite(screenWidth-x_padding, screenHeight-y_padding, 'button_right_passive');
+    let button_right_img = scene.add.sprite(screenWidth-x_padding, screenHeight-y_padding, 'button_right_passive');
     button_right_img.setInteractive();
     button_right_img.on('pointerdown', function (pointer) {
         button_right_img.isPressed = true;
@@ -293,7 +239,7 @@ function initUI(game) {
     return ui;
 }
 
-function displayFullPhrase(game, obj) {
+function displayFullPhrase(scene, obj) {
     if (obj.text.draw_timer && obj.text.draw_timer.getOverallProgress() < 1) {
         obj.text.text.setText(obj.text.draw_timer.args[1])
         obj.text.draw_timer.remove();
@@ -301,59 +247,13 @@ function displayFullPhrase(game, obj) {
     }
 }
 
-function clearDrawnDialogue(game, obj) {
-    /* Speeds up drawing if text is still printing or clears up dialogue if its finished */
-    if (obj.text.draw_timer) {
-        obj.text.draw_timer.remove();
-    }
-    if (obj.text.hide_timer) {
-        obj.text.hide_timer.remove();
-    }
-}
-
-function drawDialoguePhrase(game, obj, phrase) {
-    const draw_timer_event = {
-        delay: textCharDrawDelay,
-        callback: function(text, phrase_text){
-            if (!this.char) {
-                this.char = 1;
-            }
-            const visibleText = phrase_text.slice(0, this.char);
-            const invisibleText = '[color=transparent]'+phrase_text.slice(this.char, phrase_text.length)+'[/color]';
-            //console.log(visibleText+invisibleText);
-            text.setText(visibleText+invisibleText);
-            this.char += 1;
-        },
-        args: [obj.text.text, phrase],
-        repeat: phrase.length,
-    }
-    obj.text.text.setText('[color=transparent]'+phrase+'[/color]');
-    obj.text['draw_timer'] = game.time.addEvent(draw_timer_event);
-
-    const hide_timer_event = {
-        delay: textCharDrawDelay * phrase.length + textHideDelay,
-        callback: function(text){
-            text.text.setVisible(0);
-            text.text.setText('');
-            if (text.draw_timer) {
-                text.draw_timer.remove();
-            }
-        },
-        args: [obj.text],
-    }
-
-    obj.text.hide_timer = game.time.addEvent(hide_timer_event);
-    obj.text.text.setVisible(1);
-}
-
-function initObjectDialogues(game, obj, obj_name) {
+function initObjectDialogues(scene, obj, obj_name) {
     obj.setInteractive();
-    console.log('Initting text for', obj, obj_name)
-    const obj_dialogues = dialogues[obj_name];
+    const obj_dialogues = scene.dialogues[obj_name];
     const phrases = obj_dialogues.phrases;
     const style = obj_dialogues.style;
 
-    const text = game.add.rexBBCodeText(-1000, -1000, 'dummy text', style);
+    const text = scene.add.rexBBCodeText(-1000, -1000, 'dummy text', style);
     text.setOrigin(obj_dialogues.origin[0], obj_dialogues.origin[1]);
     text.setPadding(obj_dialogues.padding);
     text.setVisible(0);
@@ -367,75 +267,69 @@ function initObjectDialogues(game, obj, obj_name) {
     };
 
     obj.on('pointerdown', function (pointer) {
-        if (displayFullPhrase(game, obj)) {
+        if (displayFullPhrase(scene, obj)) {
             return;
         }
 
-        clearDrawnDialogue(game, obj);
+        clearDrawnDialogue(scene, obj);
 
         const next_phrase = (obj.text['cur_phrase']+1)%phrases.length
         const next_phrase_text = phrases[next_phrase];
 
         obj.text['cur_phrase'] = next_phrase;
 
-        drawDialoguePhrase(game, obj, next_phrase_text);
+        drawDialoguePhrase(scene, obj, next_phrase_text);
     });
 }
 
-function initGameObject(game, object) {
+function initGameObject(scene, object, map) {
     const obj_key = object.name;
-    const obj = map.createFromObjects('game', {id: object.id, key: obj_key})[0];
+    const obj = scene.map.createFromObjects('game', {id: object.id, key: obj_key})[0];
 
     const obj_clickable = object.properties ? object.properties.filter(property => property.name == 'clickable')[0].value : false ;
     if (obj_clickable === true) {
-        initObjectDialogues(game, obj, object.name);
+        initObjectDialogues(scene, obj, object.name);
     }
     return obj;
 }
 
-function checkIfCollide(arg1, arg2, arg3) {
-    console.log('Check')
-    console.log(arg1)
-    console.log(arg2)
-    console.log(arg3)
-}
-function initGameObjects(game, map) {
+function initGameObjects(scene, map) {
     const objectsLayer = map.objects.filter(layer => layer.name == 'game')[0];
     for (let object of objectsLayer.objects) {
         if (['player', 'virgil', 'elevator_doors'].includes(object.name)) {
             continue
         }
 
-        const new_sprite = initGameObject(game, object);
-        levelObjects.push(new_sprite);
+        const new_sprite = initGameObject(scene, object, map);
+        scene.levelObjects.push(new_sprite);
     }
 
-    player = initPlayer(game, map);
+    scene.player = initPlayer(scene, map);
 
-    virgil = initVirgil(game, map);
-    initObjectDialogues(game, virgil, 'virgil');
-    levelObjects.push(virgil);
+    scene.virgil = initVirgil(scene, map);
+    initObjectDialogues(scene, scene.virgil, 'virgil');
+    scene.levelObjects.push(scene.virgil);
 
-    game.physics.add.collider(groundLayer, player);
-    game.physics.add.collider(groundLayer, virgil);
+    scene.physics.add.collider(scene.groundLayer, scene.player);
+    scene.physics.add.collider(scene.groundLayer, scene.virgil);
 
-    elevator_doors = initElevatorDoors(game, map, player);
-    levelObjects.push(elevator_doors);
+    elevator_doors = initElevatorDoors(scene, map, scene.player);
+    scene.levelObjects.push(elevator_doors);
 }
 
-function create() {
-    dialogues = this.cache.json.get('dialogues');
+function createCommon(scene) {
+    scene.dialogues = scene.cache.json.get('dialogues');
 
-    map = initMap(this);
-    initBackground(this, map);
-    groundLayer = initGround(this, map);  
+    scene.map = initMap(scene);
+    initBackground(scene, scene.map);
+    scene.groundLayer = initGround(scene, scene.map);  
     
-    initGameObjects(this, map);
+    initGameObjects(scene, scene.map);
 
-    cursors = initInput(this);
-    initCamera(this);
-    initAnimations(this);
-    ui = initUI(this);
+    scene.cursors = initInput(scene);
+    initCamera(scene, scene.map);
+    initAnimations(scene);
+    scene.ui = initUI(scene);
 }
 
 
@@ -451,24 +345,24 @@ function plyMove(player, left=true){
     }
 }
 
-function update() {
-    if (cursors.left.isDown || ui.button_left_img.isPressed)
+function commonUpdate(scene) {
+    if (scene.cursors.left.isDown || scene.ui.button_left_img.isPressed)
     {
-        ui.button_left_img.setTexture('button_left_active');
-        plyMove(player, left=true);
+        scene.ui.button_left_img.setTexture('button_left_active');
+        plyMove(scene.player, left=true);
     }
-    else if (cursors.right.isDown || ui.button_right_img.isPressed)
+    else if (scene.cursors.right.isDown || scene.ui.button_right_img.isPressed)
     {
-        ui.button_right_img.setTexture('button_right_active');
-        plyMove(player, left=false);
-    } else if (player.body.onFloor()) {
-        player.body.setVelocityX(0);
-        player.anims.play('player_walk', false);
-        ui.button_left_img.setTexture('button_left_passive');
-        ui.button_right_img.setTexture('button_right_passive');
+        scene.ui.button_right_img.setTexture('button_right_active');
+        plyMove(scene.player, left=false);
+    } else if (scene.player.body.onFloor()) {
+        scene.player.body.setVelocityX(0);
+        scene.player.anims.play('player_walk', false);
+        scene.ui.button_left_img.setTexture('button_left_passive');
+        scene.ui.button_right_img.setTexture('button_right_passive');
     }
 
-    for (let obj of levelObjects) {
+    for (let obj of scene.levelObjects) {
         if (obj.text) {
             let text = obj.text.text;
 
