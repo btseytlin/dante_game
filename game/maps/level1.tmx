@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="78">
+<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="82">
  <editorsettings>
   <export target="level1.json" format="json"/>
  </editorsettings>
@@ -56,6 +56,12 @@
  <tileset firstgid="19" name="dante" tilewidth="152" tileheight="248" tilecount="5" columns="1">
   <image source="../assets/dante.png" width="152" height="1240"/>
  </tileset>
+ <tileset firstgid="24" name="elevator" tilewidth="350" tileheight="392" tilecount="1" columns="1">
+  <image source="../assets/elevator.png" width="350" height="392"/>
+ </tileset>
+ <tileset firstgid="25" name="elevator_doors" tilewidth="196" tileheight="322" tilecount="7" columns="1">
+  <image source="../assets/elevator_doors.png" width="196" height="2254"/>
+ </tileset>
  <objectgroup id="11" name="background">
   <object id="54" gid="13" x="0" y="512" width="2560" height="73.4545"/>
   <object id="21" gid="3" x="0" y="455.879" width="2560" height="461.212"/>
@@ -108,5 +114,7 @@
     <property name="clickable" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="81" name="elevator_doors" gid="25" x="1887.7" y="513.394" width="172.464" height="283.333"/>
+  <object id="80" name="elevator" gid="24" x="1821" y="512.333" width="317.857" height="356"/>
  </objectgroup>
 </map>

@@ -371,7 +371,7 @@
                  "visible":true,
                  "width":301,
                  "x":2334.29,
-                 "y":121.8788
+                 "y":121.879
                 }, 
                 {
                  "gid":11,
@@ -447,8 +447,32 @@
                  "type":"clickable",
                  "visible":true,
                  "width":76,
-                 "x":993.333666666667,
+                 "x":993.334,
                  "y":272.667
+                }, 
+                {
+                 "gid":25,
+                 "height":283.333333333333,
+                 "id":81,
+                 "name":"elevator_doors",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":172.463768115942,
+                 "x":1887.69696969697,
+                 "y":513.39393939394
+                }, 
+                {
+                 "gid":24,
+                 "height":356,
+                 "id":80,
+                 "name":"elevator",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":317.857142857143,
+                 "x":1821,
+                 "y":512.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -457,7 +481,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":78,
+ "nextobjectid":82,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.01.13",
@@ -600,6 +624,32 @@
          "tilecount":5,
          "tileheight":248,
          "tilewidth":152
+        }, 
+        {
+         "columns":1,
+         "firstgid":24,
+         "image":"..\/assets\/elevator.png",
+         "imageheight":392,
+         "imagewidth":350,
+         "margin":0,
+         "name":"elevator",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":392,
+         "tilewidth":350
+        }, 
+        {
+         "columns":1,
+         "firstgid":25,
+         "image":"..\/assets\/elevator_doors.png",
+         "imageheight":2254,
+         "imagewidth":196,
+         "margin":0,
+         "name":"elevator_doors",
+         "spacing":0,
+         "tilecount":7,
+         "tileheight":322,
+         "tilewidth":196
         }],
  "tilewidth":128,
  "type":"map",

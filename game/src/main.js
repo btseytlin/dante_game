@@ -31,7 +31,7 @@ let config = {
         default: 'arcade',
         arcade: {
             gravity: {y: 1500},
-            debug: false
+            debug: true
         }
     },
     scene: {
@@ -45,14 +45,22 @@ let config = {
 let game = new Phaser.Game(config);
  
 let map;
-let player;
-let cursors;
+
 let groundLayer;
+
+let player;
+let virgil;
+let elevator_doors;
+let levelObjects = [];
+
+let cursors;
 let text;
 let dialogues;
-let levelObjects = [];
+
 let score = 0;
 let ui = {};
+
+let changeLevelRequested = false;
 
 function preload() {
     /* Load common */
@@ -67,6 +75,11 @@ function preload() {
         {frameWidth: 152, frameHeight: 248});
     this.load.spritesheet('virgil', 'assets/virgil.png',
         {frameWidth: 152, frameHeight: 248});
+
+    this.load.spritesheet('elevator', 'assets/elevator.png', 
+        {frameWidth: 350, frameHeight: 392});
+    this.load.spritesheet('elevator_doors', 'assets/elevator_doors.png', 
+        {frameWidth: 196, frameHeight: 322});
 
     const ui_assets = ['button_left_active', 'button_left_passive', 'button_right_active', 'button_right_passive']
     for (let image_key of ui_assets) {
@@ -151,6 +164,36 @@ function initVirgil(game, map) {
     return obj;    
 }
 
+function changeLevel() {
+    console.log('level change!')
+}
+
+function onElevatorDoorsCollidePlayer(game) {
+    if (!changeLevelRequested) {
+        changeLevelRequested = true;
+        elevator_doors.setVisible(true);
+        elevator_doors.anims.play('elevator_doors_close', false);
+
+        const timer = game.time.addEvent({
+                delay: 600,
+                callback: changeLevel,
+                loop: false
+        });
+    }
+}
+
+function initElevatorDoors(game, map, player) {
+    let elevator_doors_spawn = map.createFromObjects('game', {name: "elevator_doors", key: "elevator_doors"})[0];
+    let elevator_doors = objectFromSpawnPoint(game, elevator_doors_spawn, 'elevator_doors');
+    elevator_doors.setImmovable(true);
+    elevator_doors.setVisible(false);
+    elevator_doors.body.allowGravity = false;
+    elevator_doors.body.setSize(10, 10);
+
+    game.physics.add.overlap(player, elevator_doors, () => onElevatorDoorsCollidePlayer(game) );
+    return elevator_doors;    
+}
+
 
 function initInput(game) {
     return game.input.keyboard.createCursorKeys();
@@ -190,6 +233,14 @@ function initAnimations(game) {
             { start: 0, end: 3}),
         frameRate: 5,
         repeat: -1
+    });
+
+    game.anims.create({
+        key: 'elevator_doors_close',
+        frames: game.anims.generateFrameNames('elevator_doors', 
+            { start: 0, end: 6}),
+        frameRate: 15,
+        repeat: 0
     });
 }
 
@@ -335,24 +386,27 @@ function initGameObject(game, object) {
     const obj_key = object.name;
     const obj = map.createFromObjects('game', {id: object.id, key: obj_key})[0];
 
-    const obj_clickable = object.properties.filter(property => property.name == 'clickable')[0].value;
+    const obj_clickable = object.properties ? object.properties.filter(property => property.name == 'clickable')[0].value : false ;
     if (obj_clickable === true) {
-        
-
         initObjectDialogues(game, obj, object.name);
     }
     return obj;
 }
 
+function checkIfCollide(arg1, arg2, arg3) {
+    console.log('Check')
+    console.log(arg1)
+    console.log(arg2)
+    console.log(arg3)
+}
 function initGameObjects(game, map) {
     const objectsLayer = map.objects.filter(layer => layer.name == 'game')[0];
     for (let object of objectsLayer.objects) {
-        if (['player', 'virgil'].includes(object.name)) {
+        if (['player', 'virgil', 'elevator_doors'].includes(object.name)) {
             continue
         }
 
         const new_sprite = initGameObject(game, object);
-
         levelObjects.push(new_sprite);
     }
 
@@ -364,6 +418,9 @@ function initGameObjects(game, map) {
 
     game.physics.add.collider(groundLayer, player);
     game.physics.add.collider(groundLayer, virgil);
+
+    elevator_doors = initElevatorDoors(game, map, player);
+    levelObjects.push(elevator_doors);
 }
 
 function create() {
@@ -412,9 +469,11 @@ function update() {
     }
 
     for (let obj of levelObjects) {
-        let text = obj.text.text;
+        if (obj.text) {
+            let text = obj.text.text;
 
-        text.x = obj.x + obj.text.offset[0];
-        text.y = obj.y - obj.height/2 - text.height/2 + obj.text.offset[1];
+            text.x = obj.x + obj.text.offset[0];
+            text.y = obj.y - obj.height/2 - text.height/2 + obj.text.offset[1];
+        }
     }
  }
