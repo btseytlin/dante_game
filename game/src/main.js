@@ -117,6 +117,9 @@ function changeLevel(scene, nextLevel) {
 
 function onElevatorDoorsCollidePlayer(scene) {
     if (!scene.changeLevelRequested) {
+        scene.player.setImmovable = true;
+        scene.player.body.enable = false;
+
         scene.changeLevelRequested = true;
         elevator_doors.setVisible(true);
         elevator_doors.anims.play('elevator_doors_close', false);
