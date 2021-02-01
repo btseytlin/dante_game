@@ -33,14 +33,14 @@ function preloadCommon(scene) {
     scene.load.spritesheet('tiles', 'assets/tileset.png', 
         {frameWidth: 128, frameHeight: 128});
     scene.load.spritesheet('player', 'assets/dante.png',
-        {frameWidth: 152, frameHeight: 248});
+        {frameWidth: 120, frameHeight: 192});
     scene.load.spritesheet('virgil', 'assets/virgil.png',
-        {frameWidth: 152, frameHeight: 248});
+        {frameWidth: 120, frameHeight: 192});
 
     scene.load.spritesheet('elevator', 'assets/elevator.png', 
-        {frameWidth: 350, frameHeight: 392});
+        {frameWidth: 375, frameHeight: 350});
     scene.load.spritesheet('elevator_doors', 'assets/elevator_doors.png', 
-        {frameWidth: 196, frameHeight: 322});
+        {frameWidth: 375, frameHeight: 350});
 
     const ui_assets = ['button_left_active', 'button_left_passive', 'button_right_active', 'button_right_passive']
     for (let image_key of ui_assets) {
@@ -117,10 +117,20 @@ function changeLevel(scene, nextLevel) {
 
 function onElevatorDoorsCollidePlayer(scene) {
     if (!scene.changeLevelRequested) {
+        scene.player.anims.play('player_idle', true);
         scene.player.setImmovable = true;
         scene.player.body.enable = false;
-
         scene.changeLevelRequested = true;
+        scene.waitingForVirgil = true;
+    }
+}
+
+function onElevatorDoorsCollideVirgil(scene) {
+    if (scene.changeLevelRequested && scene.waitingForVirgil) {
+        scene.virgil.anims.play('virgil_idle', true);
+        scene.virgil.setImmovable = true;
+        scene.virgil.body.enable = false;
+
         elevator_doors.setVisible(true);
         elevator_doors.anims.play('elevator_doors_close', false);
 
@@ -135,6 +145,7 @@ function onElevatorDoorsCollidePlayer(scene) {
     }
 }
 
+
 function initElevatorDoors(scene, map, player) {
     let elevator_doors_spawn = map.createFromObjects('game', {name: "elevator_doors", key: "elevator_doors"})[0];
     let elevator_doors = objectFromSpawnPoint(scene, elevator_doors_spawn, 'elevator_doors');
@@ -144,6 +155,7 @@ function initElevatorDoors(scene, map, player) {
     elevator_doors.body.setSize(10, 10);
 
     scene.physics.add.overlap(player, elevator_doors, () => onElevatorDoorsCollidePlayer(scene) );
+    scene.physics.add.overlap(scene.virgil, elevator_doors, () => onElevatorDoorsCollideVirgil(scene) );
     return elevator_doors;    
 }
 
@@ -160,17 +172,17 @@ function initCamera(scene, map) {
 
 function initAnimations(scene) { 
     scene.anims.create({
-        key: 'idle',
+        key: 'player_idle',
         frames: scene.anims.generateFrameNames('player', 
             { start: 0, end: 0}),
-        frameRate: 10,
-        repeat: -1
+        frameRate: 1,
+        repeat: 0
     });
 
     scene.anims.create({
         key: 'player_walk',
         frames: scene.anims.generateFrameNames('player', 
-            { start: 0, end: 4}),
+            { start: 2, end: 5}),
         frameRate: 5,
         repeat: -1
     });
@@ -179,16 +191,24 @@ function initAnimations(scene) {
     scene.anims.create({
         key: 'virgil_walk',
         frames: scene.anims.generateFrameNames('virgil', 
-            { start: 0, end: 3}),
+            { start: 1, end: 3}),
         frameRate: 5,
         repeat: -1
     });
 
     scene.anims.create({
+        key: 'virgil_idle',
+        frames: scene.anims.generateFrameNames('virgil', 
+            { start: 0, end: 0}),
+        frameRate: 1,
+        repeat: 0
+    });
+
+    scene.anims.create({
         key: 'elevator_doors_close',
         frames: scene.anims.generateFrameNames('elevator_doors', 
-            { start: 0, end: 6}),
-        frameRate: 15,
+            { start: 1, end: 9}),
+        frameRate: 10,
         repeat: 0
     });
 }
@@ -317,6 +337,7 @@ function initGameObjects(scene, map) {
     scene.physics.add.collider(scene.groundLayer, scene.virgil);
 
     elevator_doors = initElevatorDoors(scene, map, scene.player);
+    scene.elevator_doors = elevator_doors;
     scene.levelObjects.push(elevator_doors);
 }
 
@@ -348,6 +369,49 @@ function plyMove(player, left=true){
     }
 }
 
+
+function virgilMove(scene) {
+
+    if (!scene.waitingForVirgil) {
+        // Virgil follows player
+        const ply_virgil_dist = Math.abs(scene.player.x - scene.virgil.x);
+        if (ply_virgil_dist > virgilFollowThreshold) {
+            if (scene.player.x > scene.virgil.x) { // Player to the right of Virgil, Virgil walks left
+                scene.virgil.body.setVelocityX(virgilSpeed); // move left
+                scene.virgil.anims.play('virgil_walk', true);
+                scene.virgil.flipX = false;
+            } else {
+                scene.virgil.body.setVelocityX(-virgilSpeed); // move right
+                scene.virgil.anims.play('virgil_walk', true);
+                scene.virgil.flipX = true;
+            }
+        } else {
+            scene.virgil.body.setVelocityX(0);
+            scene.virgil.anims.play('virgil_idle', false);
+        }
+
+    } else {
+        // Virgil moves to elevator
+        const virgil_elevator_dist = Math.abs(scene.elevator_doors.x - scene.virgil.x);
+
+        if (virgil_elevator_dist > 0) {
+            if (scene.elevator_doors.x > scene.virgil.x) { // Elevator to the right of Virgil, Virgil walks left
+                scene.virgil.body.setVelocityX(virgilSpeed); // move left
+                scene.virgil.anims.play('virgil_walk', true);
+                scene.virgil.flipX = false;
+            } else {
+                scene.virgil.body.setVelocityX(-virgilSpeed); // move right
+                scene.virgil.anims.play('virgil_walk', true);
+                scene.virgil.flipX = true;
+            }
+        } else {
+            scene.virgil.body.setVelocityX(0);
+            scene.virgil.anims.play('virgil_idle', false);
+        }
+
+    }
+}
+
 function commonUpdate(scene) {
     if (scene.cursors.left.isDown || scene.ui.button_left_img.isPressed)
     {
@@ -364,6 +428,8 @@ function commonUpdate(scene) {
         scene.ui.button_left_img.setTexture('button_left_passive');
         scene.ui.button_right_img.setTexture('button_right_passive');
     }
+
+    virgilMove(scene);
 
     for (let obj of scene.levelObjects) {
         if (obj.text) {

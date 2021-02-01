@@ -7,6 +7,7 @@ class BaseLevel extends Phaser.Scene {
         this.groundLayer = null;
         this.player = null;
         this.virgil = null;
+        this.elevator_doors = null;
         this.ui = null;
         this.cursors = null;
         this.levelObjects = [];
@@ -14,6 +15,7 @@ class BaseLevel extends Phaser.Scene {
         this.dialogues = null;
 
         this.changeLevelRequested = false;
+        this.waitingForVirgil = false;
     }
 
     preload () {

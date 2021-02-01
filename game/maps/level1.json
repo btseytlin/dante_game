@@ -16,7 +16,7 @@
          "name":"background",
          "objects":[
                 {
-                 "gid":13,
+                 "gid":31,
                  "height":73.4545,
                  "id":54,
                  "name":"",
@@ -28,7 +28,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":3,
+                 "gid":21,
                  "height":461.212,
                  "id":21,
                  "name":"",
@@ -51,7 +51,7 @@
          "name":"background_objects_2",
          "objects":[
                 {
-                 "gid":4,
+                 "gid":22,
                  "height":23,
                  "id":22,
                  "name":"",
@@ -63,7 +63,7 @@
                  "y":233.333
                 }, 
                 {
-                 "gid":4,
+                 "gid":22,
                  "height":23,
                  "id":23,
                  "name":"",
@@ -75,7 +75,7 @@
                  "y":361.333
                 }, 
                 {
-                 "gid":4,
+                 "gid":22,
                  "height":23,
                  "id":24,
                  "name":"",
@@ -87,7 +87,7 @@
                  "y":105.333
                 }, 
                 {
-                 "gid":4,
+                 "gid":22,
                  "height":23,
                  "id":25,
                  "name":"",
@@ -99,7 +99,7 @@
                  "y":361.333
                 }, 
                 {
-                 "gid":4,
+                 "gid":22,
                  "height":23,
                  "id":26,
                  "name":"",
@@ -111,7 +111,7 @@
                  "y":312.121
                 }, 
                 {
-                 "gid":5,
+                 "gid":23,
                  "height":34,
                  "id":27,
                  "name":"",
@@ -123,7 +123,7 @@
                  "y":361.333
                 }, 
                 {
-                 "gid":5,
+                 "gid":23,
                  "height":34,
                  "id":28,
                  "name":"",
@@ -135,7 +135,7 @@
                  "y":233.727
                 }, 
                 {
-                 "gid":5,
+                 "gid":23,
                  "height":34,
                  "id":29,
                  "name":"",
@@ -147,7 +147,7 @@
                  "y":233.333
                 }, 
                 {
-                 "gid":5,
+                 "gid":23,
                  "height":34,
                  "id":30,
                  "name":"",
@@ -159,7 +159,7 @@
                  "y":105.333
                 }, 
                 {
-                 "gid":6,
+                 "gid":24,
                  "height":13,
                  "id":31,
                  "name":"",
@@ -171,7 +171,7 @@
                  "y":361.333
                 }, 
                 {
-                 "gid":1073741834,
+                 "gid":1073741852,
                  "height":384,
                  "id":55,
                  "name":"",
@@ -183,7 +183,7 @@
                  "y":80.3939
                 }, 
                 {
-                 "gid":6,
+                 "gid":24,
                  "height":13,
                  "id":32,
                  "name":"",
@@ -195,7 +195,7 @@
                  "y":361.333
                 }, 
                 {
-                 "gid":6,
+                 "gid":24,
                  "height":13,
                  "id":33,
                  "name":"",
@@ -207,7 +207,7 @@
                  "y":233.333
                 }, 
                 {
-                 "gid":2147483660,
+                 "gid":2147483678,
                  "height":384,
                  "id":60,
                  "name":"",
@@ -219,7 +219,7 @@
                  "y":453.455
                 }, 
                 {
-                 "gid":10,
+                 "gid":28,
                  "height":384,
                  "id":41,
                  "name":"",
@@ -231,7 +231,7 @@
                  "y":485.364
                 }, 
                 {
-                 "gid":6,
+                 "gid":24,
                  "height":13,
                  "id":34,
                  "name":"",
@@ -243,7 +243,7 @@
                  "y":17.4545
                 }, 
                 {
-                 "gid":12,
+                 "gid":30,
                  "height":384,
                  "id":47,
                  "name":"",
@@ -255,7 +255,7 @@
                  "y":446.697
                 }, 
                 {
-                 "gid":6,
+                 "gid":24,
                  "height":13,
                  "id":35,
                  "name":"",
@@ -267,7 +267,7 @@
                  "y":105.545
                 }, 
                 {
-                 "gid":6,
+                 "gid":24,
                  "height":13,
                  "id":36,
                  "name":"",
@@ -279,7 +279,7 @@
                  "y":120.697
                 }, 
                 {
-                 "gid":6,
+                 "gid":24,
                  "height":13,
                  "id":37,
                  "name":"",
@@ -291,7 +291,7 @@
                  "y":87.3636
                 }, 
                 {
-                 "gid":12,
+                 "gid":30,
                  "height":384,
                  "id":56,
                  "name":"",
@@ -303,7 +303,7 @@
                  "y":440
                 }, 
                 {
-                 "gid":6,
+                 "gid":24,
                  "height":13,
                  "id":38,
                  "name":"",
@@ -315,7 +315,7 @@
                  "y":87.3636
                 }, 
                 {
-                 "gid":5,
+                 "gid":23,
                  "height":34,
                  "id":50,
                  "name":"",
@@ -338,7 +338,7 @@
          "name":"background_objects_1",
          "objects":[
                 {
-                 "gid":7,
+                 "gid":25,
                  "height":384,
                  "id":63,
                  "name":"",
@@ -350,7 +350,7 @@
                  "y":511.636
                 }, 
                 {
-                 "gid":9,
+                 "gid":27,
                  "height":384,
                  "id":67,
                  "name":"",
@@ -362,7 +362,7 @@
                  "y":500.485
                 }, 
                 {
-                 "gid":1073741831,
+                 "gid":1073741849,
                  "height":384,
                  "id":69,
                  "name":"",
@@ -374,7 +374,7 @@
                  "y":121.879
                 }, 
                 {
-                 "gid":11,
+                 "gid":29,
                  "height":384,
                  "id":76,
                  "name":"",
@@ -409,31 +409,19 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":15,
-                 "height":248,
+                 "gid":33,
+                 "height":192,
                  "id":73,
                  "name":"virgil",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":152,
+                 "width":120,
                  "x":366,
                  "y":509
                 }, 
                 {
-                 "gid":19,
-                 "height":248,
-                 "id":74,
-                 "name":"player",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":152,
-                 "x":185,
-                 "y":510
-                }, 
-                {
-                 "gid":14,
+                 "gid":32,
                  "height":73.3333,
                  "id":75,
                  "name":"owl",
@@ -451,28 +439,40 @@
                  "y":272.667
                 }, 
                 {
-                 "gid":25,
-                 "height":283.333333333333,
-                 "id":81,
-                 "name":"elevator_doors",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":172.463768115942,
-                 "x":1887.69696969697,
-                 "y":513.39393939394
-                }, 
-                {
-                 "gid":24,
-                 "height":356,
+                 "gid":43,
+                 "height":350,
                  "id":80,
                  "name":"elevator",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":317.857142857143,
-                 "x":1821,
-                 "y":512.333333333333
+                 "width":375,
+                 "x":1818,
+                 "y":512.333
+                }, 
+                {
+                 "gid":37,
+                 "height":198,
+                 "id":84,
+                 "name":"player",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":120,
+                 "x":218,
+                 "y":508
+                }, 
+                {
+                 "gid":57,
+                 "height":355,
+                 "id":92,
+                 "name":"elevator_doors",
+                 "rotation":0,
+                 "type":"elevator_doors",
+                 "visible":true,
+                 "width":375,
+                 "x":1818,
+                 "y":515
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -481,7 +481,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":82,
+ "nextobjectid":93,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.01.13",
@@ -491,12 +491,12 @@
          "columns":1,
          "firstgid":1,
          "image":"..\/assets\/tileset.png",
-         "imageheight":256,
+         "imageheight":2560,
          "imagewidth":128,
          "margin":0,
          "name":"tiles",
          "spacing":0,
-         "tilecount":2,
+         "tilecount":20,
          "tileheight":128,
          "tiles":[
                 {
@@ -512,7 +512,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":3,
+         "firstgid":21,
          "grid":
             {
              "height":1,
@@ -601,55 +601,79 @@
         }, 
         {
          "columns":1,
-         "firstgid":15,
+         "firstgid":33,
+         "grid":
+            {
+             "height":248,
+             "orientation":"orthogonal",
+             "width":152
+            },
          "image":"..\/assets\/virgil.png",
-         "imageheight":992,
-         "imagewidth":152,
+         "imageheight":768,
+         "imagewidth":120,
          "margin":0,
          "name":"virgil",
          "spacing":0,
          "tilecount":4,
-         "tileheight":248,
-         "tilewidth":152
+         "tileheight":192,
+         "tilewidth":120
         }, 
         {
          "columns":1,
-         "firstgid":19,
+         "firstgid":37,
+         "grid":
+            {
+             "height":248,
+             "orientation":"orthogonal",
+             "width":152
+            },
          "image":"..\/assets\/dante.png",
-         "imageheight":1240,
-         "imagewidth":152,
+         "imageheight":1152,
+         "imagewidth":120,
          "margin":0,
          "name":"dante",
          "spacing":0,
-         "tilecount":5,
-         "tileheight":248,
-         "tilewidth":152
+         "tilecount":6,
+         "tileheight":192,
+         "tilewidth":120
         }, 
         {
          "columns":1,
-         "firstgid":24,
+         "firstgid":43,
+         "grid":
+            {
+             "height":392,
+             "orientation":"orthogonal",
+             "width":350
+            },
          "image":"..\/assets\/elevator.png",
-         "imageheight":392,
-         "imagewidth":350,
+         "imageheight":4900,
+         "imagewidth":375,
          "margin":0,
          "name":"elevator",
          "spacing":0,
-         "tilecount":1,
-         "tileheight":392,
-         "tilewidth":350
+         "tilecount":14,
+         "tileheight":350,
+         "tilewidth":375
         }, 
         {
          "columns":1,
-         "firstgid":25,
+         "firstgid":57,
+         "grid":
+            {
+             "height":322,
+             "orientation":"orthogonal",
+             "width":196
+            },
          "image":"..\/assets\/elevator_doors.png",
-         "imageheight":2254,
-         "imagewidth":196,
+         "imageheight":3500,
+         "imagewidth":375,
          "margin":0,
          "name":"elevator_doors",
          "spacing":0,
-         "tilecount":7,
-         "tileheight":322,
-         "tilewidth":196
+         "tilecount":12,
+         "tileheight":350,
+         "tilewidth":375
         }],
  "tilewidth":128,
  "type":"map",
