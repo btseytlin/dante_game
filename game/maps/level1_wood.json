@@ -4,7 +4,7 @@
      "export":
         {
          "format":"json",
-         "target":"level1.json"
+         "target":"level1_wood.json"
         }
     },
  "height":5,
@@ -409,7 +409,7 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":33,
+                 "gid":2147483681,
                  "height":192,
                  "id":73,
                  "name":"virgil",
@@ -417,8 +417,8 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":366,
-                 "y":509
+                 "x":355,
+                 "y":512
                 }, 
                 {
                  "gid":32,
@@ -671,7 +671,7 @@
          "margin":0,
          "name":"elevator_doors",
          "spacing":0,
-         "tilecount":12,
+         "tilecount":10,
          "tileheight":350,
          "tilewidth":375
         }],

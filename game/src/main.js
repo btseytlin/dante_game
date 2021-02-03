@@ -10,14 +10,23 @@ let config = {
             debug: false
         }
     },
-    scene: [Level1Wood, Level2Wtf]
+    scene: [
+        Level1Wood, 
+        Level2Limbo,
+        Level3Lust,
+    ]
 };
  
 let game = new Phaser.Game(config);
 
+
+const globalAssets = [
+    'player', 'virgil', 'elevator', 'elevator_doors'
+];
+
 function getNextLevel(cur_key) {
     const level_order = [
-        'Level1Wood', 'Level2Wtf'
+        'Level1Wood', 'Level2Limbo', 'Level3Lust',
     ];
 
     const cur_index = level_order.indexOf(cur_key);
@@ -49,7 +58,7 @@ function preloadCommon(scene) {
 }
 
 function initMap(scene) {
-    return scene.add.tilemap('map');
+    return scene.add.tilemap(scene.assetPrefix('map'));
 }
 
 function initGround(scene, map) {
@@ -68,7 +77,7 @@ function initBackground(scene, map) {
     for (let img of map.imageCollections[0].images) {
         let parts = img.image.split('/');
         const fname = parts[parts.length - 1];
-        const key = fname.split('.')[0];
+        const key = scene.assetPrefix(fname.split('.')[0]);
         map.createFromObjects('background', {gid: img.gid, key: key});
 
     }
@@ -76,14 +85,14 @@ function initBackground(scene, map) {
     for (let img of map.imageCollections[0].images) {
         let parts = img.image.split('/');
         const fname = parts[parts.length - 1];
-        const key = fname.split('.')[0];
+        const key = scene.assetPrefix(fname.split('.')[0]);
         map.createFromObjects('background_objects_2', {gid: img.gid, key: key});
     }
 
     for (let img of map.imageCollections[0].images) {
         let parts = img.image.split('/');
         const fname = parts[parts.length - 1];
-        const key = fname.split('.')[0];
+        const key = scene.assetPrefix(fname.split('.')[0]);
         map.createFromObjects('background_objects_1', {gid: img.gid, key: key});
     }
 
@@ -111,7 +120,6 @@ function initVirgil(scene, map) {
 }
 
 function changeLevel(scene, nextLevel) {
-    console.log('Loading level', nextLevel);
     scene.scene.start(nextLevel);
 }
 
@@ -216,7 +224,7 @@ function initAnimations(scene) {
 function initUI(scene) { 
     const headlineHeight = 130;
     const headlinePadding = (headlineHeight * UIScale)/2 + 25;
-    let headline_img = scene.add.sprite(screenWidth/2, headlinePadding, 'headline');
+    let headline_img = scene.add.sprite(screenWidth/2, headlinePadding, scene.assetPrefix('headline'));
 
     const x_padding = 100; 
     const buttonWidth = 127;
@@ -257,17 +265,10 @@ function initUI(scene) {
     for (const key in ui) {
         ui[key].setScrollFactor(0);
         ui[key].scale = UIScale;
+        ui[key].depth = 999;
     }
 
     return ui;
-}
-
-function displayFullPhrase(scene, obj) {
-    if (obj.text.draw_timer && obj.text.draw_timer.getOverallProgress() < 1) {
-        obj.text.text.setText(obj.text.draw_timer.args[1])
-        obj.text.draw_timer.remove();
-        return true;
-    }
 }
 
 function initObjectDialogues(scene, obj, obj_name) {
@@ -282,9 +283,11 @@ function initObjectDialogues(scene, obj, obj_name) {
     text.setVisible(0);
 
     obj.text = {
+        'dialogues': obj_dialogues,
         'text': text,
         'offset': obj_dialogues.offset, 
-        'cur_phrase': -1, 
+        'cur_phrase_num': -1, 
+        'cur_phrase': undefined, 
         "hide_timer": undefined,
         "draw_timer": undefined
     };
@@ -296,17 +299,16 @@ function initObjectDialogues(scene, obj, obj_name) {
 
         clearDrawnDialogue(scene, obj);
 
-        const next_phrase = (obj.text['cur_phrase']+1)%phrases.length
-        const next_phrase_text = phrases[next_phrase];
-
-        obj.text['cur_phrase'] = next_phrase;
-
-        drawDialoguePhrase(scene, obj, next_phrase_text);
+        if (obj.text.cur_phrase_num == obj.text.dialogues.phrases.length-1) {
+            obj.text.cur_phrase_num = -1;
+        } else {
+            drawNextPhrase(scene, obj);
+        }
     });
 }
 
 function initGameObject(scene, object, map) {
-    const obj_key = object.name;
+    const obj_key = globalAssets.indexOf(object.name) != -1? object.name : scene.assetPrefix(object.name);
     const obj = scene.map.createFromObjects('game', {id: object.id, key: obj_key})[0];
 
     const obj_clickable = object.properties ? object.properties.filter(property => property.name == 'clickable')[0].value : false ;
@@ -322,7 +324,6 @@ function initGameObjects(scene, map) {
         if (['player', 'virgil', 'elevator_doors'].includes(object.name)) {
             continue
         }
-
         const new_sprite = initGameObject(scene, object, map);
         scene.levelObjects.push(new_sprite);
     }
@@ -342,8 +343,7 @@ function initGameObjects(scene, map) {
 }
 
 function createCommon(scene) {
-    scene.dialogues = scene.cache.json.get('dialogues');
-
+    scene.dialogues = scene.cache.json.get(scene.assetPrefix('dialogues'));
     scene.map = initMap(scene);
     initBackground(scene, scene.map);
     scene.groundLayer = initGround(scene, scene.map);  

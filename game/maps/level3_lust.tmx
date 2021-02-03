@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="142">
+ <editorsettings>
+  <export target="level2_limbo.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="20" columns="1">
+  <image source="../assets/tileset.png" width="128" height="2560"/>
+  <tile id="0">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="12" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="23">
+   <image width="774" height="490" source="../assets/level3_limbo/ass.png"/>
+  </tile>
+  <tile id="24">
+   <image width="2560" height="896" source="../assets/level3_limbo/background.png"/>
+  </tile>
+  <tile id="25">
+   <image width="163" height="248" source="../assets/level3_limbo/cleopatra.png"/>
+  </tile>
+  <tile id="26">
+   <image width="171" height="320" source="../assets/level3_limbo/elena.png"/>
+  </tile>
+  <tile id="27">
+   <image width="376" height="362" source="../assets/level3_limbo/fountain.png"/>
+  </tile>
+  <tile id="28">
+   <image width="488" height="626" source="../assets/level3_limbo/house1.png"/>
+  </tile>
+  <tile id="29">
+   <image width="364" height="364" source="../assets/level3_limbo/house2.png"/>
+  </tile>
+  <tile id="30">
+   <image width="832" height="364" source="../assets/level3_limbo/house3.png"/>
+  </tile>
+  <tile id="31">
+   <image width="510" height="544" source="../assets/level3_limbo/house4.png"/>
+  </tile>
+  <tile id="32">
+   <image width="717" height="617" source="../assets/level3_limbo/house5.png"/>
+  </tile>
+  <tile id="33">
+   <image width="278" height="258" source="../assets/level3_limbo/paolo_and_fran.png"/>
+  </tile>
+  <tile id="34">
+   <image width="672" height="693" source="../assets/level3_limbo/tornado.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="56" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/virgil.png" width="120" height="768"/>
+ </tileset>
+ <tileset firstgid="60" name="dante" tilewidth="120" tileheight="192" tilecount="6" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/dante.png" width="120" height="1152"/>
+ </tileset>
+ <tileset firstgid="66" name="elevator" tilewidth="375" tileheight="350" tilecount="14" columns="1">
+  <grid orientation="orthogonal" width="350" height="392"/>
+  <image source="../assets/elevator.png" width="375" height="4900"/>
+ </tileset>
+ <tileset firstgid="80" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="10" columns="1">
+  <grid orientation="orthogonal" width="196" height="322"/>
+  <image source="../assets/elevator_doors.png" width="375" height="3500"/>
+ </tileset>
+ <objectgroup id="11" name="background">
+  <object id="127" gid="45" x="0" y="640" width="2560" height="896"/>
+ </objectgroup>
+ <objectgroup id="12" name="background_objects_2">
+  <object id="128" gid="50" x="746.415" y="534.819" width="364" height="364"/>
+  <object id="129" gid="52" x="1251.07" y="516.787" width="363.88" height="388.138"/>
+  <object id="131" gid="51" x="-55.0422" y="511.841" width="832" height="364"/>
+  <object id="137" gid="44" x="1585" y="517" width="565.494" height="358"/>
+ </objectgroup>
+ <objectgroup id="13" name="background_objects_1">
+  <object id="132" gid="53" x="546.469" y="512.298" width="326.468" height="280.936"/>
+  <object id="130" gid="48" x="1089.87" y="521.213" width="190.696" height="183.596"/>
+ </objectgroup>
+ <layer id="8" name="ground" width="20" height="5">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+ </layer>
+ <objectgroup id="4" name="game">
+  <object id="73" name="virgil" gid="56" x="368" y="511" width="120" height="192"/>
+  <object id="80" name="elevator" gid="66" x="2166.51" y="512.407" width="375" height="350"/>
+  <object id="84" name="player" gid="60" x="220" y="511" width="120" height="192"/>
+  <object id="92" name="elevator_doors" type="elevator_doors" gid="80" x="2166.51" y="515.074" width="375" height="355"/>
+  <object id="138" name="cleopatra" gid="46" x="896" y="512" width="117" height="178.012">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="139" name="elena" gid="47" x="1280" y="512" width="119.7" height="224">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="140" name="francheska_and_paulo" gid="54" x="1536" y="512" width="202.574" height="188">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

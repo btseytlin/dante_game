@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="93">
  <editorsettings>
-  <export target="level1.json" format="json"/>
+  <export target="level1_wood.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="20" columns="1">
   <image source="../assets/tileset.png" width="128" height="2560"/>
@@ -62,7 +62,7 @@
   <grid orientation="orthogonal" width="350" height="392"/>
   <image source="../assets/elevator.png" width="375" height="4900"/>
  </tileset>
- <tileset firstgid="57" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="12" columns="1">
+ <tileset firstgid="57" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="10" columns="1">
   <grid orientation="orthogonal" width="196" height="322"/>
   <image source="../assets/elevator_doors.png" width="375" height="3500"/>
  </tileset>
@@ -111,7 +111,7 @@
 </data>
  </layer>
  <objectgroup id="4" name="game">
-  <object id="73" name="virgil" gid="33" x="366" y="509" width="120" height="192"/>
+  <object id="73" name="virgil" gid="2147483681" x="355" y="512" width="120" height="192"/>
   <object id="75" name="owl" type="clickable" gid="32" x="993.334" y="272.667" width="76" height="73.3333">
    <properties>
     <property name="clickable" type="bool" value="true"/>

@@ -1,6 +1,6 @@
 {
     "owl": {
-        "type": "sequential",
+        "type": "click",
         "offset": [0, 0],
         "origin": [0.5, 0.5],
         "phrases": [
@@ -32,7 +32,9 @@
         "offset": [0, -20],
         "origin": [0.5, 0.5],
         "phrases": [
-            "Welcome to hell,\nplease enjoy your stay."
+            "My name is Virgil.",
+            "I will accompany you in your journey to the Inferno.",
+            "Let's move now."
         ],
         "style": { 
             "fontSize": "24px", 
