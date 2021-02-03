@@ -14,40 +14,40 @@
  <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="12" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="23">
-   <image width="774" height="490" source="../assets/level3_limbo/ass.png"/>
+   <image width="774" height="490" source="../assets/level3_lust/ass.png"/>
   </tile>
   <tile id="24">
-   <image width="2560" height="896" source="../assets/level3_limbo/background.png"/>
+   <image width="2560" height="896" source="../assets/level3_lust/background.png"/>
   </tile>
   <tile id="25">
-   <image width="163" height="248" source="../assets/level3_limbo/cleopatra.png"/>
+   <image width="163" height="248" source="../assets/level3_lust/cleopatra.png"/>
   </tile>
   <tile id="26">
-   <image width="171" height="320" source="../assets/level3_limbo/elena.png"/>
+   <image width="171" height="320" source="../assets/level3_lust/elena.png"/>
   </tile>
   <tile id="27">
-   <image width="376" height="362" source="../assets/level3_limbo/fountain.png"/>
+   <image width="376" height="362" source="../assets/level3_lust/fountain.png"/>
   </tile>
   <tile id="28">
-   <image width="488" height="626" source="../assets/level3_limbo/house1.png"/>
+   <image width="488" height="626" source="../assets/level3_lust/house1.png"/>
   </tile>
   <tile id="29">
-   <image width="364" height="364" source="../assets/level3_limbo/house2.png"/>
+   <image width="364" height="364" source="../assets/level3_lust/house2.png"/>
   </tile>
   <tile id="30">
-   <image width="832" height="364" source="../assets/level3_limbo/house3.png"/>
+   <image width="832" height="364" source="../assets/level3_lust/house3.png"/>
   </tile>
   <tile id="31">
-   <image width="510" height="544" source="../assets/level3_limbo/house4.png"/>
+   <image width="510" height="544" source="../assets/level3_lust/house4.png"/>
   </tile>
   <tile id="32">
-   <image width="717" height="617" source="../assets/level3_limbo/house5.png"/>
+   <image width="717" height="617" source="../assets/level3_lust/house5.png"/>
   </tile>
   <tile id="33">
-   <image width="278" height="258" source="../assets/level3_limbo/paolo_and_fran.png"/>
+   <image width="278" height="258" source="../assets/level3_lust/francheska_and_paulo.png"/>
   </tile>
   <tile id="34">
-   <image width="672" height="693" source="../assets/level3_limbo/tornado.png"/>
+   <image width="672" height="693" source="../assets/level3_lust/tornado.png"/>
   </tile>
  </tileset>
  <tileset firstgid="56" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">

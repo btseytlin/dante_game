@@ -14,6 +14,8 @@ let config = {
         Level1Wood, 
         Level2Limbo,
         Level3Lust,
+        Level4Gluttony,
+        Level5Greed,
     ]
 };
  
@@ -26,7 +28,8 @@ const globalAssets = [
 
 function getNextLevel(cur_key) {
     const level_order = [
-        'Level1Wood', 'Level2Limbo', 'Level3Lust',
+        'Level1Wood', 'Level2Limbo', 'Level3Lust', 'Level4Gluttony', 
+        'Level5Greed', 
     ];
 
     const cur_index = level_order.indexOf(cur_key);

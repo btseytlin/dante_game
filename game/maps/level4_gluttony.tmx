@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="154">
+ <editorsettings>
+  <export target="level4_gluttony.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="20" columns="1">
+  <image source="../assets/tileset.png" width="128" height="2560"/>
+  <tile id="0">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="11" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="35">
+   <image width="2560" height="896" source="../assets/level4_gluttony/background.png"/>
+  </tile>
+  <tile id="36">
+   <image width="454" height="473" source="../assets/level4_gluttony/cake.png"/>
+  </tile>
+  <tile id="37">
+   <image width="206" height="248" source="../assets/level4_gluttony/chako.png"/>
+  </tile>
+  <tile id="38">
+   <image width="255" height="544" source="../assets/level4_gluttony/cola.png"/>
+  </tile>
+  <tile id="39">
+   <image width="428" height="459" source="../assets/level4_gluttony/doge.png"/>
+  </tile>
+  <tile id="40">
+   <image width="554" height="323" source="../assets/level4_gluttony/donut.png"/>
+  </tile>
+  <tile id="41">
+   <image width="148" height="202" source="../assets/level4_gluttony/fat_man1.png"/>
+  </tile>
+  <tile id="42">
+   <image width="155" height="202" source="../assets/level4_gluttony/fat_man2.png"/>
+  </tile>
+  <tile id="43">
+   <image width="576" height="624" source="../assets/level4_gluttony/hamburger.png"/>
+  </tile>
+  <tile id="44">
+   <image width="544" height="289" source="../assets/level4_gluttony/plate.png"/>
+  </tile>
+  <tile id="45">
+   <image width="192" height="321" source="../assets/level4_gluttony/potato.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="67" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/virgil.png" width="120" height="768"/>
+ </tileset>
+ <tileset firstgid="71" name="dante" tilewidth="120" tileheight="192" tilecount="6" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/dante.png" width="120" height="1152"/>
+ </tileset>
+ <tileset firstgid="77" name="elevator" tilewidth="375" tileheight="350" tilecount="14" columns="1">
+  <grid orientation="orthogonal" width="350" height="392"/>
+  <image source="../assets/elevator.png" width="375" height="4900"/>
+ </tileset>
+ <tileset firstgid="91" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="10" columns="1">
+  <grid orientation="orthogonal" width="196" height="322"/>
+  <image source="../assets/elevator_doors.png" width="375" height="3500"/>
+ </tileset>
+ <objectgroup id="11" name="background">
+  <object id="142" gid="56" x="0" y="768" width="2560" height="896"/>
+ </objectgroup>
+ <objectgroup id="12" name="background_objects_2">
+  <object id="144" gid="64" x="1598.88" y="515.182" width="466.909" height="505.818"/>
+  <object id="145" gid="65" x="1024" y="512" width="544" height="289"/>
+  <object id="148" gid="61" x="226" y="516" width="554" height="323"/>
+ </objectgroup>
+ <objectgroup id="13" name="background_objects_1">
+  <object id="149" gid="59" x="484" y="512" width="181.875" height="388"/>
+  <object id="143" gid="57" x="688.697" y="511.848" width="275.471" height="287"/>
+  <object id="146" gid="66" x="60" y="513" width="192" height="321"/>
+ </objectgroup>
+ <layer id="8" name="ground" width="20" height="5">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7
+</data>
+ </layer>
+ <objectgroup id="4" name="game">
+  <object id="73" name="virgil" gid="67" x="368" y="511" width="120" height="192"/>
+  <object id="80" name="elevator" gid="77" x="2166.51" y="512.407" width="375" height="350"/>
+  <object id="84" name="player" gid="71" x="220" y="511" width="120" height="192"/>
+  <object id="92" name="elevator_doors" type="elevator_doors" gid="91" x="2166.51" y="515.074" width="375" height="355"/>
+  <object id="147" name="doge" gid="60" x="1344" y="513" width="301.185" height="323">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="150" name="ciacco" gid="58" x="1152" y="512" width="152.839" height="184">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="151" name="fat_man1" gid="62" x="896" y="512" width="124.931" height="170.514">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="153" name="fat_man2" gid="63" x="1792" y="512" width="131.98" height="172">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,5 +1,5 @@
 const UIScale = 0.6;
-const textHideDelay = 1800;
+const textHideDelay = 2000;
 const textCharDrawDelay = 7;
 const screenWidth = 800;
 const screenHeight = 600;

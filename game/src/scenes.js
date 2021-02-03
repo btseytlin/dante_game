@@ -158,3 +158,67 @@ class Level3Lust extends BaseLevel {
     }
 
 }
+
+class Level4Gluttony extends BaseLevel {
+
+    constructor () {
+        super('Level4Gluttony');
+    }
+
+    preload () {
+
+        super.preload();
+
+        this.load.tilemapTiledJSON(this.assetPrefix('map'), 'maps/level4_gluttony.json');
+        this.load.json(this.assetPrefix('dialogues'), 'assets/level4_gluttony/dialogues.json');
+
+        const level_assets = [
+            'background', 'headline',
+            'cola', 'cake', 'donut', 'hamburger', 'plate', 'potato',
+            'fat_man1', 'fat_man2', 'ciacco', 'doge'
+        ]
+
+        for (let image_key of level_assets) {
+            this.load.image(this.assetPrefix(image_key), 'assets/level4_gluttony/' + image_key + '.png');
+        }
+    }
+
+    create () {
+        super.create();
+    }
+
+}
+
+
+class Level5Greed extends BaseLevel {
+
+    constructor () {
+        super('Level5Greed');
+    }
+
+    preload () {
+
+        super.preload();
+
+        this.load.tilemapTiledJSON(this.assetPrefix('map'), 'maps/level5_greed.json');
+        this.load.json(this.assetPrefix('dialogues'), 'assets/level5_greed/dialogues.json');
+
+        const level_assets = [
+            'background', 'headline',
+            'strip_greed',
+            'bitcoin', 'grafik', 'silhouette1', 'silhouette2', 'silhouette3', 
+            'stone', 'stone2', 'stone3', 'stone4', 'stone5', 
+            'money', 'money2', 'money3',
+            'spender1', 'spender2', 'saver1', 'saver2',
+        ]
+
+        for (let image_key of level_assets) {
+            this.load.image(this.assetPrefix(image_key), 'assets/level5_greed/' + image_key + '.png');
+        }
+    }
+
+    create () {
+        super.create();
+    }
+
+}

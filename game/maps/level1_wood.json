@@ -527,73 +527,73 @@
          "tiles":[
                 {
                  "id":0,
-                 "image":"..\/assets\/level1\/background.png",
+                 "image":"..\/assets\/level1_wood\/background.png",
                  "imageheight":896,
                  "imagewidth":2560
                 }, 
                 {
                  "id":1,
-                 "image":"..\/assets\/level1\/star1.png",
+                 "image":"..\/assets\/level1_wood\/star1.png",
                  "imageheight":23,
                  "imagewidth":24
                 }, 
                 {
                  "id":2,
-                 "image":"..\/assets\/level1\/star2.png",
+                 "image":"..\/assets\/level1_wood\/star2.png",
                  "imageheight":34,
                  "imagewidth":34
                 }, 
                 {
                  "id":3,
-                 "image":"..\/assets\/level1\/star3.png",
+                 "image":"..\/assets\/level1_wood\/star3.png",
                  "imageheight":13,
                  "imagewidth":13
                 }, 
                 {
                  "id":4,
-                 "image":"..\/assets\/level1\/tree1.png",
+                 "image":"..\/assets\/level1_wood\/tree1.png",
                  "imageheight":384,
                  "imagewidth":301
                 }, 
                 {
                  "id":5,
-                 "image":"..\/assets\/level1\/tree2.png",
+                 "image":"..\/assets\/level1_wood\/tree2.png",
                  "imageheight":384,
                  "imagewidth":298
                 }, 
                 {
                  "id":6,
-                 "image":"..\/assets\/level1\/tree3.png",
+                 "image":"..\/assets\/level1_wood\/tree3.png",
                  "imageheight":384,
                  "imagewidth":288
                 }, 
                 {
                  "id":7,
-                 "image":"..\/assets\/level1\/tree4.png",
+                 "image":"..\/assets\/level1_wood\/tree4.png",
                  "imageheight":384,
                  "imagewidth":298
                 }, 
                 {
                  "id":8,
-                 "image":"..\/assets\/level1\/tree5.png",
+                 "image":"..\/assets\/level1_wood\/tree5.png",
                  "imageheight":384,
                  "imagewidth":384
                 }, 
                 {
                  "id":9,
-                 "image":"..\/assets\/level1\/tree6.png",
+                 "image":"..\/assets\/level1_wood\/tree6.png",
                  "imageheight":384,
                  "imagewidth":288
                 }, 
                 {
                  "id":10,
-                 "image":"..\/assets\/level1\/strip.png",
+                 "image":"..\/assets\/level1_wood\/strip.png",
                  "imageheight":128,
                  "imagewidth":2560
                 }, 
                 {
                  "id":11,
-                 "image":"..\/assets\/level1\/owl.png",
+                 "image":"..\/assets\/level1_wood\/owl.png",
                  "imageheight":108,
                  "imagewidth":108
                 }],

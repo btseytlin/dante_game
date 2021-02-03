@@ -14,40 +14,40 @@
  <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="12" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="0">
-   <image width="2560" height="896" source="../assets/level1/background.png"/>
+   <image width="2560" height="896" source="../assets/level1_wood/background.png"/>
   </tile>
   <tile id="1">
-   <image width="24" height="23" source="../assets/level1/star1.png"/>
+   <image width="24" height="23" source="../assets/level1_wood/star1.png"/>
   </tile>
   <tile id="2">
-   <image width="34" height="34" source="../assets/level1/star2.png"/>
+   <image width="34" height="34" source="../assets/level1_wood/star2.png"/>
   </tile>
   <tile id="3">
-   <image width="13" height="13" source="../assets/level1/star3.png"/>
+   <image width="13" height="13" source="../assets/level1_wood/star3.png"/>
   </tile>
   <tile id="4">
-   <image width="301" height="384" source="../assets/level1/tree1.png"/>
+   <image width="301" height="384" source="../assets/level1_wood/tree1.png"/>
   </tile>
   <tile id="5">
-   <image width="298" height="384" source="../assets/level1/tree2.png"/>
+   <image width="298" height="384" source="../assets/level1_wood/tree2.png"/>
   </tile>
   <tile id="6">
-   <image width="288" height="384" source="../assets/level1/tree3.png"/>
+   <image width="288" height="384" source="../assets/level1_wood/tree3.png"/>
   </tile>
   <tile id="7">
-   <image width="298" height="384" source="../assets/level1/tree4.png"/>
+   <image width="298" height="384" source="../assets/level1_wood/tree4.png"/>
   </tile>
   <tile id="8">
-   <image width="384" height="384" source="../assets/level1/tree5.png"/>
+   <image width="384" height="384" source="../assets/level1_wood/tree5.png"/>
   </tile>
   <tile id="9">
-   <image width="288" height="384" source="../assets/level1/tree6.png"/>
+   <image width="288" height="384" source="../assets/level1_wood/tree6.png"/>
   </tile>
   <tile id="10">
-   <image width="2560" height="128" source="../assets/level1/strip.png"/>
+   <image width="2560" height="128" source="../assets/level1_wood/strip.png"/>
   </tile>
   <tile id="11">
-   <image width="108" height="108" source="../assets/level1/owl.png"/>
+   <image width="108" height="108" source="../assets/level1_wood/owl.png"/>
   </tile>
  </tileset>
  <tileset firstgid="33" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">
