@@ -1,0 +1,106 @@
+{
+    "virgil": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Treachery. We have reached the deepest point of hell."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                 "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "judas": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Don't stare at me.",
+            "And don't mention my name in your poem.",
+            "I'm already hated enough in your world."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "brut": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "I am in no mood for small talk.",
+            "Neither are Cassius and Judas, as you can see."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+
+    "cassius": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Your journey through Inferno is over. Go away."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    }
+
+}

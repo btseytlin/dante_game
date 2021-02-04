@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="208">
+ <editorsettings>
+  <export target="level7_heresy.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="20" columns="1">
+  <image source="../assets/tileset.png" width="128" height="2560"/>
+  <tile id="0">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="10" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="65">
+   <image width="338" height="338" source="../assets/level6_heresy/moon.png"/>
+  </tile>
+  <tile id="66">
+   <image width="198" height="273" source="../assets/level6_heresy/tomb1.png"/>
+  </tile>
+  <tile id="67">
+   <image width="182" height="205" source="../assets/level6_heresy/tomb2.png"/>
+  </tile>
+  <tile id="68">
+   <image width="174" height="316" source="../assets/level6_heresy/tomb3.png"/>
+  </tile>
+  <tile id="69">
+   <image width="156" height="137" source="../assets/level6_heresy/tomb4.png"/>
+  </tile>
+  <tile id="70">
+   <image width="86" height="191" source="../assets/level6_heresy/epicur.png"/>
+  </tile>
+  <tile id="71">
+   <image width="328" height="367" source="../assets/level6_heresy/fire1.png"/>
+  </tile>
+  <tile id="72">
+   <image width="328" height="367" source="../assets/level6_heresy/fire2.png"/>
+  </tile>
+  <tile id="73">
+   <image width="85" height="190" source="../assets/level6_heresy/gvido_cavalcanti.png"/>
+  </tile>
+  <tile id="74">
+   <image width="2560" height="896" source="../assets/level6_heresy/background.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="96" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/virgil.png" width="120" height="768"/>
+ </tileset>
+ <tileset firstgid="100" name="dante" tilewidth="120" tileheight="192" tilecount="6" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/dante.png" width="120" height="1152"/>
+ </tileset>
+ <tileset firstgid="106" name="elevator" tilewidth="375" tileheight="350" tilecount="14" columns="1">
+  <grid orientation="orthogonal" width="350" height="392"/>
+  <image source="../assets/elevator.png" width="375" height="4900"/>
+ </tileset>
+ <tileset firstgid="120" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="10" columns="1">
+  <grid orientation="orthogonal" width="196" height="322"/>
+  <image source="../assets/elevator_doors.png" width="375" height="3500"/>
+ </tileset>
+ <objectgroup id="11" name="background">
+  <object id="191" gid="95" x="0" y="640" width="2560" height="659.636"/>
+ </objectgroup>
+ <objectgroup id="12" name="background_objects_2">
+  <object id="193" gid="86" x="529.061" y="333.848" width="277.394" height="277.394"/>
+  <object id="200" gid="93" x="937.333" y="512.333" width="328" height="367"/>
+  <object id="201" gid="92" x="1280" y="512" width="328" height="367"/>
+  <object id="202" gid="1073741917" x="1974" y="157.5" width="328" height="367" rotation="180"/>
+  <object id="203" gid="93" x="768" y="512" width="328" height="367"/>
+ </objectgroup>
+ <objectgroup id="13" name="background_objects_1">
+  <object id="194" gid="90" x="896" y="517" width="156" height="137"/>
+  <object id="195" gid="89" x="1152" y="516" width="174" height="316"/>
+  <object id="196" gid="88" x="1536" y="513" width="182" height="205"/>
+  <object id="198" gid="87" x="1792" y="512" width="198" height="273"/>
+ </objectgroup>
+ <layer id="8" name="ground" width="20" height="5">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11
+</data>
+ </layer>
+ <objectgroup id="4" name="game">
+  <object id="73" name="virgil" gid="96" x="368" y="511" width="120" height="192"/>
+  <object id="80" name="elevator" gid="106" x="2166.51" y="512.407" width="375" height="350"/>
+  <object id="84" name="player" gid="100" x="237.167" y="510.167" width="120" height="192"/>
+  <object id="92" name="elevator_doors" type="elevator_doors" gid="120" x="2166.51" y="515.074" width="375" height="355"/>
+  <object id="204" name="gvido_cavalcanti" gid="94" x="1002" y="512" width="85" height="190">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="205" name="epicur" gid="91" x="1408" y="512" width="86" height="191">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

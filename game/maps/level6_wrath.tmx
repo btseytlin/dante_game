@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="20" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="267">
+ <editorsettings>
+  <export target="level6_wrath.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="20" columns="1">
+  <image source="../assets/tileset.png" width="128" height="2560"/>
+  <tile id="0">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="10" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="75">
+   <image width="140" height="186" source="../assets/level6_wrath/alex.png"/>
+  </tile>
+  <tile id="76">
+   <image width="135" height="250" source="../assets/level6_wrath/argenti.png"/>
+  </tile>
+  <tile id="77">
+   <image width="2560" height="896" source="../assets/level6_wrath/background.png"/>
+  </tile>
+  <tile id="78">
+   <image width="82" height="88" source="../assets/level6_wrath/bubble.png"/>
+  </tile>
+  <tile id="79">
+   <image width="49" height="71" source="../assets/level6_wrath/bubble2.png"/>
+  </tile>
+  <tile id="80">
+   <image width="52" height="50" source="../assets/level6_wrath/bubble3.png"/>
+  </tile>
+  <tile id="81">
+   <image width="73" height="68" source="../assets/level6_wrath/frog.png"/>
+  </tile>
+  <tile id="82">
+   <image width="51" height="143" source="../assets/level6_wrath/kamysh.png"/>
+  </tile>
+  <tile id="83">
+   <image width="69" height="147" source="../assets/level6_wrath/kamysh2.png"/>
+  </tile>
+  <tile id="84">
+   <image width="2560" height="128" source="../assets/level6_wrath/wrath_strip.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="106" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/virgil.png" width="120" height="768"/>
+ </tileset>
+ <tileset firstgid="110" name="dante" tilewidth="120" tileheight="192" tilecount="6" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/dante.png" width="120" height="1152"/>
+ </tileset>
+ <tileset firstgid="116" name="elevator" tilewidth="375" tileheight="350" tilecount="14" columns="1">
+  <grid orientation="orthogonal" width="350" height="392"/>
+  <image source="../assets/elevator.png" width="375" height="4900"/>
+ </tileset>
+ <tileset firstgid="130" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="10" columns="1">
+  <grid orientation="orthogonal" width="196" height="322"/>
+  <image source="../assets/elevator_doors.png" width="375" height="3500"/>
+ </tileset>
+ <objectgroup id="11" name="background">
+  <object id="208" gid="98" x="0" y="454" width="2560" height="464"/>
+  <object id="209" gid="105" x="1.33333" y="512" width="2560" height="128"/>
+ </objectgroup>
+ <objectgroup id="12" name="background_objects_2">
+  <object id="241" gid="101" x="118" y="401" width="62.6667" height="60.2564"/>
+  <object id="243" gid="101" x="360.667" y="399.667" width="52" height="50"/>
+  <object id="244" gid="101" x="654" y="414.333" width="52" height="50"/>
+  <object id="245" gid="101" x="499.333" y="389" width="67.2533" height="64.6667"/>
+  <object id="246" gid="101" x="923.333" y="406.333" width="38.1333" height="36.6667"/>
+  <object id="247" gid="101" x="1079.44" y="407.667" width="83.8933" height="80.6667"/>
+  <object id="248" gid="101" x="1488.67" y="369" width="52" height="50"/>
+  <object id="249" gid="101" x="1178" y="315.667" width="52" height="50"/>
+  <object id="250" gid="101" x="1914" y="318.333" width="40" height="35.3333"/>
+  <object id="251" gid="101" x="2011.33" y="409" width="52" height="50"/>
+  <object id="252" gid="101" x="762.8" y="399.667" width="65.8667" height="63.3333"/>
+  <object id="253" gid="101" x="-18" y="395.667" width="70.0267" height="67.3333"/>
+  <object id="254" gid="101" x="554.373" y="335.769" width="29.92" height="28.7692"/>
+  <object id="255" gid="101" x="1131.23" y="209.667" width="20.1067" height="19.3333"/>
+  <object id="256" gid="101" x="722.373" y="286.949" width="29.92" height="28.7692"/>
+  <object id="257" gid="101" x="205.04" y="285.615" width="29.92" height="28.7692"/>
+  <object id="258" gid="101" x="1541.04" y="286.949" width="29.92" height="28.7692"/>
+  <object id="259" gid="101" x="1677.04" y="365.615" width="29.92" height="28.7692"/>
+  <object id="260" gid="101" x="1778.37" y="366.949" width="29.92" height="28.7692"/>
+  <object id="264" gid="99" x="1792" y="384" width="82" height="88"/>
+  <object id="265" gid="99" x="837.667" y="385.333" width="82" height="88"/>
+  <object id="266" gid="99" x="1408" y="384" width="82" height="88"/>
+ </objectgroup>
+ <objectgroup id="13" name="background_objects_1">
+  <object id="210" gid="104" x="893" y="521" width="69" height="147"/>
+  <object id="211" gid="103" x="962" y="538" width="51" height="143"/>
+  <object id="212" gid="1073741928" x="1096" y="365" width="69" height="147" rotation="180"/>
+  <object id="213" gid="104" x="1107.5" y="528.5" width="69" height="147"/>
+  <object id="214" gid="1073741928" x="1477.75" y="370" width="69" height="147" rotation="180"/>
+  <object id="215" gid="1073741927" x="1395.08" y="391.667" width="51" height="143" rotation="180"/>
+  <object id="216" gid="104" x="1248.75" y="510.333" width="69" height="147"/>
+  <object id="217" gid="1073741928" x="1236.58" y="366.5" width="69" height="147" rotation="180"/>
+  <object id="218" gid="1073741928" x="1943.21" y="373.667" width="69" height="147" rotation="180"/>
+  <object id="219" gid="1073741927" x="1994.21" y="390.667" width="51" height="143" rotation="180"/>
+  <object id="220" gid="104" x="1795.21" y="538.333" width="69" height="147"/>
+  <object id="222" gid="104" x="1510.46" y="523" width="69" height="147"/>
+  <object id="223" gid="103" x="1594.13" y="542.667" width="51" height="143"/>
+  <object id="224" gid="1073741928" x="1742.46" y="365.333" width="69" height="147" rotation="180"/>
+  <object id="225" gid="104" x="1751.63" y="523.5" width="69" height="147"/>
+  <object id="226" gid="104" x="-214.772" y="515.667" width="69" height="147"/>
+  <object id="227" gid="103" x="-145.772" y="532.667" width="51" height="143"/>
+  <object id="228" gid="1073741928" x="-11.7717" y="359.666" width="69" height="147" rotation="180"/>
+  <object id="229" gid="104" x="-0.271667" y="523.167" width="69" height="147"/>
+  <object id="230" gid="1073741928" x="369.978" y="364.666" width="69" height="147" rotation="180"/>
+  <object id="231" gid="1073741927" x="287.308" y="386.333" width="51" height="143" rotation="180"/>
+  <object id="232" gid="104" x="140.978" y="505" width="69" height="147"/>
+  <object id="233" gid="1073741928" x="128.808" y="361.166" width="69" height="147" rotation="180"/>
+  <object id="234" gid="1073741928" x="835.438" y="368.333" width="69" height="147" rotation="180"/>
+  <object id="235" gid="1073741927" x="886.438" y="385.333" width="51" height="143" rotation="180"/>
+  <object id="236" gid="104" x="687.438" y="532.999" width="69" height="147"/>
+  <object id="237" gid="104" x="402.688" y="517.667" width="69" height="147"/>
+  <object id="238" gid="103" x="486.358" y="537.333" width="51" height="143"/>
+  <object id="239" gid="1073741928" x="634.688" y="360" width="69" height="147" rotation="180"/>
+  <object id="240" gid="104" x="643.858" y="518.167" width="69" height="147"/>
+ </objectgroup>
+ <layer id="8" name="ground" width="20" height="5">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11
+</data>
+ </layer>
+ <objectgroup id="4" name="game">
+  <object id="73" name="virgil" gid="106" x="368" y="511" width="120" height="192"/>
+  <object id="80" name="elevator" gid="116" x="2166.51" y="512.407" width="375" height="350"/>
+  <object id="84" name="player" gid="110" x="237.167" y="510.167" width="120" height="192"/>
+  <object id="92" name="elevator_doors" type="elevator_doors" gid="130" x="2166.51" y="515.074" width="375" height="355"/>
+  <object id="261" name="frog" gid="102" x="1024" y="512" width="73" height="68">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="263" name="argenti" gid="97" x="1536" y="512" width="135" height="250">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

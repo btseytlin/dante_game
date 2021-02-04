@@ -1,0 +1,81 @@
+{
+    "virgil": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "We have arrived to Wrath."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                 "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "frog": {
+        "type": "click",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Kvuuuh",
+            "Quack",
+            "Mhm... The loveliest, lies of all..."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "green",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "argenti": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "You vengeful bastard!",
+            "You put me here just because we didn’t like each other in life, right?",
+            "I am not even dead yet!"
+
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "red",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    }
+}

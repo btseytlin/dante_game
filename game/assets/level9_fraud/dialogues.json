@@ -1,0 +1,134 @@
+{
+    "virgil": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "This is the circle called Fraud.",
+            "Here live souls of those who lied."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                 "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "pope_nicolas": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "I used to sell church positions."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "kakos": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "I stole 8 cows from Hercules.",
+            "He found and killed me."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+
+    "guido": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "I’m Guido.",
+            "I studied law at the university, but astrology seemed more fun and paid better.",
+            "Now I’m here"
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+
+    "tais": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Hello, I’m Thais, a famous Greek hetaera.",
+            "Have you seen my boyfriend Alexander on the previous circle?"
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    }
+
+}

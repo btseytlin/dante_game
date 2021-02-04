@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="2021.01.13" orientation="orthogonal" renderorder="right-down" width="15" height="5" tilewidth="128" tileheight="128" infinite="0" nextlayerid="14" nextobjectid="297">
+ <editorsettings>
+  <export target="level10_treachery.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="20" columns="1">
+  <image source="../assets/tileset.png" width="128" height="2560"/>
+  <tile id="0">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="8" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="103">
+   <image width="86" height="172" source="../assets/level10_treachery/brut.png"/>
+  </tile>
+  <tile id="104">
+   <image width="996" height="540" source="../assets/level10_treachery/devil.png"/>
+  </tile>
+  <tile id="105">
+   <image width="1496" height="764" source="../assets/level10_treachery/feet.png"/>
+  </tile>
+  <tile id="106">
+   <image width="98" height="191" source="../assets/level10_treachery/judas.png"/>
+  </tile>
+  <tile id="107">
+   <image width="86" height="172" source="../assets/level10_treachery/cassius.png"/>
+  </tile>
+  <tile id="108">
+   <image width="2560" height="128" source="../assets/level10_treachery/strip_treachery.png"/>
+  </tile>
+  <tile id="109">
+   <image width="2560" height="896" source="../assets/level10_treachery/background.png"/>
+  </tile>
+  <tile id="110">
+   <image width="796" height="130" source="../assets/level10_treachery/headline.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="132" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/virgil.png" width="120" height="768"/>
+ </tileset>
+ <tileset firstgid="136" name="dante" tilewidth="120" tileheight="192" tilecount="6" columns="1">
+  <grid orientation="orthogonal" width="152" height="248"/>
+  <image source="../assets/dante.png" width="120" height="1152"/>
+ </tileset>
+ <tileset firstgid="142" name="elevator" tilewidth="375" tileheight="350" tilecount="14" columns="1">
+  <grid orientation="orthogonal" width="350" height="392"/>
+  <image source="../assets/elevator.png" width="375" height="4900"/>
+ </tileset>
+ <tileset firstgid="156" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="10" columns="1">
+  <grid orientation="orthogonal" width="196" height="322"/>
+  <image source="../assets/elevator_doors.png" width="375" height="3500"/>
+ </tileset>
+ <objectgroup id="11" name="background">
+  <object id="289" gid="130" x="-271" y="528" width="2364" height="652.4"/>
+ </objectgroup>
+ <objectgroup id="12" name="background_objects_2">
+  <object id="290" gid="126" x="-142.333" y="496.667" width="834.157" height="426"/>
+ </objectgroup>
+ <objectgroup id="13" name="background_objects_1">
+  <object id="291" gid="125" x="801" y="528" width="996" height="540"/>
+  <object id="292" gid="129" x="-25" y="529" width="2560" height="128"/>
+ </objectgroup>
+ <layer id="8" name="ground" width="15" height="5">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+19,19,19,19,19,19,19,19,19,19,19,19,19,19,19
+</data>
+ </layer>
+ <objectgroup id="4" name="game">
+  <object id="73" name="virgil" gid="132" x="139" y="508" width="120" height="192"/>
+  <object id="80" name="elevator" gid="142" x="1735.75" y="514.346" width="375" height="350"/>
+  <object id="84" name="player" gid="136" x="8.167" y="507.167" width="120" height="192"/>
+  <object id="92" name="elevator_doors" type="elevator_doors" gid="156" x="1735.75" y="517.013" width="375" height="355"/>
+  <object id="294" name="brut" gid="124" x="1383" y="512" width="86" height="172">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="295" name="cassius" gid="128" x="1511" y="512" width="86" height="172">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="296" name="judas" gid="127" x="871" y="512" width="98" height="191">
+   <properties>
+    <property name="clickable" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

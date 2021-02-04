@@ -1,0 +1,79 @@
+{
+    "virgil": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Welcome to Heresy."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                 "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "gvido_cavalcanti": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Hello, Dante!",
+            "Remember me? I'm a poet too, my name is Guido."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "epicur": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "I was not.",
+            "I am not.",
+            "I do not care."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    }
+}

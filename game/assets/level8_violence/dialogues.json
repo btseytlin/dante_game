@@ -1,0 +1,129 @@
+{
+    "virgil": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "We have arrived to Wrath."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                 "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "priscian": {
+        "type": "click",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Hello, Dante! You probably know me as a grammarian."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "alex": {
+        "type": "click",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Say hello to my girlfriend, she's on the following circle."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "pietro_dela_vigna": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "I was a politician, but as many of my colleagues, ended up in prison.",
+            "I killed myself. That's why I was placed here and turned into a bush."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    },
+    "brunetto_latini": {
+        "type": "sequential",
+        "offset": [0, -20],
+        "origin": [0.5, 0.5],
+        "phrases": [
+            "Dante! I'm happy to see you.",
+            "As your teacher, I knew you will do well — great poems.",
+            "I am proud of you."
+        ],
+        "style": { 
+            "fontSize": "24px", 
+            "fontFamily": "Courier",
+            "fontStyle": "bold",
+            "wrap": {
+                 "width": 400, 
+                  "mode": "word"
+             },
+            "align": "center", 
+            "color": "#e3e3e3",
+            "backgroundColor": "#000000"
+        },
+        
+        "padding": {
+            "x": 7.5,
+            "y": 5
+        }
+    }
+}

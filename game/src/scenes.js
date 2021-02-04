@@ -222,3 +222,158 @@ class Level5Greed extends BaseLevel {
     }
 
 }
+
+
+class Level6Wrath extends BaseLevel {
+
+    constructor () {
+        super('Level6Wrath');
+    }
+
+    preload () {
+
+        super.preload();
+
+        this.load.tilemapTiledJSON(this.assetPrefix('map'), 'maps/level6_wrath.json');
+        this.load.json(this.assetPrefix('dialogues'), 'assets/level6_wrath/dialogues.json');
+
+        const level_assets = [
+            'background', 'headline',
+            'wrath_strip', 'kamysh', 'kamysh2',
+            'bubble', 'bubble2', 'bubble3',
+            'frog', 'argenti',
+        ]
+
+        for (let image_key of level_assets) {
+            this.load.image(this.assetPrefix(image_key), 'assets/level6_wrath/' + image_key + '.png');
+        }
+    }
+
+    create () {
+        super.create();
+    }
+
+}
+
+
+class Level7Heresy extends BaseLevel {
+
+    constructor () {
+        super('Level7Heresy');
+    }
+
+    preload () {
+
+        super.preload();
+
+        this.load.tilemapTiledJSON(this.assetPrefix('map'), 'maps/level7_heresy.json');
+        this.load.json(this.assetPrefix('dialogues'), 'assets/level7_heresy/dialogues.json');
+
+        const level_assets = [
+            'background', 'headline',
+            'fire1', 'fire2', 'gvido_cavalcanti', 'epicur',
+            'moon', 'tomb1', 'tomb2', 'tomb3', 'tomb4',
+        ]
+
+        for (let image_key of level_assets) {
+            this.load.image(this.assetPrefix(image_key), 'assets/level7_heresy/' + image_key + '.png');
+        }
+    }
+
+    create () {
+        super.create();
+    }
+
+}
+
+class Level8Violence extends BaseLevel {
+
+    constructor () {
+        super('Level8Violence');
+    }
+
+    preload () {
+
+        super.preload();
+
+        this.load.tilemapTiledJSON(this.assetPrefix('map'), 'maps/level8_violence.json');
+        this.load.json(this.assetPrefix('dialogues'), 'assets/level8_violence/dialogues.json');
+
+        const level_assets = [
+            'background', 'headline',
+            'castle1', 'castle2', 'tower', 'wall', 'wall2',
+            'brunetto_latini', 'pietro_dela_vigna', 'alex', 'priscian',
+        ]
+
+        for (let image_key of level_assets) {
+            this.load.image(this.assetPrefix(image_key), 'assets/level8_violence/' + image_key + '.png');
+        }
+    }
+
+    create () {
+        super.create();
+    }
+
+}
+
+
+class Level9Fraud extends BaseLevel {
+
+    constructor () {
+        super('Level9Fraud');
+    }
+
+    preload () {
+
+        super.preload();
+
+        this.load.tilemapTiledJSON(this.assetPrefix('map'), 'maps/level9_fraud.json');
+        this.load.json(this.assetPrefix('dialogues'), 'assets/level9_fraud/dialogues.json');
+
+        const level_assets = [
+            'background', 'headline',
+            'pope_nicolas', 'kakos', 'guido', 'tais',
+            'landscape'
+        ]
+
+        for (let image_key of level_assets) {
+            this.load.image(this.assetPrefix(image_key), 'assets/level9_fraud/' + image_key + '.png');
+        }
+    }
+
+    create () {
+        super.create();
+    }
+
+}
+
+class Level10Treachery extends BaseLevel {
+
+    constructor () {
+        super('Level10Treachery');
+    }
+
+    preload () {
+
+        super.preload();
+
+        this.load.tilemapTiledJSON(this.assetPrefix('map'), 'maps/level10_treachery.json');
+        this.load.json(this.assetPrefix('dialogues'), 'assets/level10_treachery/dialogues.json');
+
+        const level_assets = [
+            'background', 'headline',
+            'judas', 'brut', 'cassius', 'devil',
+            'strip_treachery', 'feet'
+        ]
+
+        for (let image_key of level_assets) {
+            this.load.image(this.assetPrefix(image_key), 'assets/level10_treachery/' + image_key + '.png');
+        }
+    }
+
+    create () {
+        super.create();
+    }
+
+}
+
