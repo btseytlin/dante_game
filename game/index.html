@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 
+
     <style>
         body {
             background: #191522;
@@ -23,11 +24,14 @@
             font-family: 'Roboto', sans-serif;
             padding: 0;
             margin: 0;
+            overflow: hidden;
         }
 
-        p {
-            padding: 0;
-            margin: 0;
+        #parent {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         a {
@@ -35,14 +39,51 @@
             font-style: bold;
         }
         canvas {
-            margin: auto;
+            margin: 0 auto;
+
         }
     </style>
 </head>
 <body>
-    <p id="parent" align="center">
-    </p>
+    <div id="parent">
+    </div>
     <p align="center">
         ❤️ Game for <a href="https://www.instagram.com/dante.in.russia.700">dante.in.russia.700</a> by <a href="https://www.instagram.com/zhelnovapolina/">Polina Zhelnova</a> and <a href="https://www.instagram.com/bor.tseytlin">Boris</a> ❤️
     </p>
+
+    <script>
+        function resizeApp()
+        {
+            // Width-height-ratio of game resolution
+            let game_ratio = 800 / 600;
+            
+            // Make div full height of browser and keep the ratio of game resolution
+            let div = document.getElementById('parent');
+            let canvas = document.getElementsByTagName('canvas')[0];
+
+            if (!div || !canvas) {
+                return;
+            }
+            const heightPadded = window.innerHeight - 100;
+            div.style.width = (heightPadded * game_ratio) + 'px';
+            div.style.height = heightPadded + 'px';
+            
+            // Check if device DPI messes up the width-height-ratio
+            let dpi_w = (parseInt(div.style.width) / canvas.width);
+            let dpi_h = (parseInt(div.style.height) / canvas.height);       
+            
+            let height = heightPadded * (dpi_w / dpi_h);
+            let width = height * game_ratio;
+
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+        }
+
+        // Add to resize event
+        window.addEventListener('resize', resizeApp);
+
+        // Set correct size when page loads the first time
+        window.addEventListener('load', resizeApp);
+        resizeApp();
+    </script>
 </body>
