@@ -23,7 +23,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":1668.30303030303,
+                 "width":1668.3,
                  "x":0,
                  "y":640
                 }],
@@ -47,8 +47,8 @@
                  "type":"",
                  "visible":true,
                  "width":1316,
-                 "x":94.7878787878788,
-                 "y":519.090909090909
+                 "x":94.7879,
+                 "y":519.091
                 }, 
                 {
                  "gid":121,
@@ -60,7 +60,7 @@
                  "visible":true,
                  "width":1316,
                  "x":-1219,
-                 "y":518.833333333333
+                 "y":518.833
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -117,8 +117,8 @@
                  "type":"",
                  "visible":true,
                  "width":375,
-                 "x":1376.75242424242,
-                 "y":514.346393939394
+                 "x":1376.75,
+                 "y":514.346
                 }, 
                 {
                  "gid":128,
@@ -141,8 +141,8 @@
                  "type":"elevator_doors",
                  "visible":true,
                  "width":375,
-                 "x":1376.75242424242,
-                 "y":517.013393939394
+                 "x":1376.75,
+                 "y":517.013
                 }, 
                 {
                  "gid":120,
@@ -299,7 +299,7 @@
                 }, 
                 {
                  "id":101,
-                 "image":"..\/assets\/level9_fraud\/Pope_nicolas.png",
+                 "image":"..\/assets\/level9_fraud\/pope_nicolas.png",
                  "imageheight":191,
                  "imagewidth":86
                 }, 

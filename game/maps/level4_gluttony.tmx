@@ -20,7 +20,7 @@
    <image width="454" height="473" source="../assets/level4_gluttony/cake.png"/>
   </tile>
   <tile id="37">
-   <image width="206" height="248" source="../assets/level4_gluttony/chako.png"/>
+   <image width="206" height="248" source="../assets/level4_gluttony/ciacco.png"/>
   </tile>
   <tile id="38">
    <image width="255" height="544" source="../assets/level4_gluttony/cola.png"/>

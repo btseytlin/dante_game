@@ -17,7 +17,7 @@
          "objects":[
                 {
                  "gid":95,
-                 "height":659.636363636364,
+                 "height":659.636,
                  "id":191,
                  "name":"",
                  "rotation":0,
@@ -40,15 +40,15 @@
          "objects":[
                 {
                  "gid":86,
-                 "height":277.393939393939,
+                 "height":277.394,
                  "id":193,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":277.393939393939,
-                 "x":529.060606060606,
-                 "y":333.848484848485
+                 "width":277.394,
+                 "x":529.061,
+                 "y":333.848
                 }, 
                 {
                  "gid":93,
@@ -59,8 +59,8 @@
                  "type":"",
                  "visible":true,
                  "width":328,
-                 "x":937.333333333333,
-                 "y":512.333333333333
+                 "x":937.333,
+                 "y":512.333
                 }, 
                 {
                  "gid":92,
@@ -317,61 +317,61 @@
          "tiles":[
                 {
                  "id":65,
-                 "image":"..\/assets\/level6_heresy\/moon.png",
+                 "image":"..\/assets\/level7_heresy\/moon.png",
                  "imageheight":338,
                  "imagewidth":338
                 }, 
                 {
                  "id":66,
-                 "image":"..\/assets\/level6_heresy\/tomb1.png",
+                 "image":"..\/assets\/level7_heresy\/tomb1.png",
                  "imageheight":273,
                  "imagewidth":198
                 }, 
                 {
                  "id":67,
-                 "image":"..\/assets\/level6_heresy\/tomb2.png",
+                 "image":"..\/assets\/level7_heresy\/tomb2.png",
                  "imageheight":205,
                  "imagewidth":182
                 }, 
                 {
                  "id":68,
-                 "image":"..\/assets\/level6_heresy\/tomb3.png",
+                 "image":"..\/assets\/level7_heresy\/tomb3.png",
                  "imageheight":316,
                  "imagewidth":174
                 }, 
                 {
                  "id":69,
-                 "image":"..\/assets\/level6_heresy\/tomb4.png",
+                 "image":"..\/assets\/level7_heresy\/tomb4.png",
                  "imageheight":137,
                  "imagewidth":156
                 }, 
                 {
                  "id":70,
-                 "image":"..\/assets\/level6_heresy\/epicur.png",
+                 "image":"..\/assets\/level7_heresy\/epicur.png",
                  "imageheight":191,
                  "imagewidth":86
                 }, 
                 {
                  "id":71,
-                 "image":"..\/assets\/level6_heresy\/fire1.png",
+                 "image":"..\/assets\/level7_heresy\/fire1.png",
                  "imageheight":367,
                  "imagewidth":328
                 }, 
                 {
                  "id":72,
-                 "image":"..\/assets\/level6_heresy\/fire2.png",
+                 "image":"..\/assets\/level7_heresy\/fire2.png",
                  "imageheight":367,
                  "imagewidth":328
                 }, 
                 {
                  "id":73,
-                 "image":"..\/assets\/level6_heresy\/gvido_cavalcanti.png",
+                 "image":"..\/assets\/level7_heresy\/gvido_cavalcanti.png",
                  "imageheight":190,
                  "imagewidth":85
                 }, 
                 {
                  "id":74,
-                 "image":"..\/assets\/level6_heresy\/background.png",
+                 "image":"..\/assets\/level7_heresy\/background.png",
                  "imageheight":896,
                  "imagewidth":2560
                 }],

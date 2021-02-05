@@ -29,7 +29,7 @@
    <image width="1316" height="217" source="../assets/level9_fraud/landscape.png"/>
   </tile>
   <tile id="101">
-   <image width="86" height="191" source="../assets/level9_fraud/Pope_nicolas.png"/>
+   <image width="86" height="191" source="../assets/level9_fraud/pope_nicolas.png"/>
   </tile>
   <tile id="102">
    <image width="95" height="190" source="../assets/level9_fraud/tais.png"/>

@@ -14,34 +14,34 @@
  <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="10" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="65">
-   <image width="338" height="338" source="../assets/level6_heresy/moon.png"/>
+   <image width="338" height="338" source="../assets/level7_heresy/moon.png"/>
   </tile>
   <tile id="66">
-   <image width="198" height="273" source="../assets/level6_heresy/tomb1.png"/>
+   <image width="198" height="273" source="../assets/level7_heresy/tomb1.png"/>
   </tile>
   <tile id="67">
-   <image width="182" height="205" source="../assets/level6_heresy/tomb2.png"/>
+   <image width="182" height="205" source="../assets/level7_heresy/tomb2.png"/>
   </tile>
   <tile id="68">
-   <image width="174" height="316" source="../assets/level6_heresy/tomb3.png"/>
+   <image width="174" height="316" source="../assets/level7_heresy/tomb3.png"/>
   </tile>
   <tile id="69">
-   <image width="156" height="137" source="../assets/level6_heresy/tomb4.png"/>
+   <image width="156" height="137" source="../assets/level7_heresy/tomb4.png"/>
   </tile>
   <tile id="70">
-   <image width="86" height="191" source="../assets/level6_heresy/epicur.png"/>
+   <image width="86" height="191" source="../assets/level7_heresy/epicur.png"/>
   </tile>
   <tile id="71">
-   <image width="328" height="367" source="../assets/level6_heresy/fire1.png"/>
+   <image width="328" height="367" source="../assets/level7_heresy/fire1.png"/>
   </tile>
   <tile id="72">
-   <image width="328" height="367" source="../assets/level6_heresy/fire2.png"/>
+   <image width="328" height="367" source="../assets/level7_heresy/fire2.png"/>
   </tile>
   <tile id="73">
-   <image width="85" height="190" source="../assets/level6_heresy/gvido_cavalcanti.png"/>
+   <image width="85" height="190" source="../assets/level7_heresy/gvido_cavalcanti.png"/>
   </tile>
   <tile id="74">
-   <image width="2560" height="896" source="../assets/level6_heresy/background.png"/>
+   <image width="2560" height="896" source="../assets/level7_heresy/background.png"/>
   </tile>
  </tileset>
  <tileset firstgid="96" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">

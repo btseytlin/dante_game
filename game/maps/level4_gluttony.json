@@ -40,15 +40,15 @@
          "objects":[
                 {
                  "gid":64,
-                 "height":505.818181818182,
+                 "height":505.818,
                  "id":144,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":466.909090909091,
-                 "x":1598.87878787879,
-                 "y":515.181818181818
+                 "width":466.909,
+                 "x":1598.88,
+                 "y":515.182
                 }, 
                 {
                  "gid":65,
@@ -105,9 +105,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":275.471458773784,
-                 "x":688.69696969697,
-                 "y":511.848484848485
+                 "width":275.471,
+                 "x":688.697,
+                 "y":511.848
                 }, 
                 {
                  "gid":66,
@@ -206,7 +206,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":301.185185185185,
+                 "width":301.185,
                  "x":1344,
                  "y":513
                 }, 
@@ -224,13 +224,13 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":152.838709677419,
+                 "width":152.839,
                  "x":1152,
                  "y":512
                 }, 
                 {
                  "gid":62,
-                 "height":170.513513513514,
+                 "height":170.514,
                  "id":151,
                  "name":"fat_man1",
                  "properties":[
@@ -242,7 +242,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":124.930693069307,
+                 "width":124.931,
                  "x":896,
                  "y":512
                 }, 
@@ -260,7 +260,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":131.980198019802,
+                 "width":131.98,
                  "x":1792,
                  "y":512
                 }],
@@ -329,7 +329,7 @@
                 }, 
                 {
                  "id":37,
-                 "image":"..\/assets\/level4_gluttony\/chako.png",
+                 "image":"..\/assets\/level4_gluttony\/ciacco.png",
                  "imageheight":248,
                  "imagewidth":206
                 }, 

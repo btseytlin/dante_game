@@ -3,7 +3,8 @@
     {
      "export":
         {
-         "format":"json"
+         "format":"json",
+         "target":"level2_limbo.json"
         }
     },
  "height":5,
@@ -46,20 +47,20 @@
                  "type":"",
                  "visible":true,
                  "width":364,
-                 "x":746.415137150034,
-                 "y":534.819172642924
+                 "x":746.415,
+                 "y":534.819
                 }, 
                 {
                  "gid":52,
-                 "height":388.13813594803,
+                 "height":388.138,
                  "id":129,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":363.879502451278,
-                 "x":1251.06539443296,
-                 "y":516.787488351363
+                 "width":363.88,
+                 "x":1251.07,
+                 "y":516.787
                 }, 
                 {
                  "gid":51,
@@ -70,8 +71,8 @@
                  "type":"",
                  "visible":true,
                  "width":832,
-                 "x":-55.0421781937522,
-                 "y":511.840768202261
+                 "x":-55.0422,
+                 "y":511.841
                 }, 
                 {
                  "gid":44,
@@ -81,7 +82,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":565.49387755102,
+                 "width":565.494,
                  "x":1585,
                  "y":517
                 }],
@@ -98,27 +99,27 @@
          "objects":[
                 {
                  "gid":53,
-                 "height":280.935821076942,
+                 "height":280.936,
                  "id":132,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":326.46836906348,
-                 "x":546.469024755886,
-                 "y":512.298083546048
+                 "width":326.468,
+                 "x":546.469,
+                 "y":512.298
                 }, 
                 {
                  "gid":48,
-                 "height":183.595559337142,
+                 "height":183.596,
                  "id":130,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":190.695940084987,
-                 "x":1089.87366800373,
-                 "y":521.21311940359
+                 "width":190.696,
+                 "x":1089.87,
+                 "y":521.213
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -164,8 +165,8 @@
                  "type":"",
                  "visible":true,
                  "width":375,
-                 "x":2166.51100036465,
-                 "y":512.407470240266
+                 "x":2166.51,
+                 "y":512.407
                 }, 
                 {
                  "gid":60,
@@ -188,12 +189,12 @@
                  "type":"elevator_doors",
                  "visible":true,
                  "width":375,
-                 "x":2166.51100036465,
-                 "y":515.074470240266
+                 "x":2166.51,
+                 "y":515.074
                 }, 
                 {
                  "gid":46,
-                 "height":178.01226993865,
+                 "height":178.012,
                  "id":138,
                  "name":"cleopatra",
                  "properties":[
@@ -241,7 +242,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":202.573643410853,
+                 "width":202.574,
                  "x":1536,
                  "y":512
                 }],
@@ -298,73 +299,73 @@
          "tiles":[
                 {
                  "id":23,
-                 "image":"..\/assets\/level3_limbo\/ass.png",
+                 "image":"..\/assets\/level3_lust\/ass.png",
                  "imageheight":490,
                  "imagewidth":774
                 }, 
                 {
                  "id":24,
-                 "image":"..\/assets\/level3_limbo\/background.png",
+                 "image":"..\/assets\/level3_lust\/background.png",
                  "imageheight":896,
                  "imagewidth":2560
                 }, 
                 {
                  "id":25,
-                 "image":"..\/assets\/level3_limbo\/cleopatra.png",
+                 "image":"..\/assets\/level3_lust\/cleopatra.png",
                  "imageheight":248,
                  "imagewidth":163
                 }, 
                 {
                  "id":26,
-                 "image":"..\/assets\/level3_limbo\/elena.png",
+                 "image":"..\/assets\/level3_lust\/elena.png",
                  "imageheight":320,
                  "imagewidth":171
                 }, 
                 {
                  "id":27,
-                 "image":"..\/assets\/level3_limbo\/fountain.png",
+                 "image":"..\/assets\/level3_lust\/fountain.png",
                  "imageheight":362,
                  "imagewidth":376
                 }, 
                 {
                  "id":28,
-                 "image":"..\/assets\/level3_limbo\/house1.png",
+                 "image":"..\/assets\/level3_lust\/house1.png",
                  "imageheight":626,
                  "imagewidth":488
                 }, 
                 {
                  "id":29,
-                 "image":"..\/assets\/level3_limbo\/house2.png",
+                 "image":"..\/assets\/level3_lust\/house2.png",
                  "imageheight":364,
                  "imagewidth":364
                 }, 
                 {
                  "id":30,
-                 "image":"..\/assets\/level3_limbo\/house3.png",
+                 "image":"..\/assets\/level3_lust\/house3.png",
                  "imageheight":364,
                  "imagewidth":832
                 }, 
                 {
                  "id":31,
-                 "image":"..\/assets\/level3_limbo\/house4.png",
+                 "image":"..\/assets\/level3_lust\/house4.png",
                  "imageheight":544,
                  "imagewidth":510
                 }, 
                 {
                  "id":32,
-                 "image":"..\/assets\/level3_limbo\/house5.png",
+                 "image":"..\/assets\/level3_lust\/house5.png",
                  "imageheight":617,
                  "imagewidth":717
                 }, 
                 {
                  "id":33,
-                 "image":"..\/assets\/level3_limbo\/paolo_and_fran.png",
+                 "image":"..\/assets\/level3_lust\/francheska_and_paulo.png",
                  "imageheight":258,
                  "imagewidth":278
                 }, 
                 {
                  "id":34,
-                 "image":"..\/assets\/level3_limbo\/tornado.png",
+                 "image":"..\/assets\/level3_lust\/tornado.png",
                  "imageheight":693,
                  "imagewidth":672
                 }],
