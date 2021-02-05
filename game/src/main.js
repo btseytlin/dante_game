@@ -2,8 +2,8 @@
 let config = {
     parent: 'parent',
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: screenWidth,
+    height: screenHeight,
     physics: {
         default: 'arcade',
         arcade: {
@@ -233,7 +233,7 @@ function initAnimations(scene) {
 
 function initUI(scene) { 
     const headlineHeight = 130;
-    const headlinePadding = (headlineHeight * UIScale)/2 + 25;
+    const headlinePadding = (headlineHeight * UIScale)/2 + 10;
     let headline_img = scene.add.sprite(screenWidth/2, headlinePadding, scene.assetPrefix('headline'));
 
     const x_padding = 100; 
@@ -278,6 +278,8 @@ function initUI(scene) {
         ui[key].depth = 999;
     }
 
+    ui.headline_img.depth = 0;
+
     return ui;
 }
 
@@ -292,6 +294,7 @@ function initObjectDialogues(scene, obj, obj_name) {
     text.setOrigin(obj_dialogues.origin[0], obj_dialogues.origin[1]);
     text.setPadding(obj_dialogues.padding);
     text.setVisible(0);
+    text.depth = 1;
 
     obj.text = {
         'dialogues': obj_dialogues,

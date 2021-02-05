@@ -1,7 +1,7 @@
 {
     "owl": {
         "type": "click",
-        "offset": [0, 0],
+        "offset": [0, 150],
         "origin": [0.5, 0.5],
         "phrases": [
             "Howl!",

@@ -79,15 +79,15 @@ class Level1Wood extends BaseLevel {
             "y": 10
         };
 
-        let txt = this.add.text(180, 550, "Use arrow keys to move")
+        let txt = this.add.text(180, 520, "Use arrow keys to move")
         txt.setStyle(text_style);
         txt.setPadding(text_padding);
 
-        txt = this.add.text(1450, 550, "Click Virgil, ask him what's up")
+        txt = this.add.text(1450, 520, "Click Virgil, ask him what's up")
         txt.setStyle(text_style);
         txt.setPadding(text_padding);
 
-        txt = this.add.text(900, 550, "Click the owl")
+        txt = this.add.text(900, 520, "Click the owl")
         txt.setStyle(text_style);
         txt.setPadding(text_padding);
         
