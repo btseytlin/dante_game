@@ -12,8 +12,6 @@ let config = {
         }
     },
     scene: [
-        Level11End,
-
         Level1Wood, 
         Level2Limbo,
         Level3Lust,
@@ -24,6 +22,7 @@ let config = {
         Level8Violence,
         Level9Fraud,
         Level10Treachery,
+        Level11End,
     ]
 };
  
@@ -38,7 +37,7 @@ function getNextLevel(cur_key) {
     const level_order = [
         'Level1Wood', 'Level2Limbo', 'Level3Lust', 'Level4Gluttony', 
         'Level5Greed', 'Level6Wrath', 'Level7Heresy', 'Level8Violence',
-        'Level9Fraud', 'Level10Treachery',
+        'Level9Fraud', 'Level10Treachery', 'Level11End',
     ];
 
     const cur_index = level_order.indexOf(cur_key);
@@ -286,7 +285,6 @@ function initUI(scene) {
 }
 
 function initObjectDialogues(scene, obj, obj_name) {
-    console.log(obj_name)
     obj.setInteractive();
     const obj_dialogues = scene.dialogues[obj_name];
     const phrases = obj_dialogues.phrases;
