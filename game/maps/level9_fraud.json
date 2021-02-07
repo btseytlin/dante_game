@@ -16,7 +16,7 @@
          "name":"background",
          "objects":[
                 {
-                 "gid":117,
+                 "gid":118,
                  "height":896,
                  "id":281,
                  "name":"",
@@ -39,7 +39,7 @@
          "name":"background_objects_2",
          "objects":[
                 {
-                 "gid":121,
+                 "gid":122,
                  "height":217,
                  "id":283,
                  "name":"",
@@ -51,7 +51,7 @@
                  "y":519.091
                 }, 
                 {
-                 "gid":121,
+                 "gid":122,
                  "height":217,
                  "id":284,
                  "name":"",
@@ -97,7 +97,7 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":124,
+                 "gid":125,
                  "height":192,
                  "id":73,
                  "name":"virgil",
@@ -109,7 +109,7 @@
                  "y":510
                 }, 
                 {
-                 "gid":134,
+                 "gid":135,
                  "height":350,
                  "id":80,
                  "name":"elevator",
@@ -121,7 +121,7 @@
                  "y":514.346
                 }, 
                 {
-                 "gid":128,
+                 "gid":129,
                  "height":192,
                  "id":84,
                  "name":"player",
@@ -133,7 +133,7 @@
                  "y":509.167
                 }, 
                 {
-                 "gid":148,
+                 "gid":149,
                  "height":355,
                  "id":92,
                  "name":"elevator_doors",
@@ -145,7 +145,7 @@
                  "y":517.013
                 }, 
                 {
-                 "gid":120,
+                 "gid":121,
                  "height":279,
                  "id":285,
                  "name":"kakos",
@@ -163,7 +163,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":118,
+                 "gid":119,
                  "height":282,
                  "id":286,
                  "name":"guido",
@@ -181,7 +181,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":123,
+                 "gid":124,
                  "height":190,
                  "id":287,
                  "name":"tais",
@@ -199,7 +199,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":122,
+                 "gid":123,
                  "height":191,
                  "id":288,
                  "name":"pope_nicolas",
@@ -233,12 +233,12 @@
          "columns":1,
          "firstgid":1,
          "image":"..\/assets\/tileset.png",
-         "imageheight":2560,
+         "imageheight":2688,
          "imagewidth":128,
          "margin":0,
          "name":"tiles",
          "spacing":0,
-         "tilecount":20,
+         "tilecount":21,
          "tileheight":128,
          "tiles":[
                 {
@@ -254,7 +254,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":21,
+         "firstgid":22,
          "grid":
             {
              "height":1,
@@ -313,7 +313,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":124,
+         "firstgid":125,
          "grid":
             {
              "height":248,
@@ -331,8 +331,8 @@
          "tilewidth":120
         }, 
         {
-         "columns":1,
-         "firstgid":128,
+         "columns":2,
+         "firstgid":129,
          "grid":
             {
              "height":248,
@@ -340,8 +340,8 @@
              "width":152
             },
          "image":"..\/assets\/dante.png",
-         "imageheight":1152,
-         "imagewidth":120,
+         "imageheight":576,
+         "imagewidth":240,
          "margin":0,
          "name":"dante",
          "spacing":0,
@@ -351,7 +351,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":134,
+         "firstgid":135,
          "grid":
             {
              "height":392,
@@ -370,7 +370,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":148,
+         "firstgid":149,
          "grid":
             {
              "height":322,

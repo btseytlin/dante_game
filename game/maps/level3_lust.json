@@ -16,7 +16,7 @@
          "name":"background",
          "objects":[
                 {
-                 "gid":45,
+                 "gid":46,
                  "height":896,
                  "id":127,
                  "name":"",
@@ -39,7 +39,7 @@
          "name":"background_objects_2",
          "objects":[
                 {
-                 "gid":50,
+                 "gid":51,
                  "height":364,
                  "id":128,
                  "name":"",
@@ -51,7 +51,7 @@
                  "y":534.819
                 }, 
                 {
-                 "gid":52,
+                 "gid":53,
                  "height":388.138,
                  "id":129,
                  "name":"",
@@ -63,7 +63,7 @@
                  "y":516.787
                 }, 
                 {
-                 "gid":51,
+                 "gid":52,
                  "height":364,
                  "id":131,
                  "name":"",
@@ -75,7 +75,7 @@
                  "y":511.841
                 }, 
                 {
-                 "gid":44,
+                 "gid":45,
                  "height":358,
                  "id":137,
                  "name":"",
@@ -98,7 +98,7 @@
          "name":"background_objects_1",
          "objects":[
                 {
-                 "gid":53,
+                 "gid":54,
                  "height":280.936,
                  "id":132,
                  "name":"",
@@ -110,7 +110,7 @@
                  "y":512.298
                 }, 
                 {
-                 "gid":48,
+                 "gid":49,
                  "height":183.596,
                  "id":130,
                  "name":"",
@@ -145,7 +145,7 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":56,
+                 "gid":57,
                  "height":192,
                  "id":73,
                  "name":"virgil",
@@ -153,11 +153,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":368,
+                 "x":245.667,
                  "y":511
                 }, 
                 {
-                 "gid":66,
+                 "gid":67,
                  "height":350,
                  "id":80,
                  "name":"elevator",
@@ -169,7 +169,7 @@
                  "y":512.407
                 }, 
                 {
-                 "gid":60,
+                 "gid":61,
                  "height":192,
                  "id":84,
                  "name":"player",
@@ -177,11 +177,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":220,
+                 "x":97.6667,
                  "y":511
                 }, 
                 {
-                 "gid":80,
+                 "gid":81,
                  "height":355,
                  "id":92,
                  "name":"elevator_doors",
@@ -193,7 +193,7 @@
                  "y":515.074
                 }, 
                 {
-                 "gid":46,
+                 "gid":47,
                  "height":178.012,
                  "id":138,
                  "name":"cleopatra",
@@ -207,11 +207,11 @@
                  "type":"",
                  "visible":true,
                  "width":117,
-                 "x":896,
+                 "x":474,
                  "y":512
                 }, 
                 {
-                 "gid":47,
+                 "gid":48,
                  "height":224,
                  "id":139,
                  "name":"elena",
@@ -229,7 +229,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":54,
+                 "gid":55,
                  "height":188,
                  "id":140,
                  "name":"francheska_and_paulo",
@@ -243,7 +243,7 @@
                  "type":"",
                  "visible":true,
                  "width":202.574,
-                 "x":1536,
+                 "x":1614,
                  "y":512
                 }],
          "opacity":1,
@@ -263,12 +263,12 @@
          "columns":1,
          "firstgid":1,
          "image":"..\/assets\/tileset.png",
-         "imageheight":2560,
+         "imageheight":2688,
          "imagewidth":128,
          "margin":0,
          "name":"tiles",
          "spacing":0,
-         "tilecount":20,
+         "tilecount":21,
          "tileheight":128,
          "tiles":[
                 {
@@ -284,7 +284,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":21,
+         "firstgid":22,
          "grid":
             {
              "height":1,
@@ -373,7 +373,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":56,
+         "firstgid":57,
          "grid":
             {
              "height":248,
@@ -391,8 +391,8 @@
          "tilewidth":120
         }, 
         {
-         "columns":1,
-         "firstgid":60,
+         "columns":2,
+         "firstgid":61,
          "grid":
             {
              "height":248,
@@ -400,8 +400,8 @@
              "width":152
             },
          "image":"..\/assets\/dante.png",
-         "imageheight":1152,
-         "imagewidth":120,
+         "imageheight":576,
+         "imagewidth":240,
          "margin":0,
          "name":"dante",
          "spacing":0,
@@ -411,7 +411,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":66,
+         "firstgid":67,
          "grid":
             {
              "height":392,
@@ -430,7 +430,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":80,
+         "firstgid":81,
          "grid":
             {
              "height":322,

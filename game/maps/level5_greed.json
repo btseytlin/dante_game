@@ -16,7 +16,7 @@
          "name":"background",
          "objects":[
                 {
-                 "gid":67,
+                 "gid":68,
                  "height":471.758,
                  "id":154,
                  "name":"",
@@ -28,7 +28,7 @@
                  "y":464.97
                 }, 
                 {
-                 "gid":85,
+                 "gid":86,
                  "height":128,
                  "id":156,
                  "name":"",
@@ -51,7 +51,7 @@
          "name":"background_objects_2",
          "objects":[
                 {
-                 "gid":69,
+                 "gid":70,
                  "height":283,
                  "id":157,
                  "name":"",
@@ -63,7 +63,7 @@
                  "y":338.848
                 }, 
                 {
-                 "gid":69,
+                 "gid":70,
                  "height":201.667,
                  "id":158,
                  "name":"",
@@ -75,7 +75,7 @@
                  "y":270.303
                 }, 
                 {
-                 "gid":69,
+                 "gid":70,
                  "height":143,
                  "id":159,
                  "name":"",
@@ -87,7 +87,7 @@
                  "y":221.167
                 }, 
                 {
-                 "gid":68,
+                 "gid":69,
                  "height":63,
                  "id":160,
                  "name":"",
@@ -99,7 +99,7 @@
                  "y":128
                 }, 
                 {
-                 "gid":68,
+                 "gid":69,
                  "height":63,
                  "id":161,
                  "name":"",
@@ -111,7 +111,7 @@
                  "y":256
                 }, 
                 {
-                 "gid":68,
+                 "gid":69,
                  "height":63,
                  "id":162,
                  "name":"",
@@ -123,7 +123,7 @@
                  "y":128
                 }, 
                 {
-                 "gid":68,
+                 "gid":69,
                  "height":63,
                  "id":163,
                  "name":"",
@@ -135,7 +135,7 @@
                  "y":297.333
                 }, 
                 {
-                 "gid":68,
+                 "gid":69,
                  "height":63,
                  "id":164,
                  "name":"",
@@ -147,7 +147,7 @@
                  "y":106.667
                 }, 
                 {
-                 "gid":68,
+                 "gid":69,
                  "height":63,
                  "id":165,
                  "name":"",
@@ -159,7 +159,7 @@
                  "y":257.333
                 }, 
                 {
-                 "gid":68,
+                 "gid":69,
                  "height":63,
                  "id":166,
                  "name":"",
@@ -171,7 +171,7 @@
                  "y":112
                 }, 
                 {
-                 "gid":79,
+                 "gid":80,
                  "height":92,
                  "id":167,
                  "name":"",
@@ -183,7 +183,7 @@
                  "y":384
                 }, 
                 {
-                 "gid":78,
+                 "gid":79,
                  "height":119.333,
                  "id":168,
                  "name":"",
@@ -195,7 +195,7 @@
                  "y":384
                 }, 
                 {
-                 "gid":77,
+                 "gid":78,
                  "height":111.667,
                  "id":169,
                  "name":"",
@@ -207,7 +207,7 @@
                  "y":384
                 }, 
                 {
-                 "gid":1073741901,
+                 "gid":1073741902,
                  "height":111.667,
                  "id":170,
                  "name":"",
@@ -219,7 +219,7 @@
                  "y":273.833
                 }, 
                 {
-                 "gid":1073741903,
+                 "gid":1073741904,
                  "height":92,
                  "id":172,
                  "name":"",
@@ -231,7 +231,7 @@
                  "y":292.667
                 }, 
                 {
-                 "gid":1073741901,
+                 "gid":1073741902,
                  "height":111.667,
                  "id":173,
                  "name":"",
@@ -243,7 +243,7 @@
                  "y":276.499
                 }, 
                 {
-                 "gid":1073741902,
+                 "gid":1073741903,
                  "height":119.333,
                  "id":174,
                  "name":"",
@@ -266,7 +266,7 @@
          "name":"background_objects_1",
          "objects":[
                 {
-                 "gid":84,
+                 "gid":85,
                  "height":64,
                  "id":175,
                  "name":"",
@@ -278,7 +278,7 @@
                  "y":514.167
                 }, 
                 {
-                 "gid":83,
+                 "gid":84,
                  "height":256,
                  "id":176,
                  "name":"",
@@ -290,7 +290,7 @@
                  "y":513.333
                 }, 
                 {
-                 "gid":81,
+                 "gid":82,
                  "height":335,
                  "id":177,
                  "name":"",
@@ -302,7 +302,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":80,
+                 "gid":81,
                  "height":157,
                  "id":179,
                  "name":"",
@@ -314,7 +314,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":76,
+                 "gid":77,
                  "height":81,
                  "id":184,
                  "name":"",
@@ -326,7 +326,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":75,
+                 "gid":76,
                  "height":135,
                  "id":185,
                  "name":"",
@@ -338,7 +338,7 @@
                  "y":511
                 }, 
                 {
-                 "gid":74,
+                 "gid":75,
                  "height":237,
                  "id":186,
                  "name":"",
@@ -373,7 +373,7 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":86,
+                 "gid":87,
                  "height":192,
                  "id":73,
                  "name":"virgil",
@@ -385,7 +385,7 @@
                  "y":511
                 }, 
                 {
-                 "gid":96,
+                 "gid":97,
                  "height":350,
                  "id":80,
                  "name":"elevator",
@@ -397,7 +397,7 @@
                  "y":512.407
                 }, 
                 {
-                 "gid":90,
+                 "gid":91,
                  "height":192,
                  "id":84,
                  "name":"player",
@@ -409,7 +409,7 @@
                  "y":510.167
                 }, 
                 {
-                 "gid":110,
+                 "gid":111,
                  "height":355,
                  "id":92,
                  "name":"elevator_doors",
@@ -421,7 +421,7 @@
                  "y":515.074
                 }, 
                 {
-                 "gid":73,
+                 "gid":74,
                  "height":189,
                  "id":180,
                  "name":"spender2",
@@ -439,7 +439,7 @@
                  "y":357.667
                 }, 
                 {
-                 "gid":70,
+                 "gid":71,
                  "height":191,
                  "id":182,
                  "name":"saver1",
@@ -457,7 +457,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":72,
+                 "gid":73,
                  "height":190,
                  "id":188,
                  "name":"spender1",
@@ -475,7 +475,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":71,
+                 "gid":72,
                  "height":191,
                  "id":189,
                  "name":"saver2",
@@ -509,12 +509,12 @@
          "columns":1,
          "firstgid":1,
          "image":"..\/assets\/tileset.png",
-         "imageheight":2560,
+         "imageheight":2688,
          "imagewidth":128,
          "margin":0,
          "name":"tiles",
          "spacing":0,
-         "tilecount":20,
+         "tilecount":21,
          "tileheight":128,
          "tiles":[
                 {
@@ -530,7 +530,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":21,
+         "firstgid":22,
          "grid":
             {
              "height":1,
@@ -661,7 +661,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":86,
+         "firstgid":87,
          "grid":
             {
              "height":248,
@@ -679,8 +679,8 @@
          "tilewidth":120
         }, 
         {
-         "columns":1,
-         "firstgid":90,
+         "columns":2,
+         "firstgid":91,
          "grid":
             {
              "height":248,
@@ -688,8 +688,8 @@
              "width":152
             },
          "image":"..\/assets\/dante.png",
-         "imageheight":1152,
-         "imagewidth":120,
+         "imageheight":576,
+         "imagewidth":240,
          "margin":0,
          "name":"dante",
          "spacing":0,
@@ -699,7 +699,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":96,
+         "firstgid":97,
          "grid":
             {
              "height":392,
@@ -718,7 +718,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":110,
+         "firstgid":111,
          "grid":
             {
              "height":322,

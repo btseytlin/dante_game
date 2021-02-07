@@ -11,7 +11,9 @@ class BaseLevel extends Phaser.Scene {
         this.cursors = null;
         this.levelObjects = [];
 
+        this.names = null;
         this.dialogues = null;
+
 
         this.changeLevelRequested = false;
         this.waitingForVirgil = false;

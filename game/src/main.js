@@ -66,6 +66,9 @@ function preloadCommon(scene) {
     for (let image_key of ui_assets) {
         scene.load.image(image_key, 'assets/ui/' + image_key + '.png');
     }
+
+    scene.load.json('names', 'assets/names.json');
+
 }
 
 function initMap(scene) {
@@ -287,6 +290,7 @@ function initUI(scene) {
 function initObjectDialogues(scene, obj, obj_name) {
     obj.setInteractive();
     const obj_dialogues = scene.dialogues[obj_name];
+
     const phrases = obj_dialogues.phrases;
     const style = obj_dialogues.style;
 
@@ -321,10 +325,31 @@ function initObjectDialogues(scene, obj, obj_name) {
     });
 }
 
+function initObjectName(scene, obj, obj_name) {
+    if (!scene.names[obj_name]) {
+        return;
+    }
+    const display_name = scene.names[obj_name];
+    obj.display_name = display_name;
+
+    const display_name_style = {
+        "fontSize": "16px", 
+        "fontFamily": "Courier",
+        "align": "center", 
+        "color": "#e3e3e3",
+        "stroke": 'black',
+        "strokeThickness": 0,
+    };
+
+    const display_name_text = scene.add.text(0, 0, display_name.name, display_name_style);
+    obj.display_name.text = display_name_text;
+}
+
 function initGameObject(scene, object, map) {
     const obj_key = globalAssets.indexOf(object.name) != -1? object.name : scene.assetPrefix(object.name);
     const obj = scene.map.createFromObjects('game', {id: object.id, key: obj_key})[0];
 
+    initObjectName(scene, obj, object.name);
     const obj_clickable = object.properties ? object.properties.filter(property => property.name == 'clickable')[0].value : false ;
     if (obj_clickable === true) {
         initObjectDialogues(scene, obj, object.name);
@@ -346,6 +371,7 @@ function initGameObjects(scene, map) {
 
     scene.virgil = initVirgil(scene, map);
     initObjectDialogues(scene, scene.virgil, 'virgil');
+    initObjectName(scene, scene.virgil, 'virgil');
     scene.levelObjects.push(scene.virgil);
 
     scene.physics.add.collider(scene.groundLayer, scene.player);
@@ -357,6 +383,7 @@ function initGameObjects(scene, map) {
 }
 
 function createCommon(scene) {
+    scene.names = scene.cache.json.get('names');
     scene.dialogues = scene.cache.json.get(scene.assetPrefix('dialogues'));
     scene.map = initMap(scene);
     initBackground(scene, scene.map);
@@ -447,10 +474,18 @@ function commonUpdate(scene) {
 
     for (let obj of scene.levelObjects) {
         if (obj.text) {
-            let text = obj.text.text;
+            const text = obj.text.text;
 
             text.x = obj.x + obj.text.offset[0];
             text.y = obj.y - obj.height/2 - text.height/2 + obj.text.offset[1];
         }
+
+        if (obj.display_name) {
+            const dname = obj.display_name;
+
+            dname.text.x = obj.x - dname.text.width/2 + dname.offset[0];
+            dname.text.y = obj.y - obj.height/2 - dname.text.height*2 + dname.offset[1];
+        }
+
     }
  }

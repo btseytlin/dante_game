@@ -16,7 +16,7 @@
          "name":"background",
          "objects":[
                 {
-                 "gid":95,
+                 "gid":96,
                  "height":659.636,
                  "id":191,
                  "name":"",
@@ -39,7 +39,7 @@
          "name":"background_objects_2",
          "objects":[
                 {
-                 "gid":86,
+                 "gid":87,
                  "height":277.394,
                  "id":193,
                  "name":"",
@@ -47,11 +47,11 @@
                  "type":"",
                  "visible":true,
                  "width":277.394,
-                 "x":517.635368947774,
-                 "y":284.060714233621
+                 "x":517.635,
+                 "y":284.061
                 }, 
                 {
-                 "gid":93,
+                 "gid":94,
                  "height":367,
                  "id":200,
                  "name":"",
@@ -63,7 +63,7 @@
                  "y":512.333
                 }, 
                 {
-                 "gid":92,
+                 "gid":93,
                  "height":367,
                  "id":201,
                  "name":"",
@@ -75,7 +75,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":1073741917,
+                 "gid":1073741918,
                  "height":367,
                  "id":202,
                  "name":"",
@@ -87,7 +87,7 @@
                  "y":157.5
                 }, 
                 {
-                 "gid":93,
+                 "gid":94,
                  "height":367,
                  "id":203,
                  "name":"",
@@ -110,7 +110,7 @@
          "name":"background_objects_1",
          "objects":[
                 {
-                 "gid":90,
+                 "gid":91,
                  "height":137,
                  "id":194,
                  "name":"",
@@ -122,7 +122,7 @@
                  "y":517
                 }, 
                 {
-                 "gid":89,
+                 "gid":90,
                  "height":316,
                  "id":195,
                  "name":"",
@@ -134,7 +134,7 @@
                  "y":516
                 }, 
                 {
-                 "gid":88,
+                 "gid":89,
                  "height":205,
                  "id":196,
                  "name":"",
@@ -146,7 +146,7 @@
                  "y":513
                 }, 
                 {
-                 "gid":87,
+                 "gid":88,
                  "height":273,
                  "id":198,
                  "name":"",
@@ -158,7 +158,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":96,
+                 "gid":97,
                  "height":205,
                  "id":208,
                  "name":"",
@@ -193,7 +193,7 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":97,
+                 "gid":98,
                  "height":192,
                  "id":73,
                  "name":"virgil",
@@ -201,11 +201,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":226.936023661926,
-                 "y":508.925529759734
+                 "x":226.936,
+                 "y":508.926
                 }, 
                 {
-                 "gid":107,
+                 "gid":108,
                  "height":350,
                  "id":80,
                  "name":"elevator",
@@ -217,7 +217,7 @@
                  "y":512.407
                 }, 
                 {
-                 "gid":101,
+                 "gid":102,
                  "height":192,
                  "id":84,
                  "name":"player",
@@ -225,11 +225,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":96.1030236619262,
-                 "y":508.092529759734
+                 "x":96.103,
+                 "y":508.093
                 }, 
                 {
-                 "gid":121,
+                 "gid":122,
                  "height":355,
                  "id":92,
                  "name":"elevator_doors",
@@ -241,7 +241,7 @@
                  "y":515.074
                 }, 
                 {
-                 "gid":94,
+                 "gid":95,
                  "height":190,
                  "id":204,
                  "name":"gvido_cavalcanti",
@@ -259,7 +259,7 @@
                  "y":512
                 }, 
                 {
-                 "gid":91,
+                 "gid":92,
                  "height":191,
                  "id":205,
                  "name":"epicur",
@@ -293,12 +293,12 @@
          "columns":1,
          "firstgid":1,
          "image":"..\/assets\/tileset.png",
-         "imageheight":2560,
+         "imageheight":2688,
          "imagewidth":128,
          "margin":0,
          "name":"tiles",
          "spacing":0,
-         "tilecount":20,
+         "tilecount":21,
          "tileheight":128,
          "tiles":[
                 {
@@ -314,7 +314,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":21,
+         "firstgid":22,
          "grid":
             {
              "height":1,
@@ -397,7 +397,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":97,
+         "firstgid":98,
          "grid":
             {
              "height":248,
@@ -416,7 +416,7 @@
         }, 
         {
          "columns":2,
-         "firstgid":101,
+         "firstgid":102,
          "grid":
             {
              "height":248,
@@ -435,7 +435,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":107,
+         "firstgid":108,
          "grid":
             {
              "height":392,
@@ -454,7 +454,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":121,
+         "firstgid":122,
          "grid":
             {
              "height":322,

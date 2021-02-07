@@ -3,15 +3,15 @@
  <editorsettings>
   <export target="level8_violence.json" format="json"/>
  </editorsettings>
- <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="20" columns="1">
-  <image source="../assets/tileset.png" width="128" height="2560"/>
+ <tileset firstgid="1" name="tiles" tilewidth="128" tileheight="128" tilecount="21" columns="1">
+  <image source="../assets/tileset.png" width="128" height="2688"/>
   <tile id="0">
    <properties>
     <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="21" name="background" tilewidth="2560" tileheight="896" tilecount="11" columns="0">
+ <tileset firstgid="22" name="background" tilewidth="2560" tileheight="896" tilecount="11" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="85">
    <image width="140" height="186" source="../assets/level8_violence/alex.png"/>
@@ -47,34 +47,34 @@
    <image width="463" height="301" source="../assets/level8_violence/wall2.png"/>
   </tile>
  </tileset>
- <tileset firstgid="117" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">
+ <tileset firstgid="118" name="virgil" tilewidth="120" tileheight="192" tilecount="4" columns="1">
   <grid orientation="orthogonal" width="152" height="248"/>
   <image source="../assets/virgil.png" width="120" height="768"/>
  </tileset>
- <tileset firstgid="121" name="dante" tilewidth="120" tileheight="192" tilecount="6" columns="1">
+ <tileset firstgid="122" name="dante" tilewidth="120" tileheight="192" tilecount="6" columns="2">
   <grid orientation="orthogonal" width="152" height="248"/>
-  <image source="../assets/dante.png" width="120" height="1152"/>
+  <image source="../assets/dante.png" width="240" height="576"/>
  </tileset>
- <tileset firstgid="127" name="elevator" tilewidth="375" tileheight="350" tilecount="14" columns="1">
+ <tileset firstgid="128" name="elevator" tilewidth="375" tileheight="350" tilecount="14" columns="1">
   <grid orientation="orthogonal" width="350" height="392"/>
   <image source="../assets/elevator.png" width="375" height="4900"/>
  </tileset>
- <tileset firstgid="141" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="10" columns="1">
+ <tileset firstgid="142" name="elevator_doors" tilewidth="375" tileheight="350" tilecount="10" columns="1">
   <grid orientation="orthogonal" width="196" height="322"/>
   <image source="../assets/elevator_doors.png" width="375" height="3500"/>
  </tileset>
  <objectgroup id="11" name="background">
-  <object id="267" gid="107" x="0" y="640" width="2560" height="650.545"/>
+  <object id="267" gid="108" x="0" y="640" width="2560" height="650.545"/>
  </objectgroup>
  <objectgroup id="12" name="background_objects_2">
-  <object id="269" gid="110" x="652" y="513" width="556" height="479"/>
-  <object id="272" gid="115" x="1192" y="522" width="622.676" height="349"/>
-  <object id="274" gid="1073741940" x="654" y="126" width="257" height="125" rotation="180"/>
+  <object id="269" gid="111" x="652" y="513" width="556" height="479"/>
+  <object id="272" gid="116" x="1192" y="522" width="622.676" height="349"/>
+  <object id="274" gid="1073741941" x="654" y="126" width="257" height="125" rotation="180"/>
  </objectgroup>
  <objectgroup id="13" name="background_objects_1">
-  <object id="268" gid="109" x="396" y="519" width="273.77" height="354.606"/>
-  <object id="273" gid="114" x="1808" y="520" width="176.18" height="533"/>
-  <object id="276" gid="114" x="1205.91" y="523.5" width="176.18" height="533"/>
+  <object id="268" gid="110" x="396" y="519" width="273.77" height="354.606"/>
+  <object id="273" gid="115" x="1808" y="520" width="176.18" height="533"/>
+  <object id="276" gid="115" x="1205.91" y="523.5" width="176.18" height="533"/>
  </objectgroup>
  <layer id="8" name="ground" width="20" height="5">
   <data encoding="csv">
@@ -86,26 +86,26 @@
 </data>
  </layer>
  <objectgroup id="4" name="game">
-  <object id="73" name="virgil" gid="117" x="368" y="511" width="120" height="192"/>
-  <object id="80" name="elevator" gid="127" x="2166.51" y="512.407" width="375" height="350"/>
-  <object id="84" name="player" gid="121" x="237.167" y="510.167" width="120" height="192"/>
-  <object id="92" name="elevator_doors" type="elevator_doors" gid="141" x="2166.51" y="515.074" width="375" height="355"/>
-  <object id="277" name="pietro_dela_vigna" gid="112" x="598" y="512" width="204" height="246">
+  <object id="73" name="virgil" gid="118" x="368" y="511" width="120" height="192"/>
+  <object id="80" name="elevator" gid="128" x="2166.51" y="512.407" width="375" height="350"/>
+  <object id="84" name="player" gid="122" x="237.167" y="510.167" width="120" height="192"/>
+  <object id="92" name="elevator_doors" type="elevator_doors" gid="142" x="2166.51" y="515.074" width="375" height="355"/>
+  <object id="277" name="pietro_dela_vigna" gid="113" x="598" y="512" width="204" height="246">
    <properties>
     <property name="clickable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="278" name="brunetto_latini" gid="108" x="1152" y="512" width="84" height="180">
+  <object id="278" name="brunetto_latini" gid="109" x="1024" y="512" width="84" height="180">
    <properties>
     <property name="clickable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="279" name="alex" gid="106" x="1305" y="512" width="140" height="186">
+  <object id="279" name="alex" gid="107" x="1332" y="512" width="140" height="186">
    <properties>
     <property name="clickable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="280" name="priscian" gid="113" x="1732" y="511.667" width="119" height="191">
+  <object id="280" name="priscian" gid="114" x="1732" y="511.667" width="119" height="191">
    <properties>
     <property name="clickable" type="bool" value="true"/>
    </properties>

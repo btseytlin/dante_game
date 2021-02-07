@@ -1,0 +1,106 @@
+{
+    "virgil": {
+        "name": "Virgil",
+        "offset": [0, -10]
+    },
+    "homer": {
+        "name": "Homer",
+        "offset": [0, -10]
+    },
+    "aristotle": {
+        "name": "Aristotle",
+        "offset": [0, -10]
+    },
+    "pythagoras": {
+        "name": "Pythagoras",
+        "offset": [0, -10]
+    },
+    "cleopatra": {
+        "name": "Cleopatra",
+        "offset": [0, -10]
+    },
+    "elena": {
+        "name": "Helen of Troy",
+        "offset": [0, -10]
+    },
+    "francheska_and_paulo": {
+        "name": "Francheska and Paulo",
+        "offset": [0, -10]
+    },
+    "ciacco": {
+        "name": "Ciacco",
+        "offset": [0, -10]
+    },
+    "doge": {
+        "name": "Doggo the Doge",
+        "offset": [0, -10]
+    },
+    "argenti": {
+        "name": "Filippo Argenti",
+        "offset": [0, -10]
+    },
+    "gvido_cavalcanti": {
+        "name": "Gvido Cavalcanti",
+        "offset": [0, -10]
+    },
+    "epicur": {
+        "name": "Epicur",
+        "offset": [0, -10]
+    },
+    "pietro_dela_vigna": {
+        "name": "Pietro dela Vigna",
+        "offset": [0, -10]
+    },
+    "brunetto_latini": {
+        "name": "Brunetto Latini",
+        "offset": [0, -10]
+    },
+    "alex": {
+        "name": "Alexander The Great",
+        "offset": [0, -10]
+    },
+    "priscian": {
+        "name": "Priscian",
+        "offset": [0, -10]
+    },
+    "tais": {
+        "name": "Thais",
+        "offset": [0, -10]
+    },
+    "guido": {
+        "name": "Guido Bonatti",
+        "offset": [0, -10]
+    },
+    "kakos": {
+        "name": "Kakos",
+        "offset": [0, -10]
+    },
+    "pope_nicolas": {
+        "name": "Pope Nicolas",
+        "offset": [0, -10]
+    },
+    "judas": {
+        "name": "Judas",
+        "offset": [0, -10]
+    },
+    "brut": {
+        "name": "Brut",
+        "offset": [0, -10]
+    },
+    "cassius": {
+        "name": "Cassius",
+        "offset": [0, -10]
+    },
+    "boris": {
+        "name": "Boris",
+        "offset": [0, -10]
+    },
+    "polina": {
+        "name": "Polina",
+        "offset": [0, -10]
+    },
+    "frog": {
+        "name": "Jason Funderberker",
+        "offset": [0, -10]
+    }
+}

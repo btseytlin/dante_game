@@ -2,9 +2,9 @@ const UIScale = 0.5;
 const textHideDelay = 2000;
 const textCharDrawDelay = 7;
 
-const plySpeed = 500;
+const plySpeed = 750;
 const changeLevelDelay = 1500;
-const virgilSpeed = 500;
+const virgilSpeed = plySpeed;
 const virgilFollowThreshold = 200;
 
 // const [viewportWidth, viewportHeight] = getViewport();
@@ -18,6 +18,6 @@ const virgilFollowThreshold = 200;
 // const screenWidth = Math.max(Math.min(maxWidth, viewportWidth), minWidth);
 // const screenHeight = Math.max(Math.min(maxHeight, viewportHeight), minHeight);
 
-const screenWidth = 800;
+const screenWidth = 1200;
 const screenHeight = 600;
 
