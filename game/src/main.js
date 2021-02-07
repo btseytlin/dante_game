@@ -336,9 +336,7 @@ function initObjectName(scene, obj, obj_name) {
         "fontSize": "16px", 
         "fontFamily": "Courier",
         "align": "center", 
-        "color": "#e3e3e3",
-        "stroke": 'black',
-        "strokeThickness": 0,
+        "color": "#e3e3e3"
     };
 
     const display_name_text = scene.add.text(0, 0, display_name.name, display_name_style);
@@ -371,7 +369,7 @@ function initGameObjects(scene, map) {
 
     scene.virgil = initVirgil(scene, map);
     initObjectDialogues(scene, scene.virgil, 'virgil');
-    initObjectName(scene, scene.virgil, 'virgil');
+    // initObjectName(scene, scene.virgil, 'virgil');
     scene.levelObjects.push(scene.virgil);
 
     scene.physics.add.collider(scene.groundLayer, scene.player);

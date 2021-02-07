@@ -56,7 +56,9 @@
         function resizeApp()
         {
             // Width-height-ratio of game resolution
-            let game_ratio = 1200 / 600;
+            const w = 1200;
+            const h = 600;
+            let game_ratio = w / h;
             
             // Make div full height of browser and keep the ratio of game resolution
             let div = document.getElementById('parent');
@@ -65,19 +67,51 @@
             if (!div || !canvas) {
                 return;
             }
-            const heightPadded = Math.min(window.innerHeight - 100, 600);
-            div.style.width = (heightPadded * game_ratio) + 'px';
-            div.style.height = heightPadded + 'px';
+            const heightPadded = Math.min(window.innerHeight - 100, h);
+            const widthIntermediate = Math.min(window.innerWidth, w);
+
+            const option1_w = (heightPadded * game_ratio);
+            const option1_h = (heightPadded);
+
+            const option2_w = widthIntermediate;
+            const option2_h = widthIntermediate / game_ratio;
+
+            if (option1_h*option1_w > option1_w * option1_h) {
+                div.style.width = option1_w + 'px';
+                div.style.height = option1_h + 'px';
+            } else {
+                div.style.width = option2_w + 'px';
+                div.style.height = option2_h + 'px';
+            }
             
             // Check if device DPI messes up the width-height-ratio
             let dpi_w = (parseInt(div.style.width) / canvas.width);
             let dpi_h = (parseInt(div.style.height) / canvas.height);       
             
-            let height = heightPadded * (dpi_w / dpi_h);
-            let width = height * game_ratio;
+            const option1_canvas_height = heightPadded * (dpi_w / dpi_h);
+            const option1_canvas_width = option1_canvas_height * game_ratio;
 
-            canvas.style.width = width + 'px';
-            canvas.style.height = height + 'px';
+            const option2_canvas_width = widthIntermediate * (dpi_h/ dpi_w);
+            const option2_canvas_height = option2_canvas_width / game_ratio;
+            if (option1_canvas_height*option1_canvas_width < option2_canvas_width * option2_canvas_height) {
+                canvas.style.width = option1_canvas_width + 'px';
+                canvas.style.height = option1_canvas_height + 'px';
+            } else {
+                canvas.style.width = option2_canvas_width + 'px';
+                canvas.style.height = option2_canvas_height + 'px';
+            }
+
+            // canvas.style.width = div.style.width;
+            // canvas.style.height = div.style.height;
+
+            div.style.width = canvas.style.width;
+            div.style.height = canvas.style.height;
+
+
+            // console.log('div', div.style.width, div.style.height)
+            // console.log('canvas', canvas.style.width, canvas.style.height)
+
+            
         }
 
         // Add to resize event
