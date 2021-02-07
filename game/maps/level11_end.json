@@ -4,7 +4,7 @@
      "export":
         {
          "format":"json",
-         "target":"level10_treachery.json"
+         "target":"level11_end.json"
         }
     },
  "height":5,
@@ -16,16 +16,16 @@
          "name":"background",
          "objects":[
                 {
-                 "gid":130,
-                 "height":652.4,
-                 "id":289,
+                 "gid":134,
+                 "height":896,
+                 "id":297,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":2616,
-                 "x":-271,
-                 "y":528
+                 "width":2560,
+                 "x":-214,
+                 "y":724
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -37,19 +37,7 @@
          "draworder":"topdown",
          "id":12,
          "name":"background_objects_2",
-         "objects":[
-                {
-                 "gid":126,
-                 "height":426,
-                 "id":290,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":834.157,
-                 "x":-142.333,
-                 "y":496.667
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -60,31 +48,7 @@
          "draworder":"topdown",
          "id":13,
          "name":"background_objects_1",
-         "objects":[
-                {
-                 "gid":125,
-                 "height":540,
-                 "id":291,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":996,
-                 "x":778,
-                 "y":528
-                }, 
-                {
-                 "gid":129,
-                 "height":128,
-                 "id":292,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":2560,
-                 "x":-25,
-                 "y":529
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -92,7 +56,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19],
+         "data":[21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21],
          "height":5,
          "id":8,
          "name":"ground",
@@ -109,7 +73,7 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":132,
+                 "gid":137,
                  "height":192,
                  "id":73,
                  "name":"virgil",
@@ -117,23 +81,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":139,
-                 "y":508
+                 "x":1077.49966666667,
+                 "y":510.166333333333
                 }, 
                 {
-                 "gid":142,
-                 "height":350,
-                 "id":80,
-                 "name":"elevator",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":375,
-                 "x":1796.75,
-                 "y":514.346
-                }, 
-                {
-                 "gid":136,
+                 "gid":141,
                  "height":192,
                  "id":84,
                  "name":"player",
@@ -141,74 +93,56 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":8.167,
-                 "y":507.167
+                 "x":961.333333333333,
+                 "y":509.333333333333
                 }, 
                 {
-                 "gid":156,
-                 "height":355,
-                 "id":92,
+                 "gid":133,
+                 "height":174,
+                 "id":298,
+                 "name":"boris",
+                 "properties":[
+                        {
+                         "name":"clickable",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":90,
+                 "x":1270,
+                 "y":512
+                }, 
+                {
+                 "gid":136,
+                 "height":174,
+                 "id":299,
+                 "name":"polina",
+                 "properties":[
+                        {
+                         "name":"clickable",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":90,
+                 "x":652,
+                 "y":512
+                }, 
+                {
+                 "gid":161,
+                 "height":350,
+                 "id":300,
                  "name":"elevator_doors",
                  "rotation":0,
-                 "type":"elevator_doors",
+                 "type":"",
                  "visible":true,
                  "width":375,
-                 "x":1796.75,
-                 "y":517.013
-                }, 
-                {
-                 "gid":124,
-                 "height":172,
-                 "id":294,
-                 "name":"brut",
-                 "properties":[
-                        {
-                         "name":"clickable",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":86,
-                 "x":1382.5,
-                 "y":512
-                }, 
-                {
-                 "gid":128,
-                 "height":172,
-                 "id":295,
-                 "name":"cassius",
-                 "properties":[
-                        {
-                         "name":"clickable",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":86,
-                 "x":1631,
-                 "y":510.666666666667
-                }, 
-                {
-                 "gid":127,
-                 "height":191,
-                 "id":296,
-                 "name":"judas",
-                 "properties":[
-                        {
-                         "name":"clickable",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":98,
-                 "x":723,
-                 "y":512
+                 "x":2382.7,
+                 "y":511.364
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -217,7 +151,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":297,
+ "nextobjectid":301,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.01.13",
@@ -227,12 +161,12 @@
          "columns":1,
          "firstgid":1,
          "image":"..\/assets\/tileset.png",
-         "imageheight":2560,
+         "imageheight":2688,
          "imagewidth":128,
          "margin":0,
          "name":"tiles",
          "spacing":0,
-         "tilecount":20,
+         "tilecount":21,
          "tileheight":128,
          "tiles":[
                 {
@@ -248,7 +182,7 @@
         }, 
         {
          "columns":0,
-         "firstgid":21,
+         "firstgid":22,
          "grid":
             {
              "height":1,
@@ -258,62 +192,38 @@
          "margin":0,
          "name":"background",
          "spacing":0,
-         "tilecount":8,
+         "tilecount":4,
          "tileheight":896,
          "tiles":[
                 {
-                 "id":103,
-                 "image":"..\/assets\/level10_treachery\/brut.png",
-                 "imageheight":172,
-                 "imagewidth":86
+                 "id":111,
+                 "image":"..\/assets\/level11_end\/boris.png",
+                 "imageheight":174,
+                 "imagewidth":90
                 }, 
                 {
-                 "id":104,
-                 "image":"..\/assets\/level10_treachery\/devil.png",
-                 "imageheight":540,
-                 "imagewidth":996
-                }, 
-                {
-                 "id":105,
-                 "image":"..\/assets\/level10_treachery\/feet.png",
-                 "imageheight":764,
-                 "imagewidth":1496
-                }, 
-                {
-                 "id":106,
-                 "image":"..\/assets\/level10_treachery\/judas.png",
-                 "imageheight":191,
-                 "imagewidth":98
-                }, 
-                {
-                 "id":107,
-                 "image":"..\/assets\/level10_treachery\/cassius.png",
-                 "imageheight":172,
-                 "imagewidth":86
-                }, 
-                {
-                 "id":108,
-                 "image":"..\/assets\/level10_treachery\/strip_treachery.png",
-                 "imageheight":128,
-                 "imagewidth":2560
-                }, 
-                {
-                 "id":109,
-                 "image":"..\/assets\/level10_treachery\/background.png",
+                 "id":112,
+                 "image":"..\/assets\/level11_end\/background.jpg",
                  "imageheight":896,
                  "imagewidth":2560
                 }, 
                 {
-                 "id":110,
-                 "image":"..\/assets\/level10_treachery\/headline.png",
-                 "imageheight":130,
-                 "imagewidth":796
+                 "id":113,
+                 "image":"..\/assets\/level11_end\/floor.png",
+                 "imageheight":128,
+                 "imagewidth":128
+                }, 
+                {
+                 "id":114,
+                 "image":"..\/assets\/level11_end\/polina.png",
+                 "imageheight":174,
+                 "imagewidth":90
                 }],
          "tilewidth":2560
         }, 
         {
          "columns":1,
-         "firstgid":132,
+         "firstgid":137,
          "grid":
             {
              "height":248,
@@ -332,7 +242,7 @@
         }, 
         {
          "columns":2,
-         "firstgid":136,
+         "firstgid":141,
          "grid":
             {
              "height":248,
@@ -351,7 +261,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":142,
+         "firstgid":147,
          "grid":
             {
              "height":392,
@@ -370,7 +280,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":156,
+         "firstgid":161,
          "grid":
             {
              "height":322,

@@ -16,16 +16,16 @@
          "name":"background",
          "objects":[
                 {
-                 "gid":21,
-                 "height":525.212,
-                 "id":21,
+                 "gid":45,
+                 "height":896,
+                 "id":127,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":2560,
                  "x":0,
-                 "y":519.879
+                 "y":640
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -39,256 +39,52 @@
          "name":"background_objects_2",
          "objects":[
                 {
-                 "gid":41,
-                 "height":196,
-                 "id":93,
+                 "gid":50,
+                 "height":364,
+                 "id":128,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":364,
-                 "x":270,
-                 "y":512
+                 "x":746.415,
+                 "y":534.819
                 }, 
                 {
-                 "gid":37,
-                 "height":251,
-                 "id":99,
+                 "gid":52,
+                 "height":388.138,
+                 "id":129,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":151,
-                 "x":101,
-                 "y":538
+                 "width":363.88,
+                 "x":1251.07,
+                 "y":516.787
                 }, 
                 {
-                 "gid":41,
-                 "height":612,
-                 "id":103,
+                 "gid":51,
+                 "height":364,
+                 "id":131,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":475,
-                 "x":1767,
-                 "y":520
+                 "width":832,
+                 "x":-55.0422,
+                 "y":511.841
                 }, 
                 {
-                 "gid":41,
-                 "height":132,
-                 "id":105,
+                 "gid":44,
+                 "height":358,
+                 "id":137,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":297.143,
-                 "x":-172,
-                 "y":532
-                }, 
-                {
-                 "gid":41,
-                 "height":108,
-                 "id":106,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":129.571,
-                 "x":1334.71,
-                 "y":534
-                }, 
-                {
-                 "gid":37,
-                 "height":251,
-                 "id":108,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":151,
-                 "x":1617.5,
-                 "y":518.5
-                }, 
-                {
-                 "gid":37,
-                 "height":251,
-                 "id":110,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":151,
-                 "x":2241.5,
-                 "y":517.5
-                }, 
-                {
-                 "gid":36,
-                 "height":36,
-                 "id":122,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":82.2857,
-                 "x":189.571,
-                 "y":384.5
-                }, 
-                {
-                 "gid":36,
-                 "height":99,
-                 "id":126,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":2180,
-                 "y":171.5
-                }, 
-                {
-                 "gid":36,
-                 "height":99,
-                 "id":112,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":100,
-                 "y":168
-                }, 
-                {
-                 "gid":36,
-                 "height":73,
-                 "id":113,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":160,
-                 "x":488,
-                 "y":281
-                }, 
-                {
-                 "gid":36,
-                 "height":129,
-                 "id":114,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":296,
-                 "x":1214,
-                 "y":209
-                }, 
-                {
-                 "gid":36,
-                 "height":89,
-                 "id":115,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":178,
-                 "x":971,
-                 "y":387
-                }, 
-                {
-                 "gid":36,
-                 "height":91,
-                 "id":116,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":208,
-                 "x":1502,
-                 "y":365
-                }, 
-                {
-                 "gid":36,
-                 "height":31,
-                 "id":117,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":70.8571,
-                 "x":1270,
-                 "y":385.5
-                }, 
-                {
-                 "gid":36,
-                 "height":31,
-                 "id":121,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":70.8571,
-                 "x":311.571,
-                 "y":317.5
-                }, 
-                {
-                 "gid":36,
-                 "height":43,
-                 "id":119,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":98.2857,
-                 "x":537.571,
-                 "y":363.5
-                }, 
-                {
-                 "gid":36,
-                 "height":26.1875,
-                 "id":120,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":59.8571,
-                 "x":758.571,
-                 "y":344.687
-                }, 
-                {
-                 "gid":36,
-                 "height":99,
-                 "id":123,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":870,
-                 "y":140.5
-                }, 
-                {
-                 "gid":36,
-                 "height":56.925,
-                 "id":124,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":138,
-                 "x":1497,
-                 "y":64.425
-                }, 
-                {
-                 "gid":36,
-                 "height":43,
-                 "id":125,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":98.2857,
-                 "x":-39.1428,
-                 "y":302.5
+                 "width":565.494,
+                 "x":1585,
+                 "y":517
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -302,40 +98,28 @@
          "name":"background_objects_1",
          "objects":[
                 {
-                 "gid":35,
-                 "height":108,
-                 "id":96,
+                 "gid":53,
+                 "height":280.936,
+                 "id":132,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":92.6929,
-                 "x":1519,
-                 "y":512
+                 "width":326.468,
+                 "x":546.469,
+                 "y":512.298
                 }, 
                 {
-                 "gid":42,
-                 "height":140,
-                 "id":101,
+                 "gid":48,
+                 "height":183.596,
+                 "id":130,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":70,
-                 "x":1741,
-                 "y":516
-                }, 
-                {
-                 "gid":43,
-                 "height":107,
-                 "id":100,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":128,
-                 "x":2195,
-                 "y":512
+                 "width":190.696,
+                 "x":1089.87,
+                 "y":521.213
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -344,7 +128,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
          "height":5,
          "id":8,
          "name":"ground",
@@ -361,7 +145,7 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":44,
+                 "gid":56,
                  "height":192,
                  "id":73,
                  "name":"virgil",
@@ -369,11 +153,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":368,
+                 "x":245.666666666667,
                  "y":511
                 }, 
                 {
-                 "gid":54,
+                 "gid":66,
                  "height":350,
                  "id":80,
                  "name":"elevator",
@@ -381,11 +165,11 @@
                  "type":"",
                  "visible":true,
                  "width":375,
-                 "x":1818,
-                 "y":512.333
+                 "x":2166.51,
+                 "y":512.407
                 }, 
                 {
-                 "gid":48,
+                 "gid":60,
                  "height":192,
                  "id":84,
                  "name":"player",
@@ -393,11 +177,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":220,
+                 "x":97.6666666666667,
                  "y":511
                 }, 
                 {
-                 "gid":68,
+                 "gid":80,
                  "height":355,
                  "id":92,
                  "name":"elevator_doors",
@@ -405,14 +189,14 @@
                  "type":"elevator_doors",
                  "visible":true,
                  "width":375,
-                 "x":1818,
-                 "y":515
+                 "x":2166.51,
+                 "y":515.074
                 }, 
                 {
-                 "gid":38,
-                 "height":173.167,
-                 "id":94,
-                 "name":"homer",
+                 "gid":46,
+                 "height":178.012,
+                 "id":138,
+                 "name":"cleopatra",
                  "properties":[
                         {
                          "name":"clickable",
@@ -422,15 +206,15 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":156.409,
-                 "x":682,
+                 "width":117,
+                 "x":474,
                  "y":512
                 }, 
                 {
-                 "gid":40,
-                 "height":169,
-                 "id":95,
-                 "name":"pythagoras",
+                 "gid":47,
+                 "height":224,
+                 "id":139,
+                 "name":"elena",
                  "properties":[
                         {
                          "name":"clickable",
@@ -440,15 +224,15 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":198.984,
-                 "x":1052,
+                 "width":119.7,
+                 "x":1280,
                  "y":512
                 }, 
                 {
-                 "gid":33,
-                 "height":164,
-                 "id":98,
-                 "name":"aristotle",
+                 "gid":54,
+                 "height":188,
+                 "id":140,
+                 "name":"francheska_and_paulo",
                  "properties":[
                         {
                          "name":"clickable",
@@ -458,26 +242,8 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":142.177,
-                 "x":864,
-                 "y":512
-                }, 
-                {
-                 "gid":34,
-                 "height":52.2335,
-                 "id":104,
-                 "name":"baby",
-                 "properties":[
-                        {
-                         "name":"clickable",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":70,
-                 "x":1422,
+                 "width":202.574,
+                 "x":1614,
                  "y":512
                 }],
          "opacity":1,
@@ -487,7 +253,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":127,
+ "nextobjectid":142,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.01.13",
@@ -528,80 +294,86 @@
          "margin":0,
          "name":"background",
          "spacing":0,
-         "tilecount":11,
+         "tilecount":12,
          "tileheight":896,
          "tiles":[
                 {
-                 "id":0,
-                 "image":"..\/assets\/level2_limbo\/background.png",
+                 "id":23,
+                 "image":"..\/assets\/level3_lust\/ass.png",
+                 "imageheight":490,
+                 "imagewidth":774
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/assets\/level3_lust\/background.png",
                  "imageheight":896,
                  "imagewidth":2560
                 }, 
                 {
-                 "id":12,
-                 "image":"..\/assets\/level2_limbo\/aristotle.png",
+                 "id":25,
+                 "image":"..\/assets\/level3_lust\/cleopatra.png",
                  "imageheight":248,
-                 "imagewidth":215
+                 "imagewidth":163
                 }, 
                 {
-                 "id":13,
-                 "image":"..\/assets\/level2_limbo\/baby.png",
-                 "imageheight":147,
-                 "imagewidth":197
+                 "id":26,
+                 "image":"..\/assets\/level3_lust\/elena.png",
+                 "imageheight":320,
+                 "imagewidth":171
                 }, 
                 {
-                 "id":14,
-                 "image":"..\/assets\/level2_limbo\/baby2.png",
-                 "imageheight":254,
-                 "imagewidth":218
+                 "id":27,
+                 "image":"..\/assets\/level3_lust\/fountain.png",
+                 "imageheight":362,
+                 "imagewidth":376
                 }, 
                 {
-                 "id":15,
-                 "image":"..\/assets\/level2_limbo\/cloud.png",
-                 "imageheight":129,
-                 "imagewidth":296
+                 "id":28,
+                 "image":"..\/assets\/level3_lust\/house1.png",
+                 "imageheight":626,
+                 "imagewidth":488
                 }, 
                 {
-                 "id":16,
-                 "image":"..\/assets\/level2_limbo\/column.png",
-                 "imageheight":251,
-                 "imagewidth":151
-                }, 
-                {
-                 "id":17,
-                 "image":"..\/assets\/level2_limbo\/homer.png",
-                 "imageheight":248,
-                 "imagewidth":224
-                }, 
-                {
-                 "id":19,
-                 "image":"..\/assets\/level2_limbo\/pythagoras.png",
-                 "imageheight":248,
-                 "imagewidth":292
-                }, 
-                {
-                 "id":20,
-                 "image":"..\/assets\/level2_limbo\/shrine.png",
-                 "imageheight":196,
+                 "id":29,
+                 "image":"..\/assets\/level3_lust\/house2.png",
+                 "imageheight":364,
                  "imagewidth":364
                 }, 
                 {
-                 "id":21,
-                 "image":"..\/assets\/level2_limbo\/vase.png",
-                 "imageheight":140,
-                 "imagewidth":70
+                 "id":30,
+                 "image":"..\/assets\/level3_lust\/house3.png",
+                 "imageheight":364,
+                 "imagewidth":832
                 }, 
                 {
-                 "id":22,
-                 "image":"..\/assets\/level2_limbo\/vase2.png",
-                 "imageheight":107,
-                 "imagewidth":128
+                 "id":31,
+                 "image":"..\/assets\/level3_lust\/house4.png",
+                 "imageheight":544,
+                 "imagewidth":510
+                }, 
+                {
+                 "id":32,
+                 "image":"..\/assets\/level3_lust\/house5.png",
+                 "imageheight":617,
+                 "imagewidth":717
+                }, 
+                {
+                 "id":33,
+                 "image":"..\/assets\/level3_lust\/francheska_and_paulo.png",
+                 "imageheight":258,
+                 "imagewidth":278
+                }, 
+                {
+                 "id":34,
+                 "image":"..\/assets\/level3_lust\/tornado.png",
+                 "imageheight":693,
+                 "imagewidth":672
                 }],
          "tilewidth":2560
         }, 
         {
          "columns":1,
-         "firstgid":44,
+         "firstgid":56,
          "grid":
             {
              "height":248,
@@ -619,8 +391,8 @@
          "tilewidth":120
         }, 
         {
-         "columns":1,
-         "firstgid":48,
+         "columns":2,
+         "firstgid":60,
          "grid":
             {
              "height":248,
@@ -628,8 +400,8 @@
              "width":152
             },
          "image":"..\/assets\/dante.png",
-         "imageheight":1152,
-         "imagewidth":120,
+         "imageheight":576,
+         "imagewidth":240,
          "margin":0,
          "name":"dante",
          "spacing":0,
@@ -639,7 +411,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":54,
+         "firstgid":66,
          "grid":
             {
              "height":392,
@@ -658,7 +430,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":68,
+         "firstgid":80,
          "grid":
             {
              "height":322,

@@ -83,7 +83,7 @@ class Level1Wood extends BaseLevel {
         txt.setStyle(text_style);
         txt.setPadding(text_padding);
 
-        txt = this.add.text(1450, 520, "Click Virgil, ask him what's up")
+        txt = this.add.text(1450, 520, "Click Virgil")
         txt.setStyle(text_style);
         txt.setPadding(text_padding);
 
@@ -111,7 +111,7 @@ class Level2Limbo extends BaseLevel {
             'background', 'headline',
             'aristotle', 'homer', 'pythagoras',
             'baby', 'baby2',
-            'vase', 'vase2',
+            'vase', 'vase2', 'elevator_back',
             'column', 'shrine', 'cloud',
         ]
 
@@ -272,7 +272,7 @@ class Level7Heresy extends BaseLevel {
         const level_assets = [
             'background', 'headline',
             'fire1', 'fire2', 'gvido_cavalcanti', 'epicur',
-            'moon', 'tomb1', 'tomb2', 'tomb3', 'tomb4',
+            'moon', 'tomb1', 'tomb2', 'tomb3', 'tomb4', 'tomb5',
         ]
 
         for (let image_key of level_assets) {
@@ -368,6 +368,35 @@ class Level10Treachery extends BaseLevel {
 
         for (let image_key of level_assets) {
             this.load.image(this.assetPrefix(image_key), 'assets/level10_treachery/' + image_key + '.png');
+        }
+    }
+
+    create () {
+        super.create();
+    }
+
+}
+
+class Level11End extends BaseLevel {
+
+    constructor () {
+        super('Level11End');
+    }
+
+    preload () {
+
+        super.preload();
+
+        this.load.tilemapTiledJSON(this.assetPrefix('map'), 'maps/level11_end.json');
+        this.load.json(this.assetPrefix('dialogues'), 'assets/level11_end/dialogues.json');
+
+        const level_assets = [
+            'background', 'headline',
+            'polina', 'boris', 'floor',
+        ]
+
+        for (let image_key of level_assets) {
+            this.load.image(this.assetPrefix(image_key), 'assets/level11_end/' + image_key + '.png');
         }
     }
 

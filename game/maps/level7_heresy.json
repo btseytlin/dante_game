@@ -47,8 +47,8 @@
                  "type":"",
                  "visible":true,
                  "width":277.394,
-                 "x":529.061,
-                 "y":333.848
+                 "x":517.635368947774,
+                 "y":284.060714233621
                 }, 
                 {
                  "gid":93,
@@ -156,6 +156,18 @@
                  "width":198,
                  "x":1792,
                  "y":512
+                }, 
+                {
+                 "gid":96,
+                 "height":205,
+                 "id":208,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":182,
+                 "x":512,
+                 "y":512
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -164,7 +176,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
          "height":5,
          "id":8,
          "name":"ground",
@@ -181,7 +193,7 @@
          "name":"game",
          "objects":[
                 {
-                 "gid":96,
+                 "gid":97,
                  "height":192,
                  "id":73,
                  "name":"virgil",
@@ -189,11 +201,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":368,
-                 "y":511
+                 "x":226.936023661926,
+                 "y":508.925529759734
                 }, 
                 {
-                 "gid":106,
+                 "gid":107,
                  "height":350,
                  "id":80,
                  "name":"elevator",
@@ -205,7 +217,7 @@
                  "y":512.407
                 }, 
                 {
-                 "gid":100,
+                 "gid":101,
                  "height":192,
                  "id":84,
                  "name":"player",
@@ -213,11 +225,11 @@
                  "type":"",
                  "visible":true,
                  "width":120,
-                 "x":237.167,
-                 "y":510.167
+                 "x":96.1030236619262,
+                 "y":508.092529759734
                 }, 
                 {
-                 "gid":120,
+                 "gid":121,
                  "height":355,
                  "id":92,
                  "name":"elevator_doors",
@@ -271,7 +283,7 @@
          "y":0
         }],
  "nextlayerid":14,
- "nextobjectid":208,
+ "nextobjectid":209,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.01.13",
@@ -312,7 +324,7 @@
          "margin":0,
          "name":"background",
          "spacing":0,
-         "tilecount":10,
+         "tilecount":11,
          "tileheight":896,
          "tiles":[
                 {
@@ -374,12 +386,18 @@
                  "image":"..\/assets\/level7_heresy\/background.png",
                  "imageheight":896,
                  "imagewidth":2560
+                }, 
+                {
+                 "id":75,
+                 "image":"..\/assets\/level7_heresy\/tomb5.png",
+                 "imageheight":205,
+                 "imagewidth":182
                 }],
          "tilewidth":2560
         }, 
         {
          "columns":1,
-         "firstgid":96,
+         "firstgid":97,
          "grid":
             {
              "height":248,
@@ -397,8 +415,8 @@
          "tilewidth":120
         }, 
         {
-         "columns":1,
-         "firstgid":100,
+         "columns":2,
+         "firstgid":101,
          "grid":
             {
              "height":248,
@@ -406,8 +424,8 @@
              "width":152
             },
          "image":"..\/assets\/dante.png",
-         "imageheight":1152,
-         "imagewidth":120,
+         "imageheight":576,
+         "imagewidth":240,
          "margin":0,
          "name":"dante",
          "spacing":0,
@@ -417,7 +435,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":106,
+         "firstgid":107,
          "grid":
             {
              "height":392,
@@ -436,7 +454,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":120,
+         "firstgid":121,
          "grid":
             {
              "height":322,

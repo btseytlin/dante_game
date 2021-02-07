@@ -12,6 +12,8 @@ let config = {
         }
     },
     scene: [
+        Level11End,
+
         Level1Wood, 
         Level2Limbo,
         Level3Lust,
